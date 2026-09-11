@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " M ",
+    " E ",
+    " J "
+  ],
+  "key": {
+    "J": {
+      "item": "jej:sunberry_juice"
+    },
+    "M": {
+      "item": "minecraft:milk_bucket"
+    },
+    "E": {
+      "item": "jej:emerald_dust"
+    }
+  },
+  "result": {
+    "item": "jej:sunberry_juice_boosted"
+  }
+}

@@ -14,7 +14,6 @@ public class RegisterEvents {
 
     @SubscribeEvent
     public static void onBiomeLoading(BiomeLoadingEvent e){
-        System.out.println("Biome Loading.............");
         ModBushGeneration.generateBush(e);
     }
 }

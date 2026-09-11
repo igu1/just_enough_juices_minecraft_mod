@@ -6,7 +6,7 @@
     ]
   },
   "criteria": {
-    "has_ice_berry_juice": {
+    "has_iceberry_juice": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -27,7 +27,7 @@
   },
   "requirements": [
     [
-      "has_ice_berry_juice",
+      "has_iceberry_juice",
       "has_the_recipe"
     ]
   ]

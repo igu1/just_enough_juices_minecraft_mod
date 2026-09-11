@@ -1,8 +1,14 @@
 package me.ez.jej;
 
+import me.ez.jej.common.Effects.CaffeinatedEffect;
+import me.ez.jej.common.Effects.FloatEffect;
 import me.ez.jej.common.Effects.IcyFootEffect;
+import me.ez.jej.common.Effects.MagnetEffect;
+import me.ez.jej.common.Effects.SpicyEffect;
 import me.ez.jej.common.JuiceClass;
+import me.ez.jej.common.Bushes.GlowBerryBush;
 import me.ez.jej.common.Bushes.IcyBush;
+import me.ez.jej.common.Bushes.SunBerryBush;
 import me.ez.jej.common.Bushes.WildBerryBush;
 import me.ez.jej.common.TomatoBlock;
 import net.minecraft.world.effect.MobEffect;
@@ -50,30 +56,62 @@ public class Init {
     public static final RegistryObject<Item> DRIEDKELP_JUICE_BOOSTED = ITEMS.register("driedkelp_juice_boosted", () -> new JuiceClass(new Item.Properties().rarity(Rarity.RARE).stacksTo(1).tab(Main.TAB)));
 
     public static final RegistryObject<Item> GOLDENAPPLE_JUICE = ITEMS.register("goldenapple_juice",() -> new JuiceClass(new Item.Properties().stacksTo(1).tab(Main.TAB)));
-//    public static final RegistryObject<Item> GOLDENAPPLE_JUICE_BOOSTED = ITEMS.register("driedkelp_juice_boosted", () -> new JuiceClass(new Item.Properties().rarity(Rarity.RARE).stacksTo(1).tab(Main.TAB)));
+    public static final RegistryObject<Item> GOLDENAPPLE_JUICE_BOOSTED = ITEMS.register("goldenapple_juice_boosted", () -> new JuiceClass(new Item.Properties().rarity(Rarity.RARE).stacksTo(1).tab(Main.TAB)));
 
     public static final RegistryObject<Item> GOLDENCARROT_JUICE = ITEMS.register("goldencarrot_juice",() -> new JuiceClass(new Item.Properties().stacksTo(1).tab(Main.TAB)));
-//    public static final RegistryObject<Item> GOLDENCARROT_JUICE_BOOSTED = ITEMS.register("driedkelp_juice_boosted", () -> new JuiceClass(new Item.Properties().rarity(Rarity.RARE).stacksTo(1).tab(Main.TAB)));
+    public static final RegistryObject<Item> GOLDENCARROT_JUICE_BOOSTED = ITEMS.register("goldencarrot_juice_boosted", () -> new JuiceClass(new Item.Properties().rarity(Rarity.RARE).stacksTo(1).tab(Main.TAB)));
 
     public static final RegistryObject<Item> GLISTERING_MELON_JUICE = ITEMS.register("glistering_melon_juice",() -> new JuiceClass(new Item.Properties().stacksTo(1).tab(Main.TAB)));
-//    public static final RegistryObject<Item> GLITTERINGMELON_JUICE_BOOSTED = ITEMS.register("driedkelp_juice_boosted", () -> new JuiceClass(new Item.Properties().rarity(Rarity.RARE).stacksTo(1).tab(Main.TAB)));
+    public static final RegistryObject<Item> GLISTERING_MELON_JUICE_BOOSTED = ITEMS.register("glistering_melon_juice_boosted", () -> new JuiceClass(new Item.Properties().rarity(Rarity.RARE).stacksTo(1).tab(Main.TAB)));
 
+    //New Juices
+    public static final RegistryObject<Item> CHORUS_JUICE = ITEMS.register("chorus_juice",() -> new JuiceClass(new Item.Properties().stacksTo(1).tab(Main.TAB)));
+    public static final RegistryObject<Item> CHORUS_JUICE_BOOSTED = ITEMS.register("chorus_juice_boosted", () -> new JuiceClass(new Item.Properties().rarity(Rarity.RARE).stacksTo(1).tab(Main.TAB)));
+
+    public static final RegistryObject<Item> GLOWBERRY_JUICE = ITEMS.register("glowberry_juice",() -> new JuiceClass(new Item.Properties().stacksTo(1).tab(Main.TAB)));
+    public static final RegistryObject<Item> GLOWBERRY_JUICE_BOOSTED = ITEMS.register("glowberry_juice_boosted", () -> new JuiceClass(new Item.Properties().rarity(Rarity.RARE).stacksTo(1).tab(Main.TAB)));
+
+    public static final RegistryObject<Item> SPICY_JUICE = ITEMS.register("spicy_juice",() -> new JuiceClass(new Item.Properties().stacksTo(1).tab(Main.TAB)));
+    public static final RegistryObject<Item> SPICY_JUICE_BOOSTED = ITEMS.register("spicy_juice_boosted", () -> new JuiceClass(new Item.Properties().rarity(Rarity.RARE).stacksTo(1).tab(Main.TAB)));
+
+    public static final RegistryObject<Item> GOLEM_JUICE = ITEMS.register("golem_juice",() -> new JuiceClass(new Item.Properties().stacksTo(1).tab(Main.TAB)));
+    public static final RegistryObject<Item> GOLEM_JUICE_BOOSTED = ITEMS.register("golem_juice_boosted", () -> new JuiceClass(new Item.Properties().rarity(Rarity.RARE).stacksTo(1).tab(Main.TAB)));
+
+    public static final RegistryObject<Item> SUNBERRY_JUICE = ITEMS.register("sunberry_juice",() -> new JuiceClass(new Item.Properties().stacksTo(1).tab(Main.TAB)));
+    public static final RegistryObject<Item> SUNBERRY_JUICE_BOOSTED = ITEMS.register("sunberry_juice_boosted", () -> new JuiceClass(new Item.Properties().rarity(Rarity.RARE).stacksTo(1).tab(Main.TAB)));
+
+    public static final RegistryObject<Item> BEETROOT_JUICE = ITEMS.register("beetroot_juice",() -> new JuiceClass(new Item.Properties().stacksTo(1).tab(Main.TAB)));
+    public static final RegistryObject<Item> BEETROOT_JUICE_BOOSTED = ITEMS.register("beetroot_juice_boosted", () -> new JuiceClass(new Item.Properties().rarity(Rarity.RARE).stacksTo(1).tab(Main.TAB)));
+
+    public static final RegistryObject<Item> NETHERWART_JUICE = ITEMS.register("netherwart_juice",() -> new JuiceClass(new Item.Properties().stacksTo(1).tab(Main.TAB)));
+    public static final RegistryObject<Item> NETHERWART_JUICE_BOOSTED = ITEMS.register("netherwart_juice_boosted", () -> new JuiceClass(new Item.Properties().rarity(Rarity.RARE).stacksTo(1).tab(Main.TAB)));
+
+    public static final RegistryObject<Item> COCOA_JUICE = ITEMS.register("cocoa_juice",() -> new JuiceClass(new Item.Properties().stacksTo(1).tab(Main.TAB)));
+    public static final RegistryObject<Item> COCOA_JUICE_BOOSTED = ITEMS.register("cocoa_juice_boosted", () -> new JuiceClass(new Item.Properties().rarity(Rarity.RARE).stacksTo(1).tab(Main.TAB)));
 
     public static final RegistryObject<Item> EMERALD_DUST = ITEMS.register("emerald_dust",() -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
     public static final RegistryObject<Item> GLASS_BOTTLE = ITEMS.register("glass_bottle",() -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC).stacksTo(16)));
 
     public static final RegistryObject<BlockItem> ICE_BERRY = ITEMS.register("ice_berry",() -> new BlockItem(Init.ICE_BERRY_BUSH.get(), new Item.Properties().tab(CreativeModeTab.TAB_FOOD).food(new FoodProperties.Builder().nutrition(1).saturationMod(0.1F).build())));
     public static final RegistryObject<BlockItem> WILD_BERRY = ITEMS.register("wild_berry",() -> new BlockItem(Init.WILD_BERRY_BUSH.get(), new Item.Properties().tab(CreativeModeTab.TAB_FOOD).food(new FoodProperties.Builder().nutrition(2).saturationMod(0.1F).build())));
+    public static final RegistryObject<BlockItem> SUN_BERRY = ITEMS.register("sun_berry",() -> new BlockItem(Init.SUN_BERRY_BUSH.get(), new Item.Properties().tab(CreativeModeTab.TAB_FOOD).food(new FoodProperties.Builder().nutrition(3).saturationMod(0.3F).build())));
+    public static final RegistryObject<BlockItem> GLOW_BERRY = ITEMS.register("glow_berry",() -> new BlockItem(Init.GLOW_BERRY_BUSH.get(), new Item.Properties().tab(CreativeModeTab.TAB_FOOD).food(new FoodProperties.Builder().nutrition(2).saturationMod(0.1F).build())));
 //    public static final RegistryObject<BlockItem> TOMATO_ITEM = ITEMS.register("tomato",() -> new BlockItem(Init.TOMATO.get(), new Item.Properties().tab(CreativeModeTab.TAB_FOOD).food(new FoodProperties.Builder().nutrition(2).saturationMod(0.1F).build())));
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Main.MOD_ID);
     //Blocks
     public static final RegistryObject<IcyBush> ICE_BERRY_BUSH = BLOCKS.register("iceberry_bush", IcyBush::new);
     public static final RegistryObject<WildBerryBush> WILD_BERRY_BUSH = BLOCKS.register("wildberry_bush", WildBerryBush::new);
+    public static final RegistryObject<SunBerryBush> SUN_BERRY_BUSH = BLOCKS.register("sunberry_bush", SunBerryBush::new);
+    public static final RegistryObject<GlowBerryBush> GLOW_BERRY_BUSH = BLOCKS.register("glowberry_bush", GlowBerryBush::new);
 //    public static final RegistryObject<Block> TOMATO = BLOCKS.register("tomato", () -> new TomatoBlock(BlockBehaviour.Properties.copy(Blocks.PUMPKIN)));
 
     //Effects
     public static final DeferredRegister<MobEffect> EFFECT = DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, Main.MOD_ID);
     public static final RegistryObject<MobEffect> ICYFOOTEFFECT = EFFECT.register("icyfooteffect", () -> new IcyFootEffect(1));
+    public static final RegistryObject<MobEffect> CAFFEINATED = EFFECT.register("caffeinated", () -> new CaffeinatedEffect(0x8B4513));
+    public static final RegistryObject<MobEffect> SPICY = EFFECT.register("spicy", () -> new SpicyEffect(0xFF4500));
+    public static final RegistryObject<MobEffect> MAGNET = EFFECT.register("magnet", () -> new MagnetEffect(0x9400D3));
+    public static final RegistryObject<MobEffect> FLOAT = EFFECT.register("float", () -> new FloatEffect(0x87CEEB));
 
 }

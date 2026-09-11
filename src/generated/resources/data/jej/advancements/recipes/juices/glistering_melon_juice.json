@@ -6,7 +6,7 @@
     ]
   },
   "criteria": {
-    "has_glistering_melon_juice": {
+    "has_glistering_melon": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -27,7 +27,7 @@
   },
   "requirements": [
     [
-      "has_glistering_melon_juice",
+      "has_glistering_melon",
       "has_the_recipe"
     ]
   ]

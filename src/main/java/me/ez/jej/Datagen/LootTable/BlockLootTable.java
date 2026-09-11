@@ -24,6 +24,8 @@ public class BlockLootTable extends BlockLoot {
     protected void addTables() {
         BushLootTable(Init.ICE_BERRY_BUSH.get(), Init.ICE_BERRY.get());
         BushLootTable(Init.WILD_BERRY_BUSH.get(), Init.WILD_BERRY.get());
+        BushLootTable(Init.SUN_BERRY_BUSH.get(), Init.SUN_BERRY.get());
+        BushLootTable(Init.GLOW_BERRY_BUSH.get(), Init.GLOW_BERRY.get());
     }
 
     @Override

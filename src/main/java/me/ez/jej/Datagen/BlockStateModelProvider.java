@@ -27,7 +27,12 @@ public class BlockStateModelProvider extends BlockStateProvider {
         makeBush(Init.ICE_BERRY_BUSH.get(),
                 "iceberry_bush_stage",
                 "iceberry_bush_stage");
-        simpleBlock(Init.TOMATO.get());
+        makeBush(Init.SUN_BERRY_BUSH.get(),
+                "sunberry_bush_stage",
+                "sunberry_bush_stage");
+        makeBush(Init.GLOW_BERRY_BUSH.get(),
+                "glowberry_bush_stage",
+                "glowberry_bush_stage");
     }
 
     public void makeBush(BushBlock block, String modelName, String textureName) {

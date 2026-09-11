@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "jej:sunberry_juice"
+    ]
+  },
+  "criteria": {
+    "has_sun_berry": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "jej:sun_berry"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "jej:sunberry_juice"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_sun_berry",
+      "has_the_recipe"
+    ]
+  ]
+}

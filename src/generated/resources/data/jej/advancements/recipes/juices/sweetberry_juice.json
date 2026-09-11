@@ -6,7 +6,7 @@
     ]
   },
   "criteria": {
-    "has_sweet_berry": {
+    "has_sweet_berries": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -27,7 +27,7 @@
   },
   "requirements": [
     [
-      "has_sweet_berry",
+      "has_sweet_berries",
       "has_the_recipe"
     ]
   ]

@@ -17,9 +17,19 @@ public class ModPlacementFeature {
             32);
 
     public static final Holder<PlacedFeature> PATCH_ICE_BUSH = bushPlacementFeature(
-            "path_ice_bush",
+            "patch_ice_bush",
             ModConfiguredFeature.PATCH_ICE_BERRY_BUSH,
             32);
+
+    public static final Holder<PlacedFeature> PATCH_SUN_BUSH = bushPlacementFeature(
+            "patch_sun_bush",
+            ModConfiguredFeature.PATCH_SUN_BERRY_BUSH,
+            24);
+
+    public static final Holder<PlacedFeature> PATCH_GLOW_BUSH = bushPlacementFeature(
+            "patch_glow_bush",
+            ModConfiguredFeature.PATCH_GLOW_BERRY_BUSH,
+            16);
 
     private static <T extends ConfiguredFeature<RandomPatchConfiguration, ?>> Holder<PlacedFeature> bushPlacementFeature(String string, Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> feature, int onEvery){
         return PlacementUtils.register(string,

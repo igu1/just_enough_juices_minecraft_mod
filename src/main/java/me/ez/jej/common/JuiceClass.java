@@ -2,6 +2,7 @@ package me.ez.jej.common;
 
 import com.google.common.collect.Lists;
 import com.mojang.datafixers.util.Pair;
+import me.ez.jej.Config;
 import me.ez.jej.Init;
 import me.ez.jej.Main;
 import net.minecraft.ChatFormatting;
@@ -112,21 +113,103 @@ public class JuiceClass extends PotionItem {
             } else {
                 list.add(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 1200, 0));
             }
-        } else if (Init.GOLDENAPPLE_JUICE.get() == stack.getItem()) {
-            list.add(new MobEffectInstance(MobEffects.ABSORPTION, 3600, 0));
-            list.add(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 1200, 0));
-            list.add(new MobEffectInstance(MobEffects.NIGHT_VISION, 3600, 0));
-
-        } else if (Init.GOLDENCARROT_JUICE.get() == stack.getItem()) {
-            list.add(new MobEffectInstance(MobEffects.NIGHT_VISION, 3600, 0));
-            list.add(new MobEffectInstance(MobEffects.WATER_BREATHING, 3600, 0));
-            list.add(new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 2400, 1));
-
-        } else if (Init.GLISTERING_MELON_JUICE.get() == stack.getItem()) {
+        } else if (Init.GLISTERING_MELON_JUICE.get() == stack.getItem() || Init.GLISTERING_MELON_JUICE_BOOSTED.get() == stack.getItem()) {
             list.add(new MobEffectInstance(MobEffects.REGENERATION, 200, 0));
             list.add(new MobEffectInstance(MobEffects.SLOW_FALLING, 1200, 0));
             list.add(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 2400, 0));
+            if (Init.GLISTERING_MELON_JUICE_BOOSTED.get() == stack.getItem()) {
+                list.add(new MobEffectInstance(MobEffects.REGENERATION, 400, 1));
+                list.add(new MobEffectInstance(MobEffects.SATURATION, 200, 0));
+            }
 
+        } else if (Init.GOLDENAPPLE_JUICE.get() == stack.getItem() || Init.GOLDENAPPLE_JUICE_BOOSTED.get() == stack.getItem()) {
+            list.add(new MobEffectInstance(MobEffects.ABSORPTION, 3600, 0));
+            list.add(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 1200, 0));
+            list.add(new MobEffectInstance(MobEffects.NIGHT_VISION, 3600, 0));
+            if (Init.GOLDENAPPLE_JUICE_BOOSTED.get() == stack.getItem()) {
+                list.add(new MobEffectInstance(MobEffects.REGENERATION, 600, 1));
+                list.add(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 3600, 0));
+            }
+
+        } else if (Init.GOLDENCARROT_JUICE.get() == stack.getItem() || Init.GOLDENCARROT_JUICE_BOOSTED.get() == stack.getItem()) {
+            list.add(new MobEffectInstance(MobEffects.NIGHT_VISION, 3600, 0));
+            list.add(new MobEffectInstance(MobEffects.WATER_BREATHING, 3600, 0));
+            list.add(new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 2400, 1));
+            if (Init.GOLDENCARROT_JUICE_BOOSTED.get() == stack.getItem()) {
+                list.add(new MobEffectInstance(MobEffects.LUCK, 3600, 1));
+            }
+
+        } else if (Init.CHORUS_JUICE.get() == stack.getItem() || Init.CHORUS_JUICE_BOOSTED.get() == stack.getItem()) {
+            list.add(new MobEffectInstance(MobEffects.LEVITATION, 200, 0));
+            list.add(new MobEffectInstance(MobEffects.SLOW_FALLING, 1200, 0));
+            if (Init.CHORUS_JUICE_BOOSTED.get() == stack.getItem()) {
+                list.add(new MobEffectInstance(MobEffects.SLOW_FALLING, 3600, 1));
+            }
+
+        } else if (Init.GLOWBERRY_JUICE.get() == stack.getItem() || Init.GLOWBERRY_JUICE_BOOSTED.get() == stack.getItem()) {
+            list.add(new MobEffectInstance(MobEffects.GLOWING, 3600, 0));
+            list.add(new MobEffectInstance(MobEffects.NIGHT_VISION, 3600, 0));
+            if (Init.GLOWBERRY_JUICE_BOOSTED.get() == stack.getItem()) {
+                list.add(new MobEffectInstance(Init.FLOAT.get(), 2400, 0));
+            }
+
+        } else if (Init.SPICY_JUICE.get() == stack.getItem() || Init.SPICY_JUICE_BOOSTED.get() == stack.getItem()) {
+            list.add(new MobEffectInstance(Init.SPICY.get(), 1200, 0));
+            list.add(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 1200, 0));
+            if (Init.SPICY_JUICE_BOOSTED.get() == stack.getItem()) {
+                list.add(new MobEffectInstance(Init.SPICY.get(), 2400, 1));
+                list.add(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 1200, 0));
+            }
+
+        } else if (Init.GOLEM_JUICE.get() == stack.getItem() || Init.GOLEM_JUICE_BOOSTED.get() == stack.getItem()) {
+            list.add(new MobEffectInstance(MobEffects.ABSORPTION, 3600, 2));
+            list.add(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 3600, 0));
+            list.add(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 2400, 0));
+            if (Init.GOLEM_JUICE_BOOSTED.get() == stack.getItem()) {
+                list.add(new MobEffectInstance(MobEffects.ABSORPTION, 4800, 4));
+                list.add(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 4800, 1));
+            }
+
+        } else if (Init.SUNBERRY_JUICE.get() == stack.getItem() || Init.SUNBERRY_JUICE_BOOSTED.get() == stack.getItem()) {
+            list.add(new MobEffectInstance(Init.CAFFEINATED.get(), 2400, 0));
+            list.add(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 2400, 1));
+            if (Init.SUNBERRY_JUICE_BOOSTED.get() == stack.getItem()) {
+                list.add(new MobEffectInstance(Init.CAFFEINATED.get(), 4800, 1));
+                list.add(new MobEffectInstance(MobEffects.JUMP, 2400, 0));
+            }
+
+        } else if (Init.BEETROOT_JUICE.get() == stack.getItem() || Init.BEETROOT_JUICE_BOOSTED.get() == stack.getItem()) {
+            list.add(new MobEffectInstance(MobEffects.SATURATION, 200, 0));
+            if (Init.BEETROOT_JUICE_BOOSTED.get() == stack.getItem()) {
+                list.add(new MobEffectInstance(MobEffects.SATURATION, 400, 0));
+                list.add(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 2400, 0));
+            }
+
+        } else if (Init.NETHERWART_JUICE.get() == stack.getItem() || Init.NETHERWART_JUICE_BOOSTED.get() == stack.getItem()) {
+            list.add(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 1800, 0));
+            if (Init.NETHERWART_JUICE_BOOSTED.get() == stack.getItem()) {
+                list.add(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 3600, 0));
+                list.add(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 1200, 0));
+            }
+
+        } else if (Init.COCOA_JUICE.get() == stack.getItem() || Init.COCOA_JUICE_BOOSTED.get() == stack.getItem()) {
+            list.add(new MobEffectInstance(MobEffects.DIG_SPEED, 1200, 0));
+            if (Init.COCOA_JUICE_BOOSTED.get() == stack.getItem()) {
+                list.add(new MobEffectInstance(MobEffects.DIG_SPEED, 2400, 1));
+                list.add(new MobEffectInstance(MobEffects.NIGHT_VISION, 1200, 0));
+            }
+
+        }
+
+        double multiplier = Config.EFFECT_DURATION_MULTIPLIER.get();
+        if (multiplier != 1.0D) {
+            List<MobEffectInstance> scaled = Lists.newArrayList();
+            for (MobEffectInstance instance : list) {
+                int duration = (int) Math.max(1, Math.round(instance.getDuration() * multiplier));
+                scaled.add(new MobEffectInstance(instance.getEffect(), duration, instance.getAmplifier(),
+                        instance.isAmbient(), instance.isVisible(), instance.showIcon()));
+            }
+            list = scaled;
         }
         return list;
     }
@@ -149,6 +232,32 @@ public class JuiceClass extends PotionItem {
                     livingEntity.addEffect(new MobEffectInstance(mobeffectinstance));
                 }
             }
+
+            //Overdrink debuff: too many juices in a short window causes nausea and hunger
+            if (player != null && Config.OVERDRINK_ENABLED.get()) {
+                int window = Config.OVERDRINK_WINDOW_TICKS.get();
+                var data = player.getPersistentData();
+                var bedrock = data.getCompound(player.getUUID().toString());
+                long lastDrinkTime = bedrock.getLong("LastDrinkTime");
+                int recentDrinks = bedrock.getInt("RecentDrinks");
+
+                if (level.getGameTime() - lastDrinkTime < window) {
+                    recentDrinks++;
+                } else {
+                    recentDrinks = 1;
+                }
+
+                bedrock.putLong("LastDrinkTime", level.getGameTime());
+                bedrock.putInt("RecentDrinks", recentDrinks);
+                data.put(player.getUUID().toString(), bedrock);
+
+                if (recentDrinks >= Config.OVERDRINK_MAX_DRINKS.get()) {
+                    livingEntity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, Config.OVERDRINK_NAUSEA_TICKS.get(), 1));
+                    livingEntity.addEffect(new MobEffectInstance(MobEffects.HUNGER, Config.OVERDRINK_HUNGER_TICKS.get(), 0));
+                    bedrock.putInt("RecentDrinks", 0);
+                    data.put(player.getUUID().toString(), bedrock);
+                }
+            }
         }
         //Wanted
         if (player != null) {
@@ -159,7 +268,7 @@ public class JuiceClass extends PotionItem {
         }
 
         //Wanted
-        if (player == null || !player.getAbilities().instabuild) {
+        if (Config.RETURN_GLASS_BOTTLE.get() && (player == null || !player.getAbilities().instabuild)) {
             if (stack.isEmpty()) {
                 return new ItemStack(Init.GLASS_BOTTLE.get());
             }
@@ -179,7 +288,7 @@ public class JuiceClass extends PotionItem {
 
     @Override
     public boolean isFoil(ItemStack itemStack) {
-        return itemStack.getRarity() == Rarity.RARE;
+        return false;
     }
 
     @Override

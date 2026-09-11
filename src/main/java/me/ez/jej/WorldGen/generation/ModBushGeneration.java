@@ -26,6 +26,14 @@ public class ModBushGeneration {
         }else if (types.contains(BiomeDictionary.Type.SWAMP)){
             List<Holder<PlacedFeature>> base = e.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
             base.add(ModPlacementFeature.PATCH_WILD_BUSH);
+
+        }else if (types.contains(BiomeDictionary.Type.HOT) && types.contains(BiomeDictionary.Type.SANDY)){
+            List<Holder<PlacedFeature>> base = e.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
+            base.add(ModPlacementFeature.PATCH_SUN_BUSH);
+
+        }else if (types.contains(BiomeDictionary.Type.MOUNTAIN) || types.contains(BiomeDictionary.Type.RIVER)){
+            List<Holder<PlacedFeature>> base = e.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
+            base.add(ModPlacementFeature.PATCH_GLOW_BUSH);
         }
     }
 }

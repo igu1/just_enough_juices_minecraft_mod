@@ -1,6 +1,7 @@
 package me.ez.jej.Datagen;
 
 import me.ez.jej.Init;
+import me.ez.jej.Main;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
@@ -17,9 +18,40 @@ public class RecipeProvider extends net.minecraft.data.recipes.RecipeProvider im
         super(p_125973_);
     }
 
+    private void addJuiceRecipe(Consumer<FinishedRecipe> recipeConsumer, 
+                                net.minecraft.world.item.Item fruit, 
+                                net.minecraft.world.item.Item juice) {
+        ShapedRecipeBuilder.shaped(juice)
+                .define('M', Items.MILK_BUCKET)
+                .define('G', Init.GLASS_BOTTLE.get())
+                .define('F', fruit)
+                .pattern(" F ")
+                .pattern(" M ")
+                .pattern(" G ")
+                .unlockedBy("has_" + fruit.getRegistryName().getPath(), inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(fruit).build()))
+                .save(recipeConsumer);
+    }
+
+    private void addBoostedJuiceRecipe(Consumer<FinishedRecipe> recipeConsumer,
+                                       net.minecraft.world.item.Item baseJuice,
+                                       net.minecraft.world.item.Item boostedJuice) {
+        ShapedRecipeBuilder.shaped(boostedJuice)
+                .define('J', baseJuice)
+                .define('M', Items.MILK_BUCKET)
+                .define('E', Init.EMERALD_DUST.get())
+                .pattern(" M ")
+                .pattern(" E ")
+                .pattern(" J ")
+                .unlockedBy("has_" + baseJuice.getRegistryName().getPath(), inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(baseJuice).build()))
+                .save(recipeConsumer);
+    }
+
     @Override
     protected void buildCraftingRecipes(Consumer<FinishedRecipe> recipeConsumer) {
 
+        //Base recipes
         ShapelessRecipeBuilder.shapeless(Init.EMERALD_DUST.get(), 9)
                 .requires(Items.EMERALD)
                 .unlockedBy("has_emerald", inventoryTrigger(ItemPredicate.Builder.item()
@@ -45,257 +77,74 @@ public class RecipeProvider extends net.minecraft.data.recipes.RecipeProvider im
                         .of(Init.EMERALD_DUST.get()).build()))
                 .save(recipeConsumer);
 
-        //Apple Jucie
-        ShapedRecipeBuilder.shaped(Init.APPLE_JUICE.get())
-                .define('M', Items.MILK_BUCKET)
-                .define('G', Init.GLASS_BOTTLE.get())
+        //Juice recipes
+        addJuiceRecipe(recipeConsumer, Items.APPLE, Init.APPLE_JUICE.get());
+        addBoostedJuiceRecipe(recipeConsumer, Init.APPLE_JUICE.get(), Init.APPLE_JUICE_BOOSTED.get());
 
-                .define('F', Items.APPLE)
+        addJuiceRecipe(recipeConsumer, Items.BAKED_POTATO, Init.BAKEDPOTATO_JUICE.get());
+        addBoostedJuiceRecipe(recipeConsumer, Init.BAKEDPOTATO_JUICE.get(), Init.BAKEDPOTATO_JUICE_BOOSTED.get());
 
-                .pattern(" F ")
-                .pattern(" M ")
-                .pattern(" G ")
-                .unlockedBy("has_apple", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.APPLE).build()))
-                .save(recipeConsumer);
+        addJuiceRecipe(recipeConsumer, Items.CARROT, Init.CARROT_JUICE.get());
+        addBoostedJuiceRecipe(recipeConsumer, Init.CARROT_JUICE.get(), Init.CARROT_JUICE_BOOSTED.get());
 
-        ShapedRecipeBuilder.shaped(Init.APPLE_JUICE_BOOSTED.get())
-                .define('J', Init.APPLE_JUICE.get())
-                .define('M', Items.MILK_BUCKET)
-                .define('E', Init.EMERALD_DUST.get())
+        addJuiceRecipe(recipeConsumer, Items.DRIED_KELP, Init.DRIEDKELP_JUICE.get());
+        addBoostedJuiceRecipe(recipeConsumer, Init.DRIEDKELP_JUICE.get(), Init.DRIEDKELP_JUICE_BOOSTED.get());
 
-                .pattern(" M ")
-                .pattern(" E ")
-                .pattern(" J ")
-                .unlockedBy("has_apple_juice", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Init.APPLE_JUICE.get()).build()))
-                .save(recipeConsumer);
-        //---------------------------------------------------
-        //Baked Potato
-        ShapedRecipeBuilder.shaped(Init.BAKEDPOTATO_JUICE.get())
-                .define('M', Items.MILK_BUCKET)
-                .define('G', Init.GLASS_BOTTLE.get())
+        addJuiceRecipe(recipeConsumer, Init.ICE_BERRY.get(), Init.ICEBERRY_JUICE.get());
+        addBoostedJuiceRecipe(recipeConsumer, Init.ICEBERRY_JUICE.get(), Init.ICEBERRY_JUICE_BOOSTED.get());
 
-                .define('F', Items.BAKED_POTATO)
+        addJuiceRecipe(recipeConsumer, Items.MELON_SLICE, Init.MELON_JUICE.get());
+        addBoostedJuiceRecipe(recipeConsumer, Init.MELON_JUICE.get(), Init.MELON_JUICE_BOOSTED.get());
 
-                .pattern(" F ")
-                .pattern(" M ")
-                .pattern(" G ")
-                .unlockedBy("has_baked_potato", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.BAKED_POTATO).build()))
-                .save(recipeConsumer);
+        addJuiceRecipe(recipeConsumer, Items.PUMPKIN, Init.PUMPKIN_JUICE.get());
+        addBoostedJuiceRecipe(recipeConsumer, Init.PUMPKIN_JUICE.get(), Init.PUMPKIN_JUICE_BOOSTED.get());
 
-        ShapedRecipeBuilder.shaped(Init.BAKEDPOTATO_JUICE_BOOSTED.get())
-                .define('J', Init.BAKEDPOTATO_JUICE.get())
-                .define('M', Items.MILK_BUCKET)
-                .define('E', Init.EMERALD_DUST.get())
+        addJuiceRecipe(recipeConsumer, Items.SWEET_BERRIES, Init.SWEETBERRY_JUICE.get());
+        addBoostedJuiceRecipe(recipeConsumer, Init.SWEETBERRY_JUICE.get(), Init.SWEETBERRY_JUICE_BOOSTED.get());
 
-                .pattern(" M ")
-                .pattern(" E ")
-                .pattern(" J ")
-                .unlockedBy("has_baked_potato_juice", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Init.BAKEDPOTATO_JUICE.get()).build()))
-                .save(recipeConsumer);
-        //--------------------------------------------------------
-        //Carrot Juice
-        ShapedRecipeBuilder.shaped(Init.CARROT_JUICE.get())
-                .define('M', Items.MILK_BUCKET)
-                .define('G', Init.GLASS_BOTTLE.get())
+        addJuiceRecipe(recipeConsumer, Init.WILD_BERRY.get(), Init.WILDBERRY_JUICE.get());
+        addBoostedJuiceRecipe(recipeConsumer, Init.WILDBERRY_JUICE.get(), Init.WILDBERRY_JUICE_BOOSTED.get());
 
-                .define('F', Items.CARROT)
+        addJuiceRecipe(recipeConsumer, Items.CHORUS_FRUIT, Init.CHORUS_JUICE.get());
+        addBoostedJuiceRecipe(recipeConsumer, Init.CHORUS_JUICE.get(), Init.CHORUS_JUICE_BOOSTED.get());
 
-                .pattern(" F ")
-                .pattern(" M ")
-                .pattern(" G ")
-                .unlockedBy("has_carrot", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.CARROT).build()))
-                .save(recipeConsumer);
+        addJuiceRecipe(recipeConsumer, Init.GLOW_BERRY.get(), Init.GLOWBERRY_JUICE.get());
+        addBoostedJuiceRecipe(recipeConsumer, Init.GLOWBERRY_JUICE.get(), Init.GLOWBERRY_JUICE_BOOSTED.get());
 
-        ShapedRecipeBuilder.shaped(Init.CARROT_JUICE_BOOSTED.get())
-                .define('J', Init.CARROT_JUICE.get())
-                .define('M', Items.MILK_BUCKET)
-                .define('E', Init.EMERALD_DUST.get())
+        addJuiceRecipe(recipeConsumer, Items.CACTUS, Init.SPICY_JUICE.get());
+        addBoostedJuiceRecipe(recipeConsumer, Init.SPICY_JUICE.get(), Init.SPICY_JUICE_BOOSTED.get());
 
-                .pattern(" M ")
-                .pattern(" E ")
-                .pattern(" J ")
-                .unlockedBy("has_carrot_juice", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Init.CARROT_JUICE.get()).build()))
-                .save(recipeConsumer);
-        //------------------------------------------
-        //Dried Kelp
-        ShapedRecipeBuilder.shaped(Init.DRIEDKELP_JUICE.get())
-                .define('M', Items.MILK_BUCKET)
-                .define('G', Init.GLASS_BOTTLE.get())
+        addJuiceRecipe(recipeConsumer, Init.SUN_BERRY.get(), Init.SUNBERRY_JUICE.get());
+        addBoostedJuiceRecipe(recipeConsumer, Init.SUNBERRY_JUICE.get(), Init.SUNBERRY_JUICE_BOOSTED.get());
 
-                .define('F', Items.DRIED_KELP)
+        addJuiceRecipe(recipeConsumer, Items.BEETROOT, Init.BEETROOT_JUICE.get());
+        addBoostedJuiceRecipe(recipeConsumer, Init.BEETROOT_JUICE.get(), Init.BEETROOT_JUICE_BOOSTED.get());
 
-                .pattern(" F ")
-                .pattern(" M ")
-                .pattern(" G ")
-                .unlockedBy("has_dried_kelp", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.DRIED_KELP).build()))
-                .save(recipeConsumer);
+        addJuiceRecipe(recipeConsumer, Items.NETHER_WART, Init.NETHERWART_JUICE.get());
+        addBoostedJuiceRecipe(recipeConsumer, Init.NETHERWART_JUICE.get(), Init.NETHERWART_JUICE_BOOSTED.get());
 
-        ShapedRecipeBuilder.shaped(Init.DRIEDKELP_JUICE_BOOSTED.get())
-                .define('J', Init.DRIEDKELP_JUICE.get())
-                .define('M', Items.MILK_BUCKET)
-                .define('E', Init.EMERALD_DUST.get())
+        addJuiceRecipe(recipeConsumer, Items.COCOA_BEANS, Init.COCOA_JUICE.get());
+        addBoostedJuiceRecipe(recipeConsumer, Init.COCOA_JUICE.get(), Init.COCOA_JUICE_BOOSTED.get());
 
-                .pattern(" M ")
-                .pattern(" E ")
-                .pattern(" J ")
-                .unlockedBy("has_kelp_juice", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Init.DRIEDKELP_JUICE.get()).build()))
-                .save(recipeConsumer);
-        //--------------------------------------------------------
-        //Ice Berry
-        ShapedRecipeBuilder.shaped(Init.ICEBERRY_JUICE.get())
-                .define('M', Items.MILK_BUCKET)
-                .define('G', Init.GLASS_BOTTLE.get())
+        addJuiceRecipe(recipeConsumer, Items.IRON_INGOT, Init.GOLEM_JUICE.get());
+        addBoostedJuiceRecipe(recipeConsumer, Init.GOLEM_JUICE.get(), Init.GOLEM_JUICE_BOOSTED.get());
 
-                .define('F', Init.ICE_BERRY.get())
-
-                .pattern(" F ")
-                .pattern(" M ")
-                .pattern(" G ")
-                .unlockedBy("has_ice_berry", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Init.ICE_BERRY.get()).build()))
-                .save(recipeConsumer);
-
-        ShapedRecipeBuilder.shaped(Init.ICEBERRY_JUICE_BOOSTED.get())
-                .define('J', Init.ICEBERRY_JUICE.get())
-                .define('M', Items.MILK_BUCKET)
-                .define('E', Init.EMERALD_DUST.get())
-
-                .pattern(" M ")
-                .pattern(" E ")
-                .pattern(" J ")
-                .unlockedBy("has_ice_berry_juice", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Init.ICEBERRY_JUICE.get()).build()))
-                .save(recipeConsumer);
-        //----------------------------------------------
-        ShapedRecipeBuilder.shaped(Init.MELON_JUICE.get())
-                .define('M', Items.MILK_BUCKET)
-                .define('G', Init.GLASS_BOTTLE.get())
-
-                .define('F', Items.MELON_SLICE)
-
-                .pattern(" F ")
-                .pattern(" M ")
-                .pattern(" G ")
-                .unlockedBy("has_melon_slice", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.MELON_SLICE).build()))
-                .save(recipeConsumer);
-
-        ShapedRecipeBuilder.shaped(Init.MELON_JUICE_BOOSTED.get())
-                .define('J', Init.MELON_JUICE.get())
-                .define('M', Items.MILK_BUCKET)
-                .define('E', Init.EMERALD_DUST.get())
-
-                .pattern(" M ")
-                .pattern(" E ")
-                .pattern(" J ")
-                .unlockedBy("has_melon_juice", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Init.MELON_JUICE.get()).build()))
-                .save(recipeConsumer);
-        //------------------------------------------
-        //Pumpkin
-        ShapedRecipeBuilder.shaped(Init.PUMPKIN_JUICE.get())
-                .define('M', Items.MILK_BUCKET)
-                .define('G', Init.GLASS_BOTTLE.get())
-
-                .define('F', Items.PUMPKIN)
-
-                .pattern(" F ")
-                .pattern(" M ")
-                .pattern(" G ")
-                .unlockedBy("has_pumpkin", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.PUMPKIN).build()))
-                .save(recipeConsumer);
-
-        ShapedRecipeBuilder.shaped(Init.PUMPKIN_JUICE_BOOSTED.get())
-                .define('J', Init.PUMPKIN_JUICE.get())
-                .define('M', Items.MILK_BUCKET)
-                .define('E', Init.EMERALD_DUST.get())
-
-                .pattern(" M ")
-                .pattern(" E ")
-                .pattern(" J ")
-                .unlockedBy("has_pumpkin_juice", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Init.PUMPKIN_JUICE.get()).build()))
-                .save(recipeConsumer);
-        //------------------------------------------
-        ShapedRecipeBuilder.shaped(Init.SWEETBERRY_JUICE.get())
-                .define('M', Items.MILK_BUCKET)
-                .define('G', Init.GLASS_BOTTLE.get())
-
-                .define('F', Items.SWEET_BERRIES)
-
-                .pattern(" F ")
-                .pattern(" M ")
-                .pattern(" G ")
-                .unlockedBy("has_sweet_berry", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.SWEET_BERRIES).build()))
-                .save(recipeConsumer);
-
-        ShapedRecipeBuilder.shaped(Init.SWEETBERRY_JUICE_BOOSTED.get())
-                .define('J', Init.SWEETBERRY_JUICE.get())
-                .define('M', Items.MILK_BUCKET)
-                .define('E', Init.EMERALD_DUST.get())
-
-                .pattern(" M ")
-                .pattern(" E ")
-                .pattern(" J ")
-                .unlockedBy("has_sweet_berry_juice", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Init.SWEETBERRY_JUICE.get()).build()))
-                .save(recipeConsumer);
-        //------------------------------------------
-        ShapedRecipeBuilder.shaped(Init.WILDBERRY_JUICE.get())
-                .define('M', Items.MILK_BUCKET)
-                .define('G', Init.GLASS_BOTTLE.get())
-
-                .define('F', Init.WILD_BERRY.get())
-
-                .pattern(" F ")
-                .pattern(" M ")
-                .pattern(" G ")
-                .unlockedBy("has_wild_berry", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Init.WILD_BERRY.get()).build()))
-                .save(recipeConsumer);
-
-        ShapedRecipeBuilder.shaped(Init.WILDBERRY_JUICE_BOOSTED.get())
-                .define('J', Init.WILDBERRY_JUICE.get())
-                .define('M', Items.MILK_BUCKET)
-                .define('E', Init.EMERALD_DUST.get())
-
-                .pattern(" M ")
-                .pattern(" E ")
-                .pattern(" J ")
-                .unlockedBy("has_wild_berry_juice", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Init.WILDBERRY_JUICE.get()).build()))
-                .save(recipeConsumer);
-        //------------------------------------------
-
+        //Special recipes
         ShapedRecipeBuilder.shaped(Init.GLISTERING_MELON_JUICE.get())
                 .define('M', Items.MILK_BUCKET)
                 .define('G', Init.GLASS_BOTTLE.get())
-
                 .define('F', Items.GLISTERING_MELON_SLICE)
-
                 .pattern(" F ")
                 .pattern(" M ")
                 .pattern(" G ")
-                .unlockedBy("has_glistering_melon_juice", inventoryTrigger(ItemPredicate.Builder.item()
+                .unlockedBy("has_glistering_melon", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.GLISTERING_MELON_SLICE).build()))
                 .save(recipeConsumer);
 
         ShapedRecipeBuilder.shaped(Init.GOLDENAPPLE_JUICE.get())
                 .define('M', Items.MILK_BUCKET)
                 .define('G', Init.GLASS_BOTTLE.get())
-
                 .define('F', Items.GOLDEN_APPLE)
-
                 .pattern(" F ")
                 .pattern(" M ")
                 .pattern(" G ")
@@ -303,17 +152,21 @@ public class RecipeProvider extends net.minecraft.data.recipes.RecipeProvider im
                         .of(Items.GOLDEN_APPLE).build()))
                 .save(recipeConsumer);
 
+        addBoostedJuiceRecipe(recipeConsumer, Init.GOLDENAPPLE_JUICE.get(), Init.GOLDENAPPLE_JUICE_BOOSTED.get());
+
         ShapedRecipeBuilder.shaped(Init.GOLDENCARROT_JUICE.get())
                 .define('M', Items.MILK_BUCKET)
                 .define('G', Init.GLASS_BOTTLE.get())
-
                 .define('F', Items.GOLDEN_CARROT)
-
                 .pattern(" F ")
                 .pattern(" M ")
                 .pattern(" G ")
                 .unlockedBy("has_golden_carrot", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.GOLDEN_CARROT).build()))
                 .save(recipeConsumer);
+
+        addBoostedJuiceRecipe(recipeConsumer, Init.GOLDENCARROT_JUICE.get(), Init.GOLDENCARROT_JUICE_BOOSTED.get());
+
+        addBoostedJuiceRecipe(recipeConsumer, Init.GLISTERING_MELON_JUICE.get(), Init.GLISTERING_MELON_JUICE_BOOSTED.get());
     }
 }

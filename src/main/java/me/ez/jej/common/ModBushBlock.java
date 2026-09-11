@@ -39,11 +39,19 @@ public abstract class ModBushBlock extends BushBlock implements BonemealableBloc
 
     @Override
     public ItemStack getCloneItemStack(BlockState state, HitResult target, BlockGetter level, BlockPos pos, Player player) {
-        return state.getBlock() == Init.ICE_BERRY_BUSH.get() ? Init.ICE_BERRY.get().getDefaultInstance() : Init.WILD_BERRY.get().getDefaultInstance();
+        return DropItem(state);
     }
 
     public ItemStack DropItem(BlockState state){
-        return state.getBlock() == Init.ICE_BERRY_BUSH.get() ? Init.ICE_BERRY.get().getDefaultInstance() : Init.WILD_BERRY.get().getDefaultInstance();
+        Block block = state.getBlock();
+        if (block == Init.ICE_BERRY_BUSH.get()) {
+            return Init.ICE_BERRY.get().getDefaultInstance();
+        } else if (block == Init.SUN_BERRY_BUSH.get()) {
+            return Init.SUN_BERRY.get().getDefaultInstance();
+        } else if (block == Init.GLOW_BERRY_BUSH.get()) {
+            return Init.GLOW_BERRY.get().getDefaultInstance();
+        }
+        return Init.WILD_BERRY.get().getDefaultInstance();
     }
 
     @Override

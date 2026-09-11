@@ -1,0 +1,6 @@
+{
+  "parent": "jej:item/juice_bottle",
+  "textures": {
+    "liquid": "jej:item/netherwart_liquid_boosted"
+  }
+}

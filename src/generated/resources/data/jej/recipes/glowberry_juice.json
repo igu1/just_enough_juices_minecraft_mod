@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " F ",
+    " M ",
+    " G "
+  ],
+  "key": {
+    "M": {
+      "item": "minecraft:milk_bucket"
+    },
+    "G": {
+      "item": "jej:glass_bottle"
+    },
+    "F": {
+      "item": "jej:glow_berry"
+    }
+  },
+  "result": {
+    "item": "jej:glowberry_juice"
+  }
+}

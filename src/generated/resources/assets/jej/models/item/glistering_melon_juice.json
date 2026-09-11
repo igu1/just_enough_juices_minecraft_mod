@@ -1,6 +1,6 @@
 {
-  "parent": "minecraft:item/generated",
+  "parent": "jej:item/juice_bottle",
   "textures": {
-    "layer0": "jej:item/glistering_melon_juice"
+    "liquid": "jej:item/glistering_melon_liquid"
   }
 }

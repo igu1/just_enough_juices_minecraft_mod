@@ -27,6 +27,10 @@ public class ModConfiguredFeature<E, I> {
 
     public static final Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> PATCH_WILD_BERRY_BUSH = PatchBush(Init.WILD_BERRY_BUSH.get(),blocks, "wild");
 
+    public static final Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> PATCH_SUN_BERRY_BUSH = PatchBush(Init.SUN_BERRY_BUSH.get(), List.of(Blocks.SAND, Blocks.RED_SAND), "sun");
+
+    public static final Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> PATCH_GLOW_BERRY_BUSH = PatchBush(Init.GLOW_BERRY_BUSH.get(), List.of(Blocks.STONE, Blocks.DEEPSLATE), "glow");
+
 
     private static Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> PatchBush(BushBlock block, List<Block> PlaceableBlockList, String registerName){
         return FeatureUtils.register("patch_" + registerName + "_bush",
