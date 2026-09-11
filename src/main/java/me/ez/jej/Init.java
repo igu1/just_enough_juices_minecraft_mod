@@ -3,6 +3,7 @@ package me.ez.jej;
 import me.ez.jej.common.Effects.CaffeinatedEffect;
 import me.ez.jej.common.Effects.FloatEffect;
 import me.ez.jej.common.Effects.IcyFootEffect;
+import me.ez.jej.common.Effects.JuiceEffect;
 import me.ez.jej.common.Effects.MagnetEffect;
 import me.ez.jej.common.Effects.SpicyEffect;
 import me.ez.jej.common.JuiceClass;
@@ -12,6 +13,7 @@ import me.ez.jej.common.Bushes.SunBerryBush;
 import me.ez.jej.common.Bushes.WildBerryBush;
 import me.ez.jej.common.TomatoBlock;
 import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -113,5 +115,150 @@ public class Init {
     public static final RegistryObject<MobEffect> SPICY = EFFECT.register("spicy", () -> new SpicyEffect(0xFF4500));
     public static final RegistryObject<MobEffect> MAGNET = EFFECT.register("magnet", () -> new MagnetEffect(0x9400D3));
     public static final RegistryObject<MobEffect> FLOAT = EFFECT.register("float", () -> new FloatEffect(0x87CEEB));
+
+    //Per-Juice Custom Effects
+    public static final RegistryObject<MobEffect> APPLE_EFFECT = EFFECT.register("apple_effect", () -> new JuiceEffect(0xDC143C,
+            app(MobEffects.NIGHT_VISION, 0)));
+    public static final RegistryObject<MobEffect> APPLE_BOOSTED_EFFECT = EFFECT.register("apple_boosted_effect", () -> new JuiceEffect(0xDC143C,
+            app(MobEffects.NIGHT_VISION, 0),
+            app(MobEffects.REGENERATION, 0)));
+
+    public static final RegistryObject<MobEffect> SWEETBERRY_EFFECT = EFFECT.register("sweetberry_effect", () -> new JuiceEffect(0xFF1493,
+            app(MobEffects.MOVEMENT_SPEED, 0)));
+    public static final RegistryObject<MobEffect> SWEETBERRY_BOOSTED_EFFECT = EFFECT.register("sweetberry_boosted_effect", () -> new JuiceEffect(0xFF1493,
+            app(MobEffects.MOVEMENT_SPEED, 1)));
+
+    public static final RegistryObject<MobEffect> CARROT_EFFECT = EFFECT.register("carrot_effect", () -> new JuiceEffect(0xFF8C00,
+            app(MobEffects.DAMAGE_BOOST, 0)));
+    public static final RegistryObject<MobEffect> CARROT_BOOSTED_EFFECT = EFFECT.register("carrot_boosted_effect", () -> new JuiceEffect(0xFF8C00,
+            app(MobEffects.DAMAGE_BOOST, 0),
+            app(MobEffects.DAMAGE_RESISTANCE, 0)));
+
+    public static final RegistryObject<MobEffect> BAKEDPOTATO_EFFECT = EFFECT.register("bakedpotato_effect", () -> new JuiceEffect(0xD2B48C,
+            app(MobEffects.NIGHT_VISION, 0),
+            app(MobEffects.DIG_SPEED, 0)));
+    public static final RegistryObject<MobEffect> BAKEDPOTATO_BOOSTED_EFFECT = EFFECT.register("bakedpotato_boosted_effect", () -> new JuiceEffect(0xD2B48C,
+            app(MobEffects.DIG_SPEED, 1)));
+
+    public static final RegistryObject<MobEffect> MELON_EFFECT = EFFECT.register("melon_effect", () -> new JuiceEffect(0x7CFC00,
+            app(MobEffects.JUMP, 0)));
+    public static final RegistryObject<MobEffect> MELON_BOOSTED_EFFECT = EFFECT.register("melon_boosted_effect", () -> new JuiceEffect(0x7CFC00,
+            app(MobEffects.JUMP, 1)));
+
+    public static final RegistryObject<MobEffect> PUMPKIN_EFFECT = EFFECT.register("pumpkin_effect", () -> new JuiceEffect(0xFFA500,
+            app(MobEffects.INVISIBILITY, 0)));
+    public static final RegistryObject<MobEffect> PUMPKIN_BOOSTED_EFFECT = EFFECT.register("pumpkin_boosted_effect", () -> new JuiceEffect(0xFFA500,
+            app(MobEffects.INVISIBILITY, 0)));
+
+    public static final RegistryObject<MobEffect> ICEBERRY_EFFECT = EFFECT.register("iceberry_effect", () -> new JuiceEffect(0xAFEEEE,
+            app(ICYFOOTEFFECT.get(), 0)));
+    public static final RegistryObject<MobEffect> ICEBERRY_BOOSTED_EFFECT = EFFECT.register("iceberry_boosted_effect", () -> new JuiceEffect(0xAFEEEE,
+            app(ICYFOOTEFFECT.get(), 0),
+            app(MobEffects.WATER_BREATHING, 0)));
+
+    public static final RegistryObject<MobEffect> WILDBERRY_EFFECT = EFFECT.register("wildberry_effect", () -> new JuiceEffect(0x8B008B,
+            app(MobEffects.ABSORPTION, 0)));
+    public static final RegistryObject<MobEffect> WILDBERRY_BOOSTED_EFFECT = EFFECT.register("wildberry_boosted_effect", () -> new JuiceEffect(0x8B008B,
+            app(MobEffects.ABSORPTION, 1),
+            app(MobEffects.DAMAGE_BOOST, 0)));
+
+    public static final RegistryObject<MobEffect> DRIEDKELP_EFFECT = EFFECT.register("driedkelp_effect", () -> new JuiceEffect(0x006400,
+            app(MobEffects.DOLPHINS_GRACE, 0)));
+    public static final RegistryObject<MobEffect> DRIEDKELP_BOOSTED_EFFECT = EFFECT.register("driedkelp_boosted_effect", () -> new JuiceEffect(0x006400,
+            app(MobEffects.DOLPHINS_GRACE, 0),
+            app(MobEffects.WATER_BREATHING, 0)));
+
+    public static final RegistryObject<MobEffect> GLISTERING_MELON_EFFECT = EFFECT.register("glistering_melon_effect", () -> new JuiceEffect(0xFFE4B5,
+            app(MobEffects.REGENERATION, 0),
+            app(MobEffects.SLOW_FALLING, 0),
+            app(MobEffects.MOVEMENT_SPEED, 0)));
+    public static final RegistryObject<MobEffect> GLISTERING_MELON_BOOSTED_EFFECT = EFFECT.register("glistering_melon_boosted_effect", () -> new JuiceEffect(0xFFE4B5,
+            app(MobEffects.REGENERATION, 1),
+            app(MobEffects.SLOW_FALLING, 0),
+            app(MobEffects.MOVEMENT_SPEED, 0),
+            app(MobEffects.SATURATION, 0)));
+
+    public static final RegistryObject<MobEffect> GOLDENAPPLE_EFFECT = EFFECT.register("goldenapple_effect", () -> new JuiceEffect(0xFFD700,
+            app(MobEffects.ABSORPTION, 0),
+            app(MobEffects.FIRE_RESISTANCE, 0),
+            app(MobEffects.NIGHT_VISION, 0)));
+    public static final RegistryObject<MobEffect> GOLDENAPPLE_BOOSTED_EFFECT = EFFECT.register("goldenapple_boosted_effect", () -> new JuiceEffect(0xFFD700,
+            app(MobEffects.ABSORPTION, 0),
+            app(MobEffects.FIRE_RESISTANCE, 0),
+            app(MobEffects.NIGHT_VISION, 0),
+            app(MobEffects.REGENERATION, 1),
+            app(MobEffects.DAMAGE_RESISTANCE, 0)));
+
+    public static final RegistryObject<MobEffect> GOLDENCARROT_EFFECT = EFFECT.register("goldencarrot_effect", () -> new JuiceEffect(0xDAA520,
+            app(MobEffects.NIGHT_VISION, 0),
+            app(MobEffects.WATER_BREATHING, 0),
+            app(MobEffects.DOLPHINS_GRACE, 1)));
+    public static final RegistryObject<MobEffect> GOLDENCARROT_BOOSTED_EFFECT = EFFECT.register("goldencarrot_boosted_effect", () -> new JuiceEffect(0xDAA520,
+            app(MobEffects.NIGHT_VISION, 0),
+            app(MobEffects.WATER_BREATHING, 0),
+            app(MobEffects.DOLPHINS_GRACE, 1),
+            app(MobEffects.LUCK, 1)));
+
+    public static final RegistryObject<MobEffect> CHORUS_EFFECT = EFFECT.register("chorus_effect", () -> new JuiceEffect(0xBA55D3,
+            app(MobEffects.LEVITATION, 0),
+            app(MobEffects.SLOW_FALLING, 0)));
+    public static final RegistryObject<MobEffect> CHORUS_BOOSTED_EFFECT = EFFECT.register("chorus_boosted_effect", () -> new JuiceEffect(0xBA55D3,
+            app(MobEffects.LEVITATION, 0),
+            app(MobEffects.SLOW_FALLING, 1)));
+
+    public static final RegistryObject<MobEffect> GLOWBERRY_EFFECT = EFFECT.register("glowberry_effect", () -> new JuiceEffect(0xFFFF00,
+            app(MobEffects.GLOWING, 0),
+            app(MobEffects.NIGHT_VISION, 0)));
+    public static final RegistryObject<MobEffect> GLOWBERRY_BOOSTED_EFFECT = EFFECT.register("glowberry_boosted_effect", () -> new JuiceEffect(0xFFFF00,
+            app(MobEffects.GLOWING, 0),
+            app(MobEffects.NIGHT_VISION, 0),
+            app(FLOAT.get(), 0)));
+
+    public static final RegistryObject<MobEffect> SPICY_EFFECT = EFFECT.register("spicy_effect", () -> new JuiceEffect(0xFF4500,
+            app(SPICY.get(), 0),
+            app(MobEffects.FIRE_RESISTANCE, 0)));
+    public static final RegistryObject<MobEffect> SPICY_BOOSTED_EFFECT = EFFECT.register("spicy_boosted_effect", () -> new JuiceEffect(0xFF4500,
+            app(SPICY.get(), 1),
+            app(MobEffects.FIRE_RESISTANCE, 0),
+            app(MobEffects.DAMAGE_BOOST, 0)));
+
+    public static final RegistryObject<MobEffect> GOLEM_EFFECT = EFFECT.register("golem_effect", () -> new JuiceEffect(0xA9A9A9,
+            app(MobEffects.ABSORPTION, 2),
+            app(MobEffects.DAMAGE_RESISTANCE, 0),
+            app(MobEffects.MOVEMENT_SLOWDOWN, 0)));
+    public static final RegistryObject<MobEffect> GOLEM_BOOSTED_EFFECT = EFFECT.register("golem_boosted_effect", () -> new JuiceEffect(0xA9A9A9,
+            app(MobEffects.ABSORPTION, 4),
+            app(MobEffects.DAMAGE_RESISTANCE, 1),
+            app(MobEffects.MOVEMENT_SLOWDOWN, 0)));
+
+    public static final RegistryObject<MobEffect> SUNBERRY_EFFECT = EFFECT.register("sunberry_effect", () -> new JuiceEffect(0xFFFF66,
+            app(CAFFEINATED.get(), 0),
+            app(MobEffects.MOVEMENT_SPEED, 1)));
+    public static final RegistryObject<MobEffect> SUNBERRY_BOOSTED_EFFECT = EFFECT.register("sunberry_boosted_effect", () -> new JuiceEffect(0xFFFF66,
+            app(CAFFEINATED.get(), 1),
+            app(MobEffects.MOVEMENT_SPEED, 1),
+            app(MobEffects.JUMP, 0)));
+
+    public static final RegistryObject<MobEffect> BEETROOT_EFFECT = EFFECT.register("beetroot_effect", () -> new JuiceEffect(0x8B0000,
+            app(MobEffects.SATURATION, 0)));
+    public static final RegistryObject<MobEffect> BEETROOT_BOOSTED_EFFECT = EFFECT.register("beetroot_boosted_effect", () -> new JuiceEffect(0x8B0000,
+            app(MobEffects.SATURATION, 0),
+            app(MobEffects.DAMAGE_RESISTANCE, 0)));
+
+    public static final RegistryObject<MobEffect> NETHERWART_EFFECT = EFFECT.register("netherwart_effect", () -> new JuiceEffect(0x800000,
+            app(MobEffects.FIRE_RESISTANCE, 0)));
+    public static final RegistryObject<MobEffect> NETHERWART_BOOSTED_EFFECT = EFFECT.register("netherwart_boosted_effect", () -> new JuiceEffect(0x800000,
+            app(MobEffects.FIRE_RESISTANCE, 0),
+            app(MobEffects.DAMAGE_BOOST, 0)));
+
+    public static final RegistryObject<MobEffect> COCOA_EFFECT = EFFECT.register("cocoa_effect", () -> new JuiceEffect(0x8B4513,
+            app(MobEffects.DIG_SPEED, 0)));
+    public static final RegistryObject<MobEffect> COCOA_BOOSTED_EFFECT = EFFECT.register("cocoa_boosted_effect", () -> new JuiceEffect(0x8B4513,
+            app(MobEffects.DIG_SPEED, 1),
+            app(MobEffects.NIGHT_VISION, 0)));
+
+    private static JuiceEffect.JuiceApplication app(MobEffect effect, int amplifier) {
+        return new JuiceEffect.JuiceApplication(effect, amplifier);
+    }
 
 }

@@ -45,158 +45,143 @@ public class JuiceClass extends PotionItem {
         List<MobEffectInstance> list = Lists.newArrayList();
 
         if (Init.APPLE_JUICE.get() == stack.getItem() || Init.APPLE_JUICE_BOOSTED.get() == stack.getItem()) {
-            list.add(new MobEffectInstance(MobEffects.NIGHT_VISION, 3600, 0));
-            if (Init.APPLE_JUICE_BOOSTED.get() == stack.getItem()) {
-                list.add(new MobEffectInstance(MobEffects.REGENERATION, 200, 0));
-                list.add(new MobEffectInstance(MobEffects.NIGHT_VISION, 3600, 0));
-
-
+            if (stack.getItem() == Init.APPLE_JUICE_BOOSTED.get()) {
+                list.add(new MobEffectInstance(Init.APPLE_BOOSTED_EFFECT.get(), 3600, 0));
+            } else {
+                list.add(new MobEffectInstance(Init.APPLE_EFFECT.get(), 3600, 0));
             }
 
         } else if (Init.SWEETBERRY_JUICE.get() == stack.getItem() || Init.SWEETBERRY_JUICE_BOOSTED.get() == stack.getItem()) {
             if (stack.getItem() == Init.SWEETBERRY_JUICE_BOOSTED.get()) {
-                list.add(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 3600, 1));
+                list.add(new MobEffectInstance(Init.SWEETBERRY_BOOSTED_EFFECT.get(), 3600, 0));
             } else {
-                list.add(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 1200, 0));
+                list.add(new MobEffectInstance(Init.SWEETBERRY_EFFECT.get(), 1200, 0));
             }
 
         } else if (Init.MELON_JUICE.get() == stack.getItem() || Init.MELON_JUICE_BOOSTED.get() == stack.getItem()) {
             if (stack.getItem() == Init.MELON_JUICE_BOOSTED.get()) {
-                list.add(new MobEffectInstance(MobEffects.JUMP, 3600, 1));
+                list.add(new MobEffectInstance(Init.MELON_BOOSTED_EFFECT.get(), 3600, 0));
             } else {
-                list.add(new MobEffectInstance(MobEffects.JUMP, 1200, 0));
+                list.add(new MobEffectInstance(Init.MELON_EFFECT.get(), 1200, 0));
             }
 
         } else if (Init.BAKEDPOTATO_JUICE.get() == stack.getItem() || Init.BAKEDPOTATO_JUICE_BOOSTED.get() == stack.getItem()) {
             if (stack.getItem() == Init.BAKEDPOTATO_JUICE_BOOSTED.get()) {
-                list.add(new MobEffectInstance(MobEffects.DIG_SPEED, 2400, 1));
+                list.add(new MobEffectInstance(Init.BAKEDPOTATO_BOOSTED_EFFECT.get(), 2400, 0));
             } else {
-                list.add(new MobEffectInstance(MobEffects.NIGHT_VISION, 3600, 0));
-                list.add(new MobEffectInstance(MobEffects.DIG_SPEED, 1600, 0));
+                list.add(new MobEffectInstance(Init.BAKEDPOTATO_EFFECT.get(), 3600, 0));
             }
 
         } else if (Init.PUMPKIN_JUICE.get() == stack.getItem() || Init.PUMPKIN_JUICE_BOOSTED.get() == stack.getItem()) {
             if (stack.getItem() == Init.PUMPKIN_JUICE_BOOSTED.get()) {
-                list.add(new MobEffectInstance(MobEffects.INVISIBILITY, 2400, 0));
+                list.add(new MobEffectInstance(Init.PUMPKIN_BOOSTED_EFFECT.get(), 2400, 0));
             } else {
-                list.add(new MobEffectInstance(MobEffects.INVISIBILITY, 1200, 0));
+                list.add(new MobEffectInstance(Init.PUMPKIN_EFFECT.get(), 1200, 0));
             }
 
         } else if (Init.WILDBERRY_JUICE.get() == stack.getItem() || Init.WILDBERRY_JUICE_BOOSTED.get() == stack.getItem()) {
             if (stack.getItem() == Init.WILDBERRY_JUICE_BOOSTED.get()) {
-                list.add(new MobEffectInstance(MobEffects.ABSORPTION, 1200, 1));
-                list.add(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 1200, 0));
+                list.add(new MobEffectInstance(Init.WILDBERRY_BOOSTED_EFFECT.get(), 1200, 0));
             } else {
-                list.add(new MobEffectInstance(MobEffects.ABSORPTION, 1100, 0));
+                list.add(new MobEffectInstance(Init.WILDBERRY_EFFECT.get(), 1100, 0));
             }
 
         } else if (Init.ICEBERRY_JUICE.get() == stack.getItem() || Init.ICEBERRY_JUICE_BOOSTED.get() == stack.getItem()) {
             if (stack.getItem() == Init.ICEBERRY_JUICE_BOOSTED.get()) {
-                list.add(new MobEffectInstance(Init.ICYFOOTEFFECT.get(), 1200, 0));
-                list.add(new MobEffectInstance(MobEffects.WATER_BREATHING, 3600, 0));
+                list.add(new MobEffectInstance(Init.ICEBERRY_BOOSTED_EFFECT.get(), 1200, 0));
             } else {
-                list.add(new MobEffectInstance(Init.ICYFOOTEFFECT.get(), 1200, 0));
+                list.add(new MobEffectInstance(Init.ICEBERRY_EFFECT.get(), 1200, 0));
             }
 
         } else if (Init.DRIEDKELP_JUICE.get() == stack.getItem() || Init.DRIEDKELP_JUICE_BOOSTED.get() == stack.getItem()) {
             if (stack.getItem() == Init.DRIEDKELP_JUICE_BOOSTED.get()) {
-                list.add(new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 2400, 0));
-                list.add(new MobEffectInstance(MobEffects.WATER_BREATHING, 3600, 0));
+                list.add(new MobEffectInstance(Init.DRIEDKELP_BOOSTED_EFFECT.get(), 2400, 0));
             } else {
-                list.add(new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 1200, 0));
+                list.add(new MobEffectInstance(Init.DRIEDKELP_EFFECT.get(), 1200, 0));
             }
 
         } else if (Init.CARROT_JUICE.get() == stack.getItem() || Init.CARROT_JUICE_BOOSTED.get() == stack.getItem()) {
             if (stack.getItem() == Init.CARROT_JUICE_BOOSTED.get()) {
-                list.add(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 3600, 0));
-                list.add(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 3600, 0));
+                list.add(new MobEffectInstance(Init.CARROT_BOOSTED_EFFECT.get(), 3600, 0));
             } else {
-                list.add(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 1200, 0));
+                list.add(new MobEffectInstance(Init.CARROT_EFFECT.get(), 1200, 0));
             }
+
         } else if (Init.GLISTERING_MELON_JUICE.get() == stack.getItem() || Init.GLISTERING_MELON_JUICE_BOOSTED.get() == stack.getItem()) {
-            list.add(new MobEffectInstance(MobEffects.REGENERATION, 200, 0));
-            list.add(new MobEffectInstance(MobEffects.SLOW_FALLING, 1200, 0));
-            list.add(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 2400, 0));
-            if (Init.GLISTERING_MELON_JUICE_BOOSTED.get() == stack.getItem()) {
-                list.add(new MobEffectInstance(MobEffects.REGENERATION, 400, 1));
-                list.add(new MobEffectInstance(MobEffects.SATURATION, 200, 0));
+            if (stack.getItem() == Init.GLISTERING_MELON_JUICE_BOOSTED.get()) {
+                list.add(new MobEffectInstance(Init.GLISTERING_MELON_BOOSTED_EFFECT.get(), 2400, 0));
+            } else {
+                list.add(new MobEffectInstance(Init.GLISTERING_MELON_EFFECT.get(), 2400, 0));
             }
 
         } else if (Init.GOLDENAPPLE_JUICE.get() == stack.getItem() || Init.GOLDENAPPLE_JUICE_BOOSTED.get() == stack.getItem()) {
-            list.add(new MobEffectInstance(MobEffects.ABSORPTION, 3600, 0));
-            list.add(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 1200, 0));
-            list.add(new MobEffectInstance(MobEffects.NIGHT_VISION, 3600, 0));
-            if (Init.GOLDENAPPLE_JUICE_BOOSTED.get() == stack.getItem()) {
-                list.add(new MobEffectInstance(MobEffects.REGENERATION, 600, 1));
-                list.add(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 3600, 0));
+            if (stack.getItem() == Init.GOLDENAPPLE_JUICE_BOOSTED.get()) {
+                list.add(new MobEffectInstance(Init.GOLDENAPPLE_BOOSTED_EFFECT.get(), 3600, 0));
+            } else {
+                list.add(new MobEffectInstance(Init.GOLDENAPPLE_EFFECT.get(), 3600, 0));
             }
 
         } else if (Init.GOLDENCARROT_JUICE.get() == stack.getItem() || Init.GOLDENCARROT_JUICE_BOOSTED.get() == stack.getItem()) {
-            list.add(new MobEffectInstance(MobEffects.NIGHT_VISION, 3600, 0));
-            list.add(new MobEffectInstance(MobEffects.WATER_BREATHING, 3600, 0));
-            list.add(new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 2400, 1));
-            if (Init.GOLDENCARROT_JUICE_BOOSTED.get() == stack.getItem()) {
-                list.add(new MobEffectInstance(MobEffects.LUCK, 3600, 1));
+            if (stack.getItem() == Init.GOLDENCARROT_JUICE_BOOSTED.get()) {
+                list.add(new MobEffectInstance(Init.GOLDENCARROT_BOOSTED_EFFECT.get(), 3600, 0));
+            } else {
+                list.add(new MobEffectInstance(Init.GOLDENCARROT_EFFECT.get(), 3600, 0));
             }
 
         } else if (Init.CHORUS_JUICE.get() == stack.getItem() || Init.CHORUS_JUICE_BOOSTED.get() == stack.getItem()) {
-            list.add(new MobEffectInstance(MobEffects.LEVITATION, 200, 0));
-            list.add(new MobEffectInstance(MobEffects.SLOW_FALLING, 1200, 0));
-            if (Init.CHORUS_JUICE_BOOSTED.get() == stack.getItem()) {
-                list.add(new MobEffectInstance(MobEffects.SLOW_FALLING, 3600, 1));
+            if (stack.getItem() == Init.CHORUS_JUICE_BOOSTED.get()) {
+                list.add(new MobEffectInstance(Init.CHORUS_BOOSTED_EFFECT.get(), 3600, 0));
+            } else {
+                list.add(new MobEffectInstance(Init.CHORUS_EFFECT.get(), 1200, 0));
             }
 
         } else if (Init.GLOWBERRY_JUICE.get() == stack.getItem() || Init.GLOWBERRY_JUICE_BOOSTED.get() == stack.getItem()) {
-            list.add(new MobEffectInstance(MobEffects.GLOWING, 3600, 0));
-            list.add(new MobEffectInstance(MobEffects.NIGHT_VISION, 3600, 0));
-            if (Init.GLOWBERRY_JUICE_BOOSTED.get() == stack.getItem()) {
-                list.add(new MobEffectInstance(Init.FLOAT.get(), 2400, 0));
+            if (stack.getItem() == Init.GLOWBERRY_JUICE_BOOSTED.get()) {
+                list.add(new MobEffectInstance(Init.GLOWBERRY_BOOSTED_EFFECT.get(), 2400, 0));
+            } else {
+                list.add(new MobEffectInstance(Init.GLOWBERRY_EFFECT.get(), 3600, 0));
             }
 
         } else if (Init.SPICY_JUICE.get() == stack.getItem() || Init.SPICY_JUICE_BOOSTED.get() == stack.getItem()) {
-            list.add(new MobEffectInstance(Init.SPICY.get(), 1200, 0));
-            list.add(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 1200, 0));
-            if (Init.SPICY_JUICE_BOOSTED.get() == stack.getItem()) {
-                list.add(new MobEffectInstance(Init.SPICY.get(), 2400, 1));
-                list.add(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 1200, 0));
+            if (stack.getItem() == Init.SPICY_JUICE_BOOSTED.get()) {
+                list.add(new MobEffectInstance(Init.SPICY_BOOSTED_EFFECT.get(), 2400, 0));
+            } else {
+                list.add(new MobEffectInstance(Init.SPICY_EFFECT.get(), 1200, 0));
             }
 
         } else if (Init.GOLEM_JUICE.get() == stack.getItem() || Init.GOLEM_JUICE_BOOSTED.get() == stack.getItem()) {
-            list.add(new MobEffectInstance(MobEffects.ABSORPTION, 3600, 2));
-            list.add(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 3600, 0));
-            list.add(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 2400, 0));
-            if (Init.GOLEM_JUICE_BOOSTED.get() == stack.getItem()) {
-                list.add(new MobEffectInstance(MobEffects.ABSORPTION, 4800, 4));
-                list.add(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 4800, 1));
+            if (stack.getItem() == Init.GOLEM_JUICE_BOOSTED.get()) {
+                list.add(new MobEffectInstance(Init.GOLEM_BOOSTED_EFFECT.get(), 4800, 0));
+            } else {
+                list.add(new MobEffectInstance(Init.GOLEM_EFFECT.get(), 3600, 0));
             }
 
         } else if (Init.SUNBERRY_JUICE.get() == stack.getItem() || Init.SUNBERRY_JUICE_BOOSTED.get() == stack.getItem()) {
-            list.add(new MobEffectInstance(Init.CAFFEINATED.get(), 2400, 0));
-            list.add(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 2400, 1));
-            if (Init.SUNBERRY_JUICE_BOOSTED.get() == stack.getItem()) {
-                list.add(new MobEffectInstance(Init.CAFFEINATED.get(), 4800, 1));
-                list.add(new MobEffectInstance(MobEffects.JUMP, 2400, 0));
+            if (stack.getItem() == Init.SUNBERRY_JUICE_BOOSTED.get()) {
+                list.add(new MobEffectInstance(Init.SUNBERRY_BOOSTED_EFFECT.get(), 4800, 0));
+            } else {
+                list.add(new MobEffectInstance(Init.SUNBERRY_EFFECT.get(), 2400, 0));
             }
 
         } else if (Init.BEETROOT_JUICE.get() == stack.getItem() || Init.BEETROOT_JUICE_BOOSTED.get() == stack.getItem()) {
-            list.add(new MobEffectInstance(MobEffects.SATURATION, 200, 0));
-            if (Init.BEETROOT_JUICE_BOOSTED.get() == stack.getItem()) {
-                list.add(new MobEffectInstance(MobEffects.SATURATION, 400, 0));
-                list.add(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 2400, 0));
+            if (stack.getItem() == Init.BEETROOT_JUICE_BOOSTED.get()) {
+                list.add(new MobEffectInstance(Init.BEETROOT_BOOSTED_EFFECT.get(), 400, 0));
+            } else {
+                list.add(new MobEffectInstance(Init.BEETROOT_EFFECT.get(), 200, 0));
             }
 
         } else if (Init.NETHERWART_JUICE.get() == stack.getItem() || Init.NETHERWART_JUICE_BOOSTED.get() == stack.getItem()) {
-            list.add(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 1800, 0));
-            if (Init.NETHERWART_JUICE_BOOSTED.get() == stack.getItem()) {
-                list.add(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 3600, 0));
-                list.add(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 1200, 0));
+            if (stack.getItem() == Init.NETHERWART_JUICE_BOOSTED.get()) {
+                list.add(new MobEffectInstance(Init.NETHERWART_BOOSTED_EFFECT.get(), 3600, 0));
+            } else {
+                list.add(new MobEffectInstance(Init.NETHERWART_EFFECT.get(), 1800, 0));
             }
 
         } else if (Init.COCOA_JUICE.get() == stack.getItem() || Init.COCOA_JUICE_BOOSTED.get() == stack.getItem()) {
-            list.add(new MobEffectInstance(MobEffects.DIG_SPEED, 1200, 0));
-            if (Init.COCOA_JUICE_BOOSTED.get() == stack.getItem()) {
-                list.add(new MobEffectInstance(MobEffects.DIG_SPEED, 2400, 1));
-                list.add(new MobEffectInstance(MobEffects.NIGHT_VISION, 1200, 0));
+            if (stack.getItem() == Init.COCOA_JUICE_BOOSTED.get()) {
+                list.add(new MobEffectInstance(Init.COCOA_BOOSTED_EFFECT.get(), 2400, 0));
+            } else {
+                list.add(new MobEffectInstance(Init.COCOA_EFFECT.get(), 1200, 0));
             }
 
         }

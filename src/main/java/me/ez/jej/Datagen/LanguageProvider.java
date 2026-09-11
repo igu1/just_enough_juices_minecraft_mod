@@ -75,6 +75,48 @@ public class LanguageProvider extends net.minecraftforge.common.data.LanguagePro
         add(Init.MAGNET.get(), "Magnet");
         add(Init.FLOAT.get(), "Float");
 
+        //Per-Juice Custom Effects
+        add(Init.APPLE_EFFECT.get(), "Apple Sight");
+        add(Init.APPLE_BOOSTED_EFFECT.get(), "Empowered Apple Sight");
+        add(Init.SWEETBERRY_EFFECT.get(), "Berry Rush");
+        add(Init.SWEETBERRY_BOOSTED_EFFECT.get(), "Empowered Berry Rush");
+        add(Init.CARROT_EFFECT.get(), "Keen Carrot");
+        add(Init.CARROT_BOOSTED_EFFECT.get(), "Empowered Keen Carrot");
+        add(Init.BAKEDPOTATO_EFFECT.get(), "Starch Stamina");
+        add(Init.BAKEDPOTATO_BOOSTED_EFFECT.get(), "Empowered Starch Stamina");
+        add(Init.MELON_EFFECT.get(), "Melon Bounce");
+        add(Init.MELON_BOOSTED_EFFECT.get(), "Empowered Melon Bounce");
+        add(Init.PUMPKIN_EFFECT.get(), "Pumpkin Shroud");
+        add(Init.PUMPKIN_BOOSTED_EFFECT.get(), "Empowered Pumpkin Shroud");
+        add(Init.ICEBERRY_EFFECT.get(), "Frozen Footing");
+        add(Init.ICEBERRY_BOOSTED_EFFECT.get(), "Empowered Frozen Footing");
+        add(Init.WILDBERRY_EFFECT.get(), "Wild Vitality");
+        add(Init.WILDBERRY_BOOSTED_EFFECT.get(), "Empowered Wild Vitality");
+        add(Init.DRIEDKELP_EFFECT.get(), "Kelp Current");
+        add(Init.DRIEDKELP_BOOSTED_EFFECT.get(), "Empowered Kelp Current");
+        add(Init.GLISTERING_MELON_EFFECT.get(), "Glistering Vitality");
+        add(Init.GLISTERING_MELON_BOOSTED_EFFECT.get(), "Empowered Glistering Vitality");
+        add(Init.GOLDENAPPLE_EFFECT.get(), "Golden Blessing");
+        add(Init.GOLDENAPPLE_BOOSTED_EFFECT.get(), "Empowered Golden Blessing");
+        add(Init.GOLDENCARROT_EFFECT.get(), "Golden Clarity");
+        add(Init.GOLDENCARROT_BOOSTED_EFFECT.get(), "Empowered Golden Clarity");
+        add(Init.CHORUS_EFFECT.get(), "Chorus Drift");
+        add(Init.CHORUS_BOOSTED_EFFECT.get(), "Empowered Chorus Drift");
+        add(Init.GLOWBERRY_EFFECT.get(), "Glow Sight");
+        add(Init.GLOWBERRY_BOOSTED_EFFECT.get(), "Empowered Glow Sight");
+        add(Init.SPICY_EFFECT.get(), "Spicy Aura");
+        add(Init.SPICY_BOOSTED_EFFECT.get(), "Empowered Spicy Aura");
+        add(Init.GOLEM_EFFECT.get(), "Golem Strength");
+        add(Init.GOLEM_BOOSTED_EFFECT.get(), "Empowered Golem Strength");
+        add(Init.SUNBERRY_EFFECT.get(), "Solar Energy");
+        add(Init.SUNBERRY_BOOSTED_EFFECT.get(), "Empowered Solar Energy");
+        add(Init.BEETROOT_EFFECT.get(), "Beetroot Feast");
+        add(Init.BEETROOT_BOOSTED_EFFECT.get(), "Empowered Beetroot Feast");
+        add(Init.NETHERWART_EFFECT.get(), "Nether Ward");
+        add(Init.NETHERWART_BOOSTED_EFFECT.get(), "Empowered Nether Ward");
+        add(Init.COCOA_EFFECT.get(), "Cocoa Focus");
+        add(Init.COCOA_BOOSTED_EFFECT.get(), "Empowered Cocoa Focus");
+
         //item
         add(Init.EMERALD_DUST.get(), "Emerald Dust");
         add(Init.GLASS_BOTTLE.get(), "Glass Bottle");
