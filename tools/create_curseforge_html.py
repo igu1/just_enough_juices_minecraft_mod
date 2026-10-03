@@ -129,7 +129,7 @@ HTML = f"""<!DOCTYPE html>
   <ul>
     <li><strong>20 juices</strong>, each with a normal and a <strong>boosted</strong> version (40 items).</li>
     <li><strong>Custom power system</strong> &mdash; juices grant the mod's own effects, not vanilla potion effects.</li>
-    <li><strong>Juice Making Table</strong> &mdash; a machine that juices ingredients for you.</li>
+    <li><strong>Juice Press</strong> &mdash; a machine that juices ingredients for you.</li>
     <li><strong>Four wild berry bushes</strong> that grow around the world.</li>
     <li><strong>Fruit powers</strong> &mdash; Orchard Guard, Frostbite, Solar Charge and Forager's Luck.</li>
     <li><strong>Juice Booster</strong>, villager trades, advancements, composting and more.</li>
@@ -138,8 +138,8 @@ HTML = f"""<!DOCTYPE html>
   <h2 style="color:#1d6b46;border-bottom:2px solid #d8ead9;padding-bottom:4px;">Recipes</h2>
   <p>Every recipe in the mod is shown in-game with <strong>JEI (Just Enough Items)</strong>.
   Install JEI and open it to see how any juice, boosted bottle, <strong>Juice Booster</strong>,
-  or the <strong>Juice Making Table</strong> is made.</p>
-  <p>The <strong>Juice Making Table</strong> takes a fruit (or a base juice), a milk bucket, and
+  or the <strong>Juice Press</strong> is made.</p>
+  <p>The <strong>Juice Press</strong> takes a fruit (or a base juice), a milk bucket, and
   either a glass bottle (normal) or a <strong>Juice Booster</strong> (boosted), then outputs the
   finished bottle. It takes <strong>5 seconds</strong> per bottle and works with hoppers.</p>
 

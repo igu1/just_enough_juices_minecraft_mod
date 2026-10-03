@@ -17,7 +17,7 @@ powers, with **boosted** versions that push them further.
 - **20 juices**, each with a normal and a **boosted** version (40 items).
 - **Custom power system** — juices grant the mod's own effects, not vanilla potion
   effects. Hover any bottle in-game to see what it does.
-- **Juice Making Table** — a machine that juices ingredients for you.
+- **Juice Press** — a machine that juices ingredients for you.
 - **Four wild berry bushes** that grow around the world.
 - **Fruit powers** — Orchard Guard, Frostbite, Solar Charge and Forager's Luck.
 - **Emerald Dust**, villager trades, advancements, composting and more.
@@ -28,9 +28,9 @@ powers, with **boosted** versions that push them further.
 
 Every recipe in the mod is shown in-game with **JEI (Just Enough Items)**. Install
 JEI and open it to see how any juice, boosted bottle, **Juice Booster**, or the
-**Juice Making Table** is made.
+**Juice Press** is made.
 
-The **Juice Making Table** takes a fruit (or a base juice), a milk bucket, and either
+The **Juice Press** takes a fruit (or a base juice), a milk bucket, and either
 a glass bottle (normal) or a **Juice Booster** (boosted), then outputs the finished
 bottle. It takes **5 seconds** per bottle and works with hoppers.
 
@@ -126,7 +126,7 @@ Luck** increases the harvest.
 - **Glass Bottle** — the container for every juice.
 - **Emerald Dust** — crafting material for the Juice Booster.
 - **Juice Booster** — the catalyst for every boosted bottle.
-- **Juice Making Table** — the juicing machine.
+- **Juice Press** — the juicing machine.
 
 ---
 

@@ -18,8 +18,8 @@ public class LanguageProvider extends net.minecraftforge.common.data.LanguagePro
         add(Init.FROSTBITE.get(), "Frostbite");
         add(Init.SOLAR_CHARGE.get(), "Solar Charge");
         add(Init.FORAGERS_LUCK.get(), "Forager's Luck");
-        add(Init.JUICE_TABLE.get(), "Juice Making Table");
-        add("container.jej.juice_table", "Juice Making Table");
+        add(Init.JUICE_TABLE.get(), "Juice Press");
+        add("container.jej.juice_table", "Juice Press");
         add("container.jej.juice_table.slot0", "Fruit or base juice");
         add("container.jej.juice_table.slot1", "Milk bucket");
         add("container.jej.juice_table.slot2", "Empty juice bottle or Juice Booster");
