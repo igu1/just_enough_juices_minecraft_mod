@@ -5,6 +5,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -12,6 +13,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.block.BushBlock;
@@ -20,11 +22,8 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-
-import java.util.Random;
 
 public abstract class ModBushBlock extends BushBlock implements BonemealableBlock {
 
@@ -32,17 +31,16 @@ public abstract class ModBushBlock extends BushBlock implements BonemealableBloc
     private static final VoxelShape SAPLING_SHAPE = Block.box(3.0D, 0.0D, 3.0D, 13.0D, 8.0D, 13.0D);
     private static final VoxelShape MID_GROWTH_SHAPE = Block.box(1.0D, 0.0D, 1.0D, 15.0D, 16.0D, 15.0D);
 
-
     public ModBushBlock(Properties properties) {
         super(properties);
     }
 
     @Override
-    public ItemStack getCloneItemStack(BlockState state, HitResult target, BlockGetter level, BlockPos pos, Player player) {
+    public ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state) {
         return DropItem(state);
     }
 
-    public ItemStack DropItem(BlockState state){
+    public ItemStack DropItem(BlockState state) {
         Block block = state.getBlock();
         if (block == Init.ICE_BERRY_BUSH.get()) {
             return Init.ICE_BERRY.get().getDefaultInstance();
@@ -55,21 +53,21 @@ public abstract class ModBushBlock extends BushBlock implements BonemealableBloc
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand p_57279_, BlockHitResult p_57280_) {
+    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
         int i = state.getValue(AGE);
         boolean flag = i == 3;
-        if (!flag && player.getItemInHand(p_57279_).is(Items.BONE_MEAL)) {
+        if (!flag && player.getMainHandItem().is(Items.BONE_MEAL)) {
             return InteractionResult.PASS;
         } else if (i == 3 || (state.is(Init.GLOW_BERRY_BUSH.get()) && i > 1)) {
-            if (level.isClientSide) return InteractionResult.SUCCESS;
+            if (level.isClientSide()) return InteractionResult.SUCCESS;
             int j = 1 + level.random.nextInt(2);
-            if (player.hasEffect(Init.FORAGERS_LUCK.get())) j += Math.min(2, player.getEffect(Init.FORAGERS_LUCK.get()).getAmplifier() + 1);
+            if (player.hasEffect(Init.FORAGERS_LUCK)) j += Math.min(2, player.getEffect(Init.FORAGERS_LUCK).getAmplifier() + 1);
             popResource(level, pos, new ItemStack(DropItem(state).getItem(), j + (flag ? 1 : 0)));
             level.playSound(null, pos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
             level.setBlock(pos, state.setValue(AGE, state.is(Init.GLOW_BERRY_BUSH.get()) ? 1 : 2), 2);
-            return InteractionResult.sidedSuccess(level.isClientSide);
+            return InteractionResult.sidedSuccess(level.isClientSide());
         } else {
-            return super.use(state, level, pos, player, p_57279_, p_57280_);
+            return super.useWithoutItem(state, level, pos, player, hit);
         }
     }
 
@@ -94,26 +92,26 @@ public abstract class ModBushBlock extends BushBlock implements BonemealableBloc
     }
 
     @Override
-    public boolean isValidBonemealTarget(BlockGetter p_57260_, BlockPos p_57261_, BlockState p_57262_, boolean p_57263_) {
-        return p_57262_.getValue(AGE) < 3;
+    public boolean isValidBonemealTarget(LevelReader level, BlockPos pos, BlockState state) {
+        return state.getValue(AGE) < 3;
     }
+
     @Override
-    public boolean isBonemealSuccess(Level p_57265_, Random p_57266_, BlockPos p_57267_, BlockState p_57268_) {
+    public boolean isBonemealSuccess(Level level, RandomSource random, BlockPos pos, BlockState state) {
         return true;
     }
 
     @Override
-    public void performBonemeal(ServerLevel serverLevel, Random random, BlockPos pos, BlockState state) {
+    public void performBonemeal(ServerLevel level, RandomSource random, BlockPos pos, BlockState state) {
         int i = Math.min(3, state.getValue(AGE) + 1);
-        serverLevel.setBlock(pos, state.setValue(AGE, i), 2);
+        level.setBlock(pos, state.setValue(AGE, i), 2);
     }
 
     @Override
-    public void randomTick(BlockState state, ServerLevel level, BlockPos pos, Random random) {
+    public void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         int i = state.getValue(AGE);
-        if (i < 3 && level.getRawBrightness(pos.above(), 0) >= 9 && net.neoforged.neoforge.common.ForgeHooks.onCropsGrowPre(level, pos, state,random.nextInt(5) == 0)){
-            level.setBlock(pos,state.setValue(AGE, Integer.valueOf(i + 1)), 2);
-            net.neoforged.neoforge.common.ForgeHooks.onCropsGrowPost(level,pos,state);
+        if (i < 3 && level.getRawBrightness(pos.above(), 0) >= 9 && random.nextInt(5) == 0) {
+            level.setBlock(pos, state.setValue(AGE, i + 1), 2);
         }
     }
 }

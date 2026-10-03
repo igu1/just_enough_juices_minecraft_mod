@@ -7,6 +7,7 @@ import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.trading.ItemCost;
 import net.minecraft.world.item.trading.MerchantOffer;
 import net.neoforged.neoforge.event.village.VillagerTradesEvent;
 import net.neoforged.neoforge.event.village.WandererTradesEvent;
@@ -57,7 +58,7 @@ public class VillagerTradeHandler {
 
     private static VillagerTrades.ItemListing juice(Item juice, int emeraldCost, int count, int xp) {
         return (trader, random) -> new MerchantOffer(
-                new ItemStack(Items.EMERALD, emeraldCost),
+                new ItemCost(Items.EMERALD, emeraldCost),
                 new ItemStack(juice, count),
                 6,
                 xp,

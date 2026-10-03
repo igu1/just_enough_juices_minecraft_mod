@@ -17,7 +17,7 @@ public class JuiceTableMenu extends AbstractContainerMenu {
         this(id, inventory, clientContainer(inventory, buffer), new SimpleContainerData(2));
     }
     private static Container clientContainer(Inventory inventory, FriendlyByteBuf buffer) {
-        var entity = inventory.player.level.getBlockEntity(buffer.readBlockPos());
+        var entity = inventory.player.level().getBlockEntity(buffer.readBlockPos());
         return entity instanceof JuiceTableBlockEntity table ? table : new SimpleContainer(5);
     }
     public JuiceTableMenu(int id, Inventory inventory, Container container, ContainerData data) {

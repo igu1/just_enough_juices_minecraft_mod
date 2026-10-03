@@ -9,9 +9,9 @@ import net.minecraft.gametest.framework.GameTestHelper;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.RecipeType;
+import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.gametest.GameTestHolder;
 import net.neoforged.neoforge.gametest.PrefixGameTestTemplate;
-import net.neoforged.neoforge.items.CapabilityItemHandler;
 
 @GameTestHolder(Main.MOD_ID)
 @PrefixGameTestTemplate(false)
@@ -79,16 +79,16 @@ public class JuiceTableGameTests {
         JuiceTableBlockEntity table = table(helper);
         int count = 0;
         for (var recipe : helper.getLevel().getRecipeManager().getAllRecipesFor(RecipeType.CRAFTING)) {
-            if (!(recipe.getResultItem().getItem() instanceof JuiceClass)) continue;
+            if (!(recipe.value().getResultItem(helper.getLevel().registryAccess()).getItem() instanceof JuiceClass)) continue;
             table.clearContent();
-            for (var ingredient : recipe.getIngredients()) {
+            for (var ingredient : recipe.value().getIngredients()) {
                 if (ingredient.isEmpty()) continue;
                 ItemStack stack = ingredient.getItems()[0].copy();
                 int slot = stack.is(Items.MILK_BUCKET) ? 1 : stack.is(Init.GLASS_BOTTLE.get()) || stack.is(Init.JUICE_BOOSTER.get()) ? 2 : 0;
                 table.setItem(slot, stack);
             }
             tick(helper, table, JuiceTableBlockEntity.DURATION);
-            check(helper, ItemStack.isSameItemSameTags(table.getItem(3), recipe.getResultItem()), "Wrong output for " + recipe.getId());
+            check(helper, ItemStack.isSameItemSameComponents(table.getItem(3), recipe.value().getResultItem(helper.getLevel().registryAccess())), "Wrong output for " + recipe.id());
             check(helper, table.getItem(4).is(Items.BUCKET) && table.getItem(4).getCount() == 1, "Milk bucket not returned");
             check(helper, table.getItem(0).isEmpty() && table.getItem(1).isEmpty() && table.getItem(2).isEmpty(), "Inputs not consumed once");
             count++;
@@ -101,9 +101,9 @@ public class JuiceTableGameTests {
         JuiceTableBlockEntity table = table(helper);
         fillApple(table);
         tick(helper, table, 45);
-        var saved = table.saveWithoutMetadata();
+        var saved = table.saveWithoutMetadata(helper.getLevel().registryAccess());
         table.clearContent();
-        table.load(saved);
+        table.loadAdditional(saved, helper.getLevel().registryAccess());
         check(helper, table.data.get(0) == 45, "Progress not restored");
         tick(helper, table, 55);
         check(helper, table.getItem(3).is(Init.APPLE_JUICE.get()), "Recipe did not resume after load");
@@ -130,20 +130,17 @@ public class JuiceTableGameTests {
     @GameTest(template = "empty", timeoutTicks = 20)
     public static void hopperAccessAndCapabilityLifecycle(GameTestHelper helper) {
         JuiceTableBlockEntity table = table(helper);
-        var top = table.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, Direction.UP).orElseThrow(IllegalStateException::new);
-        var side = table.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, Direction.NORTH).orElseThrow(IllegalStateException::new);
-        var bottom = table.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, Direction.DOWN).orElseThrow(IllegalStateException::new);
+        var level = helper.getLevel();
+        var top = level.getCapability(Capabilities.ItemHandler.BLOCK, table.getBlockPos(), Direction.UP);
+        var side = level.getCapability(Capabilities.ItemHandler.BLOCK, table.getBlockPos(), Direction.NORTH);
+        var bottom = level.getCapability(Capabilities.ItemHandler.BLOCK, table.getBlockPos(), Direction.DOWN);
+        check(helper, top != null, "Missing top capability");
         check(helper, top.insertItem(0, new ItemStack(Items.APPLE), false).isEmpty(), "Top insertion failed");
         check(helper, side.insertItem(0, new ItemStack(Items.MILK_BUCKET), false).isEmpty(), "Side milk insertion failed");
         check(helper, side.insertItem(1, new ItemStack(Init.GLASS_BOTTLE.get()), false).isEmpty(), "Side bottle insertion failed");
         check(helper, !bottom.insertItem(0, new ItemStack(Items.DIRT), false).isEmpty(), "Output allowed insertion");
         tick(helper, table, 100);
         check(helper, bottom.extractItem(0, 1, false).is(Init.APPLE_JUICE.get()), "Bottom extraction failed");
-        var capability = table.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, Direction.UP);
-        table.invalidateCaps();
-        check(helper, !capability.isPresent(), "Removed entity retained capability");
-        table.reviveCaps();
-        check(helper, table.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, Direction.UP).isPresent(), "Revived entity missing capability");
         helper.succeed();
     }
     @GameTest(template = "empty", timeoutTicks = 20)

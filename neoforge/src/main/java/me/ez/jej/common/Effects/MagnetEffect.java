@@ -14,8 +14,8 @@ public class MagnetEffect extends MobEffect {
     }
 
     @Override
-    public void applyEffectTick(LivingEntity entity, int amp) {
-        if (!entity.getLevel().isClientSide && entity.getLevel() instanceof ServerLevel level) {
+    public boolean applyEffectTick(LivingEntity entity, int amp) {
+        if (!entity.level().isClientSide() && entity.level() instanceof ServerLevel level) {
             double radius = 6.0D + amp * 3.0D;
             for (ItemEntity item : level.getEntitiesOfClass(ItemEntity.class,
                     entity.getBoundingBox().inflate(radius),
@@ -33,10 +33,11 @@ public class MagnetEffect extends MobEffect {
                         net.minecraft.util.Mth.lerp(0.1D, orb.getZ(), entity.getZ()));
             }
         }
+        return true;
     }
 
     @Override
-    public boolean isDurationEffectTick(int duration, int amp) {
+    public boolean shouldApplyEffectTickThisTick(int duration, int amp) {
         return true;
     }
 }

@@ -1,5 +1,6 @@
 package me.ez.jej.common;
 
+import com.mojang.serialization.MapCodec;
 import me.ez.jej.Init;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
@@ -16,17 +17,19 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BedPart;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.material.PushReaction;
-import net.minecraft.world.level.material.Material;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.neoforged.neoforge.network.NetworkHooks;
 
 public class JuiceTableBlock extends BaseEntityBlock {
     public JuiceTableBlock() {
-        super(Properties.of(Material.WOOD).strength(2.5F).sound(SoundType.WOOD).noOcclusion());
+        super(Properties.of().strength(2.5F).sound(SoundType.WOOD).noOcclusion());
         registerDefaultState(stateDefinition.any().setValue(BlockStateProperties.HORIZONTAL_FACING, net.minecraft.core.Direction.NORTH)
                 .setValue(BlockStateProperties.BED_PART, BedPart.FOOT));
+    }
+
+    @Override protected MapCodec<? extends BaseEntityBlock> codec() {
+        return simpleCodec(props -> new JuiceTableBlock());
     }
 
     @Override protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
@@ -49,7 +52,7 @@ public class JuiceTableBlock extends BaseEntityBlock {
         return level.getBlockEntity(master) instanceof JuiceTableBlockEntity table ? table : null;
     }
     @Override public void setPlacedBy(Level level, BlockPos pos, BlockState state, net.minecraft.world.entity.LivingEntity placer, net.minecraft.world.item.ItemStack stack) {
-        if (!level.isClientSide) level.setBlock(otherPos(pos, state), state.setValue(BlockStateProperties.BED_PART, BedPart.HEAD), 3);
+        if (!level.isClientSide()) level.setBlock(otherPos(pos, state), state.setValue(BlockStateProperties.BED_PART, BedPart.HEAD), 3);
     }
     @Override public BlockState rotate(BlockState state, Rotation rotation) {
         return state.setValue(BlockStateProperties.HORIZONTAL_FACING, rotation.rotate(state.getValue(BlockStateProperties.HORIZONTAL_FACING)));
@@ -69,14 +72,14 @@ public class JuiceTableBlock extends BaseEntityBlock {
         return state.getValue(BlockStateProperties.BED_PART) == BedPart.FOOT ? new JuiceTableBlockEntity(pos, state) : null;
     }
     @Override public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
-        return level.isClientSide || state.getValue(BlockStateProperties.BED_PART) != BedPart.FOOT ? null : createTickerHelper(type, Init.JUICE_TABLE_ENTITY.get(), JuiceTableBlockEntity::tick);
+        return level.isClientSide() || state.getValue(BlockStateProperties.BED_PART) != BedPart.FOOT ? null : createTickerHelper(type, Init.JUICE_TABLE_ENTITY.get(), JuiceTableBlockEntity::tick);
     }
-    @Override public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+    @Override protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
         JuiceTableBlockEntity table = getTable(level, pos, state);
-        if (!level.isClientSide && table != null) {
-            NetworkHooks.openGui((ServerPlayer) player, table, table.getBlockPos());
+        if (!level.isClientSide() && table != null) {
+            ((ServerPlayer) player).openMenu(table, buf -> buf.writeBlockPos(table.getBlockPos()));
         }
-        return InteractionResult.sidedSuccess(level.isClientSide);
+        return InteractionResult.sidedSuccess(level.isClientSide());
     }
     @Override public void onRemove(BlockState state, Level level, BlockPos pos, BlockState next, boolean moving) {
         if (!state.is(next.getBlock())) {
@@ -85,7 +88,7 @@ public class JuiceTableBlock extends BaseEntityBlock {
                 level.updateNeighbourForOutputSignal(pos, this);
             }
             super.onRemove(state, level, pos, next, moving);
-            if (!level.isClientSide) {
+            if (!level.isClientSide()) {
                 BlockPos other = otherPos(pos, state);
                 BlockState partner = level.getBlockState(other);
                 if (partner.is(this) && partner.getValue(BlockStateProperties.BED_PART) != state.getValue(BlockStateProperties.BED_PART)
@@ -97,12 +100,12 @@ public class JuiceTableBlock extends BaseEntityBlock {
             }
         }
     }
-    @Override public void playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
-        if (!level.isClientSide && player.isCreative()) {
+    @Override public BlockState playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
+        if (!level.isClientSide() && player.isCreative()) {
             BlockPos master = state.getValue(BlockStateProperties.BED_PART) == BedPart.FOOT ? pos : otherPos(pos, state);
             if (level.getBlockState(master).is(this)) level.setBlock(master, Blocks.AIR.defaultBlockState(), 35);
         }
-        super.playerWillDestroy(level, pos, state, player);
+        return super.playerWillDestroy(level, pos, state, player);
     }
     @Override public boolean hasAnalogOutputSignal(BlockState state) { return true; }
     @Override public int getAnalogOutputSignal(BlockState state, Level level, BlockPos pos) {

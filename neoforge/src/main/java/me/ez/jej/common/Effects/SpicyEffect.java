@@ -1,6 +1,5 @@
 package me.ez.jej.common.Effects;
 
-import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
@@ -14,22 +13,23 @@ public class SpicyEffect extends MobEffect {
     }
 
     @Override
-    public void applyEffectTick(LivingEntity entity, int amp) {
+    public boolean applyEffectTick(LivingEntity entity, int amp) {
         entity.clearFire();
-        if (!entity.getLevel().isClientSide && entity.getLevel() instanceof ServerLevel level) {
+        if (!entity.level().isClientSide() && entity.level() instanceof ServerLevel level) {
             int radius = 2 + amp;
             for (Mob mob : level.getEntitiesOfClass(Mob.class,
                     entity.getBoundingBox().inflate(radius),
                     m -> m != entity && m.isAlive())) {
                 if (mob.getRandom().nextFloat() < 0.15f) {
-                    mob.setSecondsOnFire(3);
+                    mob.igniteForSeconds(3);
                 }
             }
         }
+        return true;
     }
 
     @Override
-    public boolean isDurationEffectTick(int duration, int amp) {
+    public boolean shouldApplyEffectTickThisTick(int duration, int amp) {
         return duration % 20 == 0;
     }
 }
