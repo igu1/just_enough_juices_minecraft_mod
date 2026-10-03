@@ -1,14 +1,10 @@
 # Just Enough Juices
 
-![Just Enough Juices](art/logo/just-enough-juices-logo.png)
-
 *Juice it. Sip it. Feel fine.*
 
-A Forge mod for **Minecraft 1.18.2** that turns fruit, vegetables and a few stranger
-ingredients into a full line of **juices** — each one handing you a set of custom
-powers, with **boosted** versions that push them further.
-
-[![Bottle icon](art/logo/just-enough-juices-bottle-128.png)](art/logo/just-enough-juices-bottle-512.png)
+A Minecraft mod (Forge 1.18.2 and NeoForge 1.21) that turns fruit, vegetables and a
+few stranger ingredients into a full line of **juices** — each one handing you a set
+of custom powers, with **boosted** versions that push them further.
 
 ---
 
@@ -180,10 +176,9 @@ The project targets Java 17 and uses ForgeGradle with official Mojang mappings.
 
 ## Branding
 
-The logo, icon and bottle art live in [`art/logo/`](art/logo/) with editable SVGs.
-The mod's `logo.png` is generated from the bottle icon. See
-[`art/logo/README.md`](art/logo/README.md) for details and regeneration
-instructions.
+The logo, icon and bottle art sources live in the local `art/` folder (kept out of
+version control, along with `tools/`). The mod's `logo.png` is generated from the
+bottle icon.
 
 ---
 
