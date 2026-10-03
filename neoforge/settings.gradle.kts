@@ -15,8 +15,13 @@ plugins {
 
 stonecutter {
     create(rootProject) {
-        // NeoForge range (1.20.2+). Forge 1.18.2/1.19.2/1.20.1 stay on the parent project.
-        versions("1.21.1", "1.21.11")
+        // Full NeoForge range (1.20.2 is the first NeoForge release).
+        versions(
+            "1.20.2", "1.20.4", "1.20.6",
+            "1.21.1", "1.21.3", "1.21.4", "1.21.5", "1.21.6",
+            "1.21.7", "1.21.8", "1.21.9", "1.21.10", "1.21.11",
+            "26.1.2", "26.2", "26.3"
+        )
         vcsVersion = "1.21.1"
     }
 }
