@@ -15,10 +15,10 @@ import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.common.capabilities.*;
-import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.items.*;
-import net.minecraftforge.items.wrapper.SidedInvWrapper;
+import net.neoforged.neoforge.common.capabilities.*;
+import net.neoforged.neoforge.common.util.LazyOptional;
+import net.neoforged.neoforge.items.*;
+import net.neoforged.neoforge.items.wrapper.SidedInvWrapper;
 
 public class JuiceTableBlockEntity extends BlockEntity implements WorldlyContainer, MenuProvider {
     public static final int DURATION = 100;

@@ -9,9 +9,9 @@ import net.minecraft.gametest.framework.GameTestHelper;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.RecipeType;
-import net.minecraftforge.gametest.GameTestHolder;
-import net.minecraftforge.gametest.PrefixGameTestTemplate;
-import net.minecraftforge.items.CapabilityItemHandler;
+import net.neoforged.neoforge.gametest.GameTestHolder;
+import net.neoforged.neoforge.gametest.PrefixGameTestTemplate;
+import net.neoforged.neoforge.items.CapabilityItemHandler;
 
 @GameTestHolder(Main.MOD_ID)
 @PrefixGameTestTemplate(false)
@@ -149,7 +149,7 @@ public class JuiceTableGameTests {
     @GameTest(template = "empty", timeoutTicks = 20)
     public static void menuShiftClickAndSlotRestrictions(GameTestHelper helper) {
         JuiceTableBlockEntity table = table(helper);
-        var player = net.minecraftforge.common.util.FakePlayerFactory.getMinecraft(helper.getLevel());
+        var player = net.neoforged.neoforge.common.util.FakePlayerFactory.getMinecraft(helper.getLevel());
         var inventory = player.getInventory();
         inventory.clearContent();
         inventory.setItem(9, new ItemStack(Items.APPLE));
@@ -206,7 +206,7 @@ public class JuiceTableGameTests {
         var level = helper.getLevel();
         BlockPos target = helper.absolutePos(new BlockPos(1, 1, 1));
         level.setBlock(target.below(), net.minecraft.world.level.block.Blocks.STONE.defaultBlockState(), 3);
-        var player = net.minecraftforge.common.util.FakePlayerFactory.getMinecraft(level);
+        var player = net.neoforged.neoforge.common.util.FakePlayerFactory.getMinecraft(level);
         var context = new net.minecraft.world.item.context.BlockPlaceContext(level, player, net.minecraft.world.InteractionHand.MAIN_HAND,
                 new ItemStack(Init.JUICE_TABLE_ITEM.get()), new net.minecraft.world.phys.BlockHitResult(net.minecraft.world.phys.Vec3.atCenterOf(target.below()), Direction.UP, target.below(), false));
         var state = Init.JUICE_TABLE.get().getStateForPlacement(context);
@@ -222,7 +222,7 @@ public class JuiceTableGameTests {
         var level = helper.getLevel();
         BlockPos master = table.getBlockPos();
         BlockPos other = JuiceTableBlock.otherPos(master, table.getBlockState());
-        var player = net.minecraftforge.common.util.FakePlayerFactory.getMinecraft(level);
+        var player = net.neoforged.neoforge.common.util.FakePlayerFactory.getMinecraft(level);
         player.gameMode.changeGameModeForPlayer(net.minecraft.world.level.GameType.CREATIVE);
         try {
             Init.JUICE_TABLE.get().playerWillDestroy(level, other, level.getBlockState(other), player);

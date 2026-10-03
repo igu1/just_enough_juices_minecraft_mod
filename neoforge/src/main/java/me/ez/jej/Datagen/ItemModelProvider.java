@@ -6,10 +6,10 @@ import me.ez.jej.Main;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
-import net.minecraftforge.client.model.generators.ItemModelBuilder;
-import net.minecraftforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
-public class ItemModelProvider extends net.minecraftforge.client.model.generators.ItemModelProvider {
+public class ItemModelProvider extends net.neoforged.neoforge.client.model.generators.ItemModelProvider {
 
     public ItemModelProvider(DataGenerator generator, ExistingFileHelper existingFileHelper) {
         super(generator, Main.MOD_ID, existingFileHelper);

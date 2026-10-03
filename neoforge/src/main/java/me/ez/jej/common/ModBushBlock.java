@@ -111,9 +111,9 @@ public abstract class ModBushBlock extends BushBlock implements BonemealableBloc
     @Override
     public void randomTick(BlockState state, ServerLevel level, BlockPos pos, Random random) {
         int i = state.getValue(AGE);
-        if (i < 3 && level.getRawBrightness(pos.above(), 0) >= 9 && net.minecraftforge.common.ForgeHooks.onCropsGrowPre(level, pos, state,random.nextInt(5) == 0)){
+        if (i < 3 && level.getRawBrightness(pos.above(), 0) >= 9 && net.neoforged.neoforge.common.ForgeHooks.onCropsGrowPre(level, pos, state,random.nextInt(5) == 0)){
             level.setBlock(pos,state.setValue(AGE, Integer.valueOf(i + 1)), 2);
-            net.minecraftforge.common.ForgeHooks.onCropsGrowPost(level,pos,state);
+            net.neoforged.neoforge.common.ForgeHooks.onCropsGrowPost(level,pos,state);
         }
     }
 }

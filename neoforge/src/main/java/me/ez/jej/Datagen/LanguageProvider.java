@@ -4,7 +4,7 @@ import me.ez.jej.Init;
 import me.ez.jej.Main;
 import net.minecraft.data.DataGenerator;
 
-public class LanguageProvider extends net.minecraftforge.common.data.LanguageProvider {
+public class LanguageProvider extends net.neoforged.neoforge.common.data.LanguageProvider {
 
     public LanguageProvider(DataGenerator gen, String locale) {
         super(gen, Main.MOD_ID, locale);

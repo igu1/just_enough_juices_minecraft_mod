@@ -5,18 +5,18 @@ import me.ez.jej.Main;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 
 @Mod.EventBusSubscriber(modid = Main.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ClientEvents {
-    @SubscribeEvent public static void models(net.minecraftforge.client.event.ModelRegistryEvent event) {
-        net.minecraftforge.client.model.ForgeModelBakery.addSpecialModel(JuiceTableRenderer.SCREW);
-        net.minecraftforge.client.model.ForgeModelBakery.addSpecialModel(JuiceTableRenderer.RAM);
+    @SubscribeEvent public static void models(net.neoforged.neoforge.client.event.ModelRegistryEvent event) {
+        net.neoforged.neoforge.client.model.ForgeModelBakery.addSpecialModel(JuiceTableRenderer.SCREW);
+        net.neoforged.neoforge.client.model.ForgeModelBakery.addSpecialModel(JuiceTableRenderer.RAM);
     }
-    @SubscribeEvent public static void renderers(net.minecraftforge.client.event.EntityRenderersEvent.RegisterRenderers event) {
+    @SubscribeEvent public static void renderers(net.neoforged.neoforge.client.event.EntityRenderersEvent.RegisterRenderers event) {
         event.registerBlockEntityRenderer(Init.JUICE_TABLE_ENTITY.get(), JuiceTableRenderer::new);
     }
     @SubscribeEvent public static void setup(FMLClientSetupEvent event) {

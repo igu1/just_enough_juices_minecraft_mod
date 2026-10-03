@@ -7,8 +7,8 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
-import net.minecraftforge.common.BiomeDictionary;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
+import net.neoforged.neoforge.common.BiomeDictionary;
+import net.neoforged.neoforge.event.world.BiomeLoadingEvent;
 
 import java.util.List;
 import java.util.Set;

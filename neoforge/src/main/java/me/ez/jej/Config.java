@@ -1,26 +1,26 @@
 package me.ez.jej;
 
-import net.minecraftforge.common.ForgeConfigSpec;
+import net.neoforged.neoforge.common.ModConfigSpec;
 
 public class Config {
 
-    public static final ForgeConfigSpec SPEC;
+    public static final ModConfigSpec SPEC;
 
-    public static final ForgeConfigSpec.BooleanValue ENABLE_VILLAGER_TRADES;
-    public static final ForgeConfigSpec.BooleanValue ENABLE_COMPOSTING;
-    public static final ForgeConfigSpec.DoubleValue COMPOST_CHANCE;
-    public static final ForgeConfigSpec.BooleanValue RETURN_GLASS_BOTTLE;
+    public static final ModConfigSpec.BooleanValue ENABLE_VILLAGER_TRADES;
+    public static final ModConfigSpec.BooleanValue ENABLE_COMPOSTING;
+    public static final ModConfigSpec.DoubleValue COMPOST_CHANCE;
+    public static final ModConfigSpec.BooleanValue RETURN_GLASS_BOTTLE;
 
-    public static final ForgeConfigSpec.BooleanValue OVERDRINK_ENABLED;
-    public static final ForgeConfigSpec.IntValue OVERDRINK_MAX_DRINKS;
-    public static final ForgeConfigSpec.IntValue OVERDRINK_WINDOW_TICKS;
-    public static final ForgeConfigSpec.IntValue OVERDRINK_NAUSEA_TICKS;
-    public static final ForgeConfigSpec.IntValue OVERDRINK_HUNGER_TICKS;
+    public static final ModConfigSpec.BooleanValue OVERDRINK_ENABLED;
+    public static final ModConfigSpec.IntValue OVERDRINK_MAX_DRINKS;
+    public static final ModConfigSpec.IntValue OVERDRINK_WINDOW_TICKS;
+    public static final ModConfigSpec.IntValue OVERDRINK_NAUSEA_TICKS;
+    public static final ModConfigSpec.IntValue OVERDRINK_HUNGER_TICKS;
 
-    public static final ForgeConfigSpec.DoubleValue EFFECT_DURATION_MULTIPLIER;
+    public static final ModConfigSpec.DoubleValue EFFECT_DURATION_MULTIPLIER;
 
     static {
-        ForgeConfigSpec.Builder builder = new ForgeConfigSpec.Builder();
+        ModConfigSpec.Builder builder = new ModConfigSpec.Builder();
 
         builder.comment("General gameplay toggles").push("general");
         ENABLE_VILLAGER_TRADES = builder

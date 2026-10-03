@@ -15,7 +15,7 @@ import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.registries.DeferredHolder;
 import org.jetbrains.annotations.NotNull;
 
 public class BlockLootTable extends BlockLoot {
@@ -37,7 +37,7 @@ public class BlockLootTable extends BlockLoot {
 
     @Override
     protected @NotNull Iterable<Block> getKnownBlocks() {
-        return Init.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
+        return Init.BLOCKS.getEntries().stream().map(DeferredHolder::get)::iterator;
     }
 
     private void BushLootTable(BushBlock bushBlock, ItemLike itemLike){
