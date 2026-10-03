@@ -47,6 +47,8 @@ minecraft {
     runs {
         client {
             workingDirectory project.file('run')
+            property 'jej.assetSmokeTest', project.findProperty('jejAssetSmokeTest') ?: 'false'
+            property 'jej.assetSmokeReport', project.file('build/reports/asset-smoke.json').absolutePath
 
             // Recommended logging data for a userdev environment
             // The markers can be added/remove as needed separated by commas.

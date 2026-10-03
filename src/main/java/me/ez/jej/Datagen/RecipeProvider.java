@@ -52,6 +52,10 @@ public class RecipeProvider extends net.minecraft.data.recipes.RecipeProvider im
     protected void buildCraftingRecipes(Consumer<FinishedRecipe> recipeConsumer) {
 
         //Base recipes
+        ShapedRecipeBuilder.shaped(Init.JUICE_TABLE_ITEM.get())
+                .define('P', Items.OAK_PLANKS).define('I', Items.IRON_INGOT).define('G', Init.GLASS_BOTTLE.get())
+                .pattern("IGI").pattern("PPP").pattern("P P")
+                .unlockedBy("has_bottle", has(Init.GLASS_BOTTLE.get())).save(recipeConsumer);
         ShapelessRecipeBuilder.shapeless(Init.EMERALD_DUST.get(), 9)
                 .requires(Items.EMERALD)
                 .unlockedBy("has_emerald", inventoryTrigger(ItemPredicate.Builder.item()

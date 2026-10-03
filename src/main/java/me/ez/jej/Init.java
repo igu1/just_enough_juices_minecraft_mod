@@ -13,6 +13,8 @@ import me.ez.jej.common.Bushes.SunBerryBush;
 import me.ez.jej.common.Bushes.WildBerryBush;
 import me.ez.jej.common.TomatoBlock;
 import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffectCategory;
+import me.ez.jej.common.Effects.JuicePower;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
@@ -27,7 +29,16 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class Init {
+    public static final DeferredRegister<net.minecraft.world.level.block.entity.BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, Main.MOD_ID);
+    public static final DeferredRegister<net.minecraft.world.inventory.MenuType<?>> MENUS = DeferredRegister.create(ForgeRegistries.CONTAINERS, Main.MOD_ID);
+    public static void registerTable(net.minecraftforge.eventbus.api.IEventBus bus) {
+        BLOCK_ENTITIES.register(bus);
+        MENUS.register(bus);
+    }
+    public static final RegistryObject<net.minecraft.world.level.block.entity.BlockEntityType<me.ez.jej.common.JuiceTableBlockEntity>> JUICE_TABLE_ENTITY = BLOCK_ENTITIES.register("juice_table", () -> net.minecraft.world.level.block.entity.BlockEntityType.Builder.of(me.ez.jej.common.JuiceTableBlockEntity::new, Init.JUICE_TABLE.get()).build(null));
+    public static final RegistryObject<net.minecraft.world.inventory.MenuType<me.ez.jej.common.JuiceTableMenu>> JUICE_TABLE_MENU = MENUS.register("juice_table", () -> net.minecraftforge.common.extensions.IForgeMenuType.create(me.ez.jej.common.JuiceTableMenu::new));
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Main.MOD_ID);
+    public static final RegistryObject<Item> JUICE_TABLE_ITEM = ITEMS.register("juice_table", () -> new BlockItem(Init.JUICE_TABLE.get(), new Item.Properties().tab(Main.TAB)));
 
     //Items
     public static final RegistryObject<Item> APPLE_JUICE = ITEMS.register("apple_juice",() -> new JuiceClass(new Item.Properties().stacksTo(1).tab(Main.TAB)));
@@ -101,6 +112,7 @@ public class Init {
 //    public static final RegistryObject<BlockItem> TOMATO_ITEM = ITEMS.register("tomato",() -> new BlockItem(Init.TOMATO.get(), new Item.Properties().tab(CreativeModeTab.TAB_FOOD).food(new FoodProperties.Builder().nutrition(2).saturationMod(0.1F).build())));
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Main.MOD_ID);
+    public static final RegistryObject<me.ez.jej.common.JuiceTableBlock> JUICE_TABLE = BLOCKS.register("juice_table", me.ez.jej.common.JuiceTableBlock::new);
     //Blocks
     public static final RegistryObject<IcyBush> ICE_BERRY_BUSH = BLOCKS.register("iceberry_bush", IcyBush::new);
     public static final RegistryObject<WildBerryBush> WILD_BERRY_BUSH = BLOCKS.register("wildberry_bush", WildBerryBush::new);
@@ -257,8 +269,22 @@ public class Init {
             app(MobEffects.DIG_SPEED, 1),
             app(MobEffects.NIGHT_VISION, 0)));
 
+    // Append new powers after the original effects to preserve their registration order.
+    public static final RegistryObject<MobEffect> ORCHARD_GUARD = EFFECT.register("orchard_guard", () -> new me.ez.jej.common.Effects.FruitPowerEffect(0x82B39B, false));
+    public static final RegistryObject<MobEffect> FROSTBITE = EFFECT.register("frostbite", () -> new me.ez.jej.common.Effects.FruitPowerEffect(0xBDF6FF, false));
+    public static final RegistryObject<MobEffect> SOLAR_CHARGE = EFFECT.register("solar_charge", () -> new me.ez.jej.common.Effects.FruitPowerEffect(0xF3D75D, true));
+    public static final RegistryObject<MobEffect> FORAGERS_LUCK = EFFECT.register("foragers_luck", () -> new me.ez.jej.common.Effects.FruitPowerEffect(0xA778CC, false));
+    public static final RegistryObject<MobEffect> CAFFEINE_CRASH = EFFECT.register("caffeine_crash", () -> new MobEffect(MobEffectCategory.HARMFUL, 0x725044) {}
+            .addAttributeModifier(net.minecraft.world.entity.ai.attributes.Attributes.MOVEMENT_SPEED, "33835159-ec5a-44c4-af5c-b54b94a23127", -.3, net.minecraft.world.entity.ai.attributes.AttributeModifier.Operation.MULTIPLY_TOTAL));
+    public static final RegistryObject<MobEffect> CHILLED = EFFECT.register("chilled", () -> new MobEffect(MobEffectCategory.HARMFUL, 0xBDF6FF) {}
+            .addAttributeModifier(net.minecraft.world.entity.ai.attributes.Attributes.MOVEMENT_SPEED, "1b1acae1-b55d-49b3-b22a-0a3488b12937", -.15, net.minecraft.world.entity.ai.attributes.AttributeModifier.Operation.MULTIPLY_TOTAL));
+
     private static JuiceEffect.JuiceApplication app(MobEffect effect, int amplifier) {
         return new JuiceEffect.JuiceApplication(effect, amplifier);
+    }
+
+    private static JuiceEffect.JuiceApplication app(JuicePower power, int amplifier) {
+        return new JuiceEffect.JuiceApplication(power, amplifier);
     }
 
 }

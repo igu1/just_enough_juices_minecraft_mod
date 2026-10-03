@@ -63,18 +63,18 @@ public class ItemModelProvider extends net.minecraftforge.client.model.generator
         bottleItem(Init.COCOA_JUICE.get());
         bottleItem(Init.COCOA_JUICE_BOOSTED.get());
 
-        //Sweetberry (no liquid texture yet, keep flat for now)
-        simpleItem(Init.SWEETBERRY_JUICE.get());
-        simpleItem(Init.SWEETBERRY_JUICE_BOOSTED.get());
+        bottleItem(Init.SWEETBERRY_JUICE.get());
+        bottleItem(Init.SWEETBERRY_JUICE_BOOSTED.get());
 
         //Item
         simpleItem(Init.EMERALD_DUST.get());
-        simpleItem(Init.GLASS_BOTTLE.get());
+        withExistingParent("glass_bottle", new ResourceLocation(Main.MOD_ID, "item/empty_juice_bottle"));
+        withExistingParent("juice_table", new ResourceLocation(Main.MOD_ID, "block/juice_table"));
 
         //BlockItem
-        simpleItem(Init.WILD_BERRY.get());
-        simpleItem(Init.ICE_BERRY.get());
-        simpleItem(Init.SUN_BERRY.get());
+        withExistingParent("wild_berry", modLoc("item/wild_berry_blockbench"));
+        withExistingParent("ice_berry", modLoc("item/ice_berry_blockbench"));
+        withExistingParent("sun_berry", modLoc("item/sun_berry_blockbench"));
         simpleItem(Init.GLOW_BERRY.get());
     }
 
@@ -93,6 +93,8 @@ public class ItemModelProvider extends net.minecraftforge.client.model.generator
             liquid = path.substring(0, path.length() - "_juice".length()) + "_liquid";
         }
         return withExistingParent(path, new ResourceLocation(Main.MOD_ID, "item/juice_bottle"))
-                .texture("liquid", new ResourceLocation(Main.MOD_ID, "item/" + liquid));
+                .texture("liquid", new ResourceLocation(Main.MOD_ID, "item/" + liquid))
+                .texture("label", new ResourceLocation(Main.MOD_ID, "item/" + path + "_label"))
+                .texture("seal", new ResourceLocation(Main.MOD_ID, "item/" + (path.endsWith("_boosted") ? "boosted_seal" : "bottle_seal")));
     }
 }

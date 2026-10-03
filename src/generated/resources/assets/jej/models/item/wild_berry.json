@@ -1,6 +1,3 @@
 {
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "jej:item/wild_berry"
-  }
+  "parent": "jej:item/wild_berry_blockbench"
 }

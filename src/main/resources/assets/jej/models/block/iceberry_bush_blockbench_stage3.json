@@ -1,0 +1,4127 @@
+{
+  "ambientocclusion": false,
+  "textures": {
+    "0": "jej:block/botany/wildberry_leaves",
+    "1": "jej:block/botany/wildberry_fruit",
+    "2": "jej:block/botany/iceberry_leaves",
+    "3": "jej:block/botany/iceberry_fruit",
+    "4": "jej:block/botany/sunberry_leaves",
+    "5": "jej:block/botany/sunberry_fruit",
+    "6": "jej:block/botany/bush_branches",
+    "7": "jej:block/botany/iceberry_frost",
+    "8": "jej:block/botany/sunberry_flower",
+    "particle": "jej:block/botany/iceberry_leaves"
+  },
+  "elements": [
+    {
+      "name": "Iceberry Bush Compact icy leaf cushion 0",
+      "shade": true,
+      "from": [
+        1.49406,
+        1.84971,
+        6.13196
+      ],
+      "to": [
+        7.5491,
+        8.78613,
+        11.92934
+      ],
+      "rotation": {
+        "origin": [
+          4.521579999999999,
+          5.31792,
+          9.03065
+        ],
+        "axis": "y",
+        "angle": -22.5,
+        "rescale": false
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Compact icy leaf cushion 1",
+      "shade": true,
+      "from": [
+        8.51533,
+        0.30829,
+        5.42339
+      ],
+      "to": [
+        14.69919,
+        7.09056,
+        11.3496
+      ],
+      "rotation": {
+        "origin": [
+          11.60726,
+          3.69942,
+          8.3865
+        ],
+        "axis": "y",
+        "angle": 22.5,
+        "rescale": false
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Compact icy leaf cushion 2",
+      "shade": true,
+      "from": [
+        4.52158,
+        0.15414,
+        1.04315
+      ],
+      "to": [
+        11.47843,
+        6.01156,
+        6.19638
+      ],
+      "rotation": {
+        "origin": [
+          8.0,
+          3.08285,
+          3.619759999999999
+        ],
+        "axis": "y",
+        "angle": -22.5,
+        "rescale": false
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Compact icy leaf cushion 3",
+      "shade": true,
+      "from": [
+        3.68418,
+        0.23121,
+        9.54597
+      ],
+      "to": [
+        11.02752,
+        6.08863,
+        14.69919
+      ],
+      "rotation": {
+        "origin": [
+          7.355849999999999,
+          3.15992,
+          12.12258
+        ],
+        "axis": "y",
+        "angle": 22.5,
+        "rescale": false
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Compact icy leaf cushion 4",
+      "shade": true,
+      "from": [
+        2.97561,
+        6.78227,
+        5.35898
+      ],
+      "to": [
+        8.64416,
+        12.17726,
+        11.41402
+      ],
+      "rotation": {
+        "origin": [
+          5.80988,
+          9.47977,
+          8.3865
+        ],
+        "axis": "y",
+        "angle": -22.5,
+        "rescale": false
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Compact icy leaf cushion 5",
+      "shade": true,
+      "from": [
+        7.93559,
+        5.70328,
+        5.8743
+      ],
+      "to": [
+        13.4753,
+        10.94412,
+        11.41402
+      ],
+      "rotation": {
+        "origin": [
+          10.705449999999999,
+          8.3237,
+          8.64416
+        ],
+        "axis": "y",
+        "angle": 22.5,
+        "rescale": false
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Compact icy leaf cushion 6",
+      "shade": true,
+      "from": [
+        5.93871,
+        11.56069,
+        6.13196
+      ],
+      "to": [
+        10.31895,
+        15.72254,
+        10.89869
+      ],
+      "rotation": {
+        "origin": [
+          8.12883,
+          13.64162,
+          8.515329999999999
+        ],
+        "axis": "y",
+        "angle": -22.5,
+        "rescale": false
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Ice ground skirt 0",
+      "shade": true,
+      "from": [
+        2.58912,
+        0.15414,
+        1.81614
+      ],
+      "to": [
+        5.68105,
+        2.92871,
+        4.65041
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Ice ground skirt 1",
+      "shade": true,
+      "from": [
+        4.39275,
+        0.15414,
+        11.3496
+      ],
+      "to": [
+        7.48468,
+        2.92871,
+        14.18387
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Ice ground skirt 2",
+      "shade": true,
+      "from": [
+        6.19638,
+        0.15414,
+        1.81614
+      ],
+      "to": [
+        9.28831,
+        2.92871,
+        4.65041
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Ice ground skirt 3",
+      "shade": true,
+      "from": [
+        8.0,
+        0.15414,
+        11.3496
+      ],
+      "to": [
+        11.09194,
+        2.92871,
+        14.18387
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Ice ground skirt 4",
+      "shade": true,
+      "from": [
+        9.80363,
+        0.15414,
+        1.81614
+      ],
+      "to": [
+        12.89557,
+        2.92871,
+        4.65041
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Embedded iceberry 0",
+      "shade": true,
+      "from": [
+        2.65353,
+        5.16378,
+        11.09194
+      ],
+      "to": [
+        3.81301,
+        6.55106,
+        12.12258
+      ],
+      "rotation": {
+        "origin": [
+          3.2332699999999996,
+          5.85742,
+          11.607259999999998
+        ],
+        "axis": "y",
+        "angle": 45,
+        "rescale": false
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Paired iceberry 0",
+      "shade": true,
+      "from": [
+        3.594,
+        4.70135,
+        11.54285
+      ],
+      "to": [
+        4.4314,
+        5.70328,
+        12.38024
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Embedded iceberry 1",
+      "shade": true,
+      "from": [
+        5.10132,
+        3.93064,
+        13.92621
+      ],
+      "to": [
+        6.26079,
+        5.31792,
+        14.95686
+      ],
+      "rotation": {
+        "origin": [
+          5.68105,
+          4.62428,
+          14.441529999999998
+        ],
+        "axis": "y",
+        "angle": 45,
+        "rescale": false
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Paired iceberry 1",
+      "shade": true,
+      "from": [
+        6.04178,
+        3.46821,
+        14.37712
+      ],
+      "to": [
+        6.87918,
+        4.47013,
+        15.21452
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Embedded iceberry 2",
+      "shade": true,
+      "from": [
+        8.45091,
+        2.23507,
+        13.92621
+      ],
+      "to": [
+        9.61039,
+        3.62235,
+        14.95686
+      ],
+      "rotation": {
+        "origin": [
+          9.030649999999998,
+          2.92871,
+          14.441529999999998
+        ],
+        "axis": "y",
+        "angle": 45,
+        "rescale": false
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Paired iceberry 2",
+      "shade": true,
+      "from": [
+        9.39137,
+        1.77264,
+        14.37712
+      ],
+      "to": [
+        10.22877,
+        2.77457,
+        15.21452
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Embedded iceberry 3",
+      "shade": true,
+      "from": [
+        12.187,
+        3.00578,
+        10.83428
+      ],
+      "to": [
+        13.34647,
+        4.39306,
+        11.86492
+      ],
+      "rotation": {
+        "origin": [
+          12.766739999999999,
+          3.69942,
+          11.349599999999999
+        ],
+        "axis": "y",
+        "angle": 45,
+        "rescale": false
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Paired iceberry 3",
+      "shade": true,
+      "from": [
+        13.12746,
+        2.54335,
+        11.28518
+      ],
+      "to": [
+        13.96486,
+        3.54528,
+        12.12258
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Embedded iceberry 4",
+      "shade": true,
+      "from": [
+        4.84365,
+        8.70906,
+        10.96311
+      ],
+      "to": [
+        6.00313,
+        10.09634,
+        11.99375
+      ],
+      "rotation": {
+        "origin": [
+          5.4233899999999995,
+          9.4027,
+          11.47843
+        ],
+        "axis": "y",
+        "angle": 45,
+        "rescale": false
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Paired iceberry 4",
+      "shade": true,
+      "from": [
+        5.78412,
+        8.24663,
+        11.41402
+      ],
+      "to": [
+        6.62152,
+        9.24855,
+        12.25141
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Embedded iceberry 5",
+      "shade": true,
+      "from": [
+        8.96623,
+        8.55491,
+        11.09194
+      ],
+      "to": [
+        10.12571,
+        9.9422,
+        12.12258
+      ],
+      "rotation": {
+        "origin": [
+          9.54597,
+          9.24855,
+          11.607259999999998
+        ],
+        "axis": "y",
+        "angle": 45,
+        "rescale": false
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Paired iceberry 5",
+      "shade": true,
+      "from": [
+        9.9067,
+        8.09249,
+        11.54285
+      ],
+      "to": [
+        10.74409,
+        9.09441,
+        12.38024
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Embedded iceberry 6",
+      "shade": true,
+      "from": [
+        12.31583,
+        7.16763,
+        7.48468
+      ],
+      "to": [
+        13.4753,
+        8.55491,
+        8.51533
+      ],
+      "rotation": {
+        "origin": [
+          12.89557,
+          7.86127,
+          8.0
+        ],
+        "axis": "y",
+        "angle": 45,
+        "rescale": false
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Paired iceberry 6",
+      "shade": true,
+      "from": [
+        13.25629,
+        6.7052,
+        7.93559
+      ],
+      "to": [
+        14.09369,
+        7.70713,
+        8.77299
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Embedded iceberry 7",
+      "shade": true,
+      "from": [
+        1.49406,
+        3.00578,
+        6.84053
+      ],
+      "to": [
+        2.65353,
+        4.39306,
+        7.87117
+      ],
+      "rotation": {
+        "origin": [
+          2.0737999999999994,
+          3.69942,
+          7.355849999999999
+        ],
+        "axis": "y",
+        "angle": 45,
+        "rescale": false
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Paired iceberry 7",
+      "shade": true,
+      "from": [
+        2.43452,
+        2.54335,
+        7.29144
+      ],
+      "to": [
+        3.27192,
+        3.54528,
+        8.12884
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Embedded iceberry 8",
+      "shade": true,
+      "from": [
+        6.38962,
+        12.87091,
+        10.70545
+      ],
+      "to": [
+        7.5491,
+        14.25819,
+        11.73609
+      ],
+      "rotation": {
+        "origin": [
+          6.96936,
+          13.56455,
+          11.22077
+        ],
+        "axis": "y",
+        "angle": 45,
+        "rescale": false
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Paired iceberry 8",
+      "shade": true,
+      "from": [
+        7.33008,
+        12.40848,
+        11.15635
+      ],
+      "to": [
+        8.16748,
+        13.4104,
+        11.99375
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Embedded iceberry 9",
+      "shade": true,
+      "from": [
+        8.8374,
+        12.25434,
+        9.93246
+      ],
+      "to": [
+        9.99688,
+        13.64162,
+        10.96311
+      ],
+      "rotation": {
+        "origin": [
+          9.41714,
+          12.94798,
+          10.44779
+        ],
+        "axis": "y",
+        "angle": 45,
+        "rescale": false
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Paired iceberry 9",
+      "shade": true,
+      "from": [
+        9.77787,
+        11.79191,
+        10.38337
+      ],
+      "to": [
+        10.61526,
+        12.79383,
+        11.22077
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Embedded iceberry 10",
+      "shade": true,
+      "from": [
+        5.48781,
+        2.54335,
+        0.91432
+      ],
+      "to": [
+        6.64728,
+        3.93064,
+        1.94497
+      ],
+      "rotation": {
+        "origin": [
+          6.067539999999999,
+          3.23699,
+          1.4296399999999991
+        ],
+        "axis": "y",
+        "angle": 45,
+        "rescale": false
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Paired iceberry 10",
+      "shade": true,
+      "from": [
+        6.42827,
+        2.08092,
+        1.36523
+      ],
+      "to": [
+        7.26567,
+        3.08285,
+        2.20263
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Embedded iceberry 11",
+      "shade": true,
+      "from": [
+        10.12571,
+        4.85549,
+        2.71795
+      ],
+      "to": [
+        11.28518,
+        6.24277,
+        3.7486
+      ],
+      "rotation": {
+        "origin": [
+          10.705449999999999,
+          5.54913,
+          3.233269999999999
+        ],
+        "axis": "y",
+        "angle": 45,
+        "rescale": false
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Paired iceberry 11",
+      "shade": true,
+      "from": [
+        11.06617,
+        4.39306,
+        3.16886
+      ],
+      "to": [
+        11.90357,
+        5.39499,
+        4.00626
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#3"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Soft frost cap 0",
+      "shade": true,
+      "from": [
+        2.40231,
+        8.70906,
+        7.00157
+      ],
+      "to": [
+        6.64084,
+        9.06358,
+        11.05973
+      ],
+      "rotation": {
+        "origin": [
+          4.521579999999999,
+          8.88632,
+          9.03065
+        ],
+        "axis": "y",
+        "angle": -22.5,
+        "rescale": false
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Soft frost cap 1",
+      "shade": true,
+      "from": [
+        9.44291,
+        7.01349,
+        6.31232
+      ],
+      "to": [
+        13.77161,
+        7.36802,
+        10.46067
+      ],
+      "rotation": {
+        "origin": [
+          11.60726,
+          7.19075,
+          8.3865
+        ],
+        "axis": "y",
+        "angle": 22.5,
+        "rescale": false
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Soft frost cap 2",
+      "shade": true,
+      "from": [
+        5.56511,
+        5.93449,
+        1.81614
+      ],
+      "to": [
+        10.4349,
+        6.28902,
+        5.42339
+      ],
+      "rotation": {
+        "origin": [
+          8.0,
+          6.11175,
+          3.619759999999999
+        ],
+        "axis": "y",
+        "angle": -22.5,
+        "rescale": false
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Soft frost cap 3",
+      "shade": true,
+      "from": [
+        4.78568,
+        6.01156,
+        10.31896
+      ],
+      "to": [
+        9.92602,
+        6.36609,
+        13.92621
+      ],
+      "rotation": {
+        "origin": [
+          7.355849999999999,
+          6.18882,
+          12.12258
+        ],
+        "axis": "y",
+        "angle": 22.5,
+        "rescale": false
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Soft frost cap 4",
+      "shade": true,
+      "from": [
+        3.82589,
+        12.10019,
+        6.26723
+      ],
+      "to": [
+        7.79387,
+        12.45472,
+        10.50576
+      ],
+      "rotation": {
+        "origin": [
+          5.80988,
+          12.27746,
+          8.3865
+        ],
+        "axis": "y",
+        "angle": -22.5,
+        "rescale": false
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Soft frost cap 5",
+      "shade": true,
+      "from": [
+        8.76655,
+        10.86705,
+        6.70526
+      ],
+      "to": [
+        12.64435,
+        11.22158,
+        10.58306
+      ],
+      "rotation": {
+        "origin": [
+          10.705449999999999,
+          11.04432,
+          8.64416
+        ],
+        "axis": "y",
+        "angle": 22.5,
+        "rescale": false
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Soft frost cap 6",
+      "shade": true,
+      "from": [
+        6.59575,
+        15.64547,
+        6.84697
+      ],
+      "to": [
+        9.66192,
+        16,
+        10.18368
+      ],
+      "rotation": {
+        "origin": [
+          8.12883,
+          15.82274,
+          8.515329999999999
+        ],
+        "axis": "y",
+        "angle": -22.5,
+        "rescale": false
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Berry frost glint 0",
+      "shade": true,
+      "from": [
+        2.9112,
+        6.50482,
+        11.37537
+      ],
+      "to": [
+        3.49093,
+        6.65896,
+        11.86492
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Berry frost glint 1",
+      "shade": true,
+      "from": [
+        5.35898,
+        5.27168,
+        14.20964
+      ],
+      "to": [
+        5.93871,
+        5.42582,
+        14.69919
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Berry frost glint 2",
+      "shade": true,
+      "from": [
+        8.70857,
+        3.57611,
+        14.20964
+      ],
+      "to": [
+        9.28831,
+        3.73025,
+        14.69919
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Berry frost glint 3",
+      "shade": true,
+      "from": [
+        12.44466,
+        4.34682,
+        11.1177
+      ],
+      "to": [
+        13.0244,
+        4.50096,
+        11.60726
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Berry frost glint 4",
+      "shade": true,
+      "from": [
+        5.10132,
+        10.0501,
+        11.24654
+      ],
+      "to": [
+        5.68105,
+        10.20424,
+        11.73609
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Berry frost glint 5",
+      "shade": true,
+      "from": [
+        9.22389,
+        9.89595,
+        11.37537
+      ],
+      "to": [
+        9.80363,
+        10.0501,
+        11.86492
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Berry frost glint 6",
+      "shade": true,
+      "from": [
+        12.57349,
+        8.50867,
+        7.76811
+      ],
+      "to": [
+        13.15323,
+        8.66281,
+        8.25767
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Berry frost glint 7",
+      "shade": true,
+      "from": [
+        1.75172,
+        4.34682,
+        7.12396
+      ],
+      "to": [
+        2.33146,
+        4.50096,
+        7.61351
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Berry frost glint 8",
+      "shade": true,
+      "from": [
+        6.64728,
+        14.21195,
+        10.98887
+      ],
+      "to": [
+        7.22702,
+        14.36609,
+        11.47843
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Berry frost glint 9",
+      "shade": true,
+      "from": [
+        9.09506,
+        13.59538,
+        10.21589
+      ],
+      "to": [
+        9.6748,
+        13.74952,
+        10.70545
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Berry frost glint 10",
+      "shade": true,
+      "from": [
+        5.74547,
+        3.88439,
+        1.19775
+      ],
+      "to": [
+        6.32521,
+        4.03854,
+        1.68731
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        }
+      }
+    },
+    {
+      "name": "Iceberry Bush Berry frost glint 11",
+      "shade": true,
+      "from": [
+        10.38337,
+        6.19653,
+        3.00138
+      ],
+      "to": [
+        10.96311,
+        6.35067,
+        3.49093
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        }
+      }
+    }
+  ]
+}

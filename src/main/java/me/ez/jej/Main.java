@@ -30,6 +30,7 @@ public class Main{
         Init.EFFECT.register(FMLJavaModLoadingContext.get().getModEventBus());
         Init.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         Init.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        Init.registerTable(FMLJavaModLoadingContext.get().getModEventBus());
         FMLJavaModLoadingContext.get().getModEventBus().addListener(EventPriority.HIGH, this::ClientSetup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::CommonSetup);
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);

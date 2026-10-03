@@ -22,6 +22,13 @@ public class BlockLootTable extends BlockLoot {
 
     @Override
     protected void addTables() {
+        add(Init.JUICE_TABLE.get(), LootTable.lootTable().withPool(LootPool.lootPool()
+                .setRolls(net.minecraft.world.level.storage.loot.providers.number.ConstantValue.exactly(1))
+                .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(Init.JUICE_TABLE.get())
+                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(BlockStateProperties.BED_PART,
+                                net.minecraft.world.level.block.state.properties.BedPart.FOOT)))
+                .when(net.minecraft.world.level.storage.loot.predicates.ExplosionCondition.survivesExplosion())
+                .add(LootItem.lootTableItem(Init.JUICE_TABLE.get()))));
         BushLootTable(Init.ICE_BERRY_BUSH.get(), Init.ICE_BERRY.get());
         BushLootTable(Init.WILD_BERRY_BUSH.get(), Init.WILD_BERRY.get());
         BushLootTable(Init.SUN_BERRY_BUSH.get(), Init.SUN_BERRY.get());

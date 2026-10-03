@@ -14,6 +14,17 @@ public class LanguageProvider extends net.minecraftforge.common.data.LanguagePro
     protected void addTranslations() {
         //Item Group
         add("itemGroup." + "juices", "Juices");
+        add(Init.ORCHARD_GUARD.get(), "Orchard Guard");
+        add(Init.FROSTBITE.get(), "Frostbite");
+        add(Init.SOLAR_CHARGE.get(), "Solar Charge");
+        add(Init.FORAGERS_LUCK.get(), "Forager's Luck");
+        add(Init.JUICE_TABLE.get(), "Juice Making Table");
+        add("container.jej.juice_table", "Juice Making Table");
+        add("container.jej.juice_table.slot0", "Fruit or base juice");
+        add("container.jej.juice_table.slot1", "Milk bucket");
+        add("container.jej.juice_table.slot2", "Empty juice bottle or emerald dust");
+        add("container.jej.juice_table.slot3", "Finished juice");
+        add("container.jej.juice_table.slot4", "Returned buckets");
 
         //Juice
         add(Init.APPLE_JUICE.get(), "Apple Juice");
@@ -74,6 +85,57 @@ public class LanguageProvider extends net.minecraftforge.common.data.LanguagePro
         add(Init.SPICY.get(), "Spicy");
         add(Init.MAGNET.get(), "Magnet");
         add(Init.FLOAT.get(), "Float");
+        add(Init.CAFFEINE_CRASH.get(), "Caffeine Crash");
+        add(Init.CHILLED.get(), "Chilled");
+
+        //Power descriptions shown in juice tooltips
+        add("jej.power.night_vision", "Night Vision");
+        add("jej.power.night_vision.desc", "See clearly in the dark.");
+        add("jej.power.regeneration", "Regeneration");
+        add("jej.power.regeneration.desc", "Slowly restores health.");
+        add("jej.power.movement_speed", "Speed");
+        add("jej.power.movement_speed.desc", "Move faster.");
+        add("jej.power.damage_boost", "Strength");
+        add("jej.power.damage_boost.desc", "Deal more melee damage.");
+        add("jej.power.damage_resistance", "Resistance");
+        add("jej.power.damage_resistance.desc", "Take less damage from most sources.");
+        add("jej.power.dig_speed", "Haste");
+        add("jej.power.dig_speed.desc", "Mine and break blocks faster.");
+        add("jej.power.jump", "Jump Boost");
+        add("jej.power.jump.desc", "Jump higher.");
+        add("jej.power.invisibility", "Invisibility");
+        add("jej.power.invisibility.desc", "Hide from mobs.");
+        add("jej.power.water_breathing", "Water Breathing");
+        add("jej.power.water_breathing.desc", "Breathe underwater without drowning.");
+        add("jej.power.absorption", "Absorption");
+        add("jej.power.absorption.desc", "Gain extra temporary hearts.");
+        add("jej.power.dolphins_grace", "Dolphin's Grace");
+        add("jej.power.dolphins_grace.desc", "Swim faster in water.");
+        add("jej.power.slow_falling", "Slow Falling");
+        add("jej.power.slow_falling.desc", "Fall gently and avoid fall damage.");
+        add("jej.power.saturation", "Saturation");
+        add("jej.power.saturation.desc", "Instantly restores hunger.");
+        add("jej.power.fire_resistance", "Fire Resistance");
+        add("jej.power.fire_resistance.desc", "Immune to fire and lava damage.");
+        add("jej.power.luck", "Luck");
+        add("jej.power.luck.desc", "Improves loot and fishing luck.");
+        add("jej.power.levitation", "Levitation");
+        add("jej.power.levitation.desc", "Drift upward into the air.");
+        add("jej.power.glowing", "Glowing");
+        add("jej.power.glowing.desc", "Your outline is visible through blocks.");
+        add("jej.power.movement_slowdown", "Slowness");
+        add("jej.power.movement_slowdown.desc", "Move slower.");
+
+        //Descriptions for the mod's own mechanical effects
+        add(Init.ICYFOOTEFFECT.get().getDescriptionId() + ".desc", "Turns the water under your feet to frosted ice.");
+        add(Init.CAFFEINATED.get().getDescriptionId() + ".desc", "Speed and Haste while active, then a 20s crash (Slowness + Mining Fatigue).");
+        add(Init.SPICY.get().getDescriptionId() + ".desc", "Sets nearby mobs on fire (15% per second) and extinguishes you.");
+        add(Init.FLOAT.get().getDescriptionId() + ".desc", "Lift gently into the air and descend slowly.");
+        add(Init.MAGNET.get().getDescriptionId() + ".desc", "Pulls nearby items and XP toward you.");
+        add(Init.ORCHARD_GUARD.get().getDescriptionId() + ".desc", "Reduces incoming damage by 15-40% (except the void).");
+        add(Init.FROSTBITE.get().getDescriptionId() + ".desc", "Chills attackers, slowing and freezing them.");
+        add(Init.SOLAR_CHARGE.get().getDescriptionId() + ".desc", "Heals you in daylight under open sky (1-1.5 HP every 2s).");
+        add(Init.FORAGERS_LUCK.get().getDescriptionId() + ".desc", "Harvest 1-2 extra berries from the mod's bushes.");
 
         //Per-Juice Custom Effects
         add(Init.APPLE_EFFECT.get(), "Apple Sight");

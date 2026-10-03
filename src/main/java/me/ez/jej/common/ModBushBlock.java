@@ -60,11 +60,13 @@ public abstract class ModBushBlock extends BushBlock implements BonemealableBloc
         boolean flag = i == 3;
         if (!flag && player.getItemInHand(p_57279_).is(Items.BONE_MEAL)) {
             return InteractionResult.PASS;
-        } else if (i > 1) {
+        } else if (i == 3 || (state.is(Init.GLOW_BERRY_BUSH.get()) && i > 1)) {
+            if (level.isClientSide) return InteractionResult.SUCCESS;
             int j = 1 + level.random.nextInt(2);
+            if (player.hasEffect(Init.FORAGERS_LUCK.get())) j += Math.min(2, player.getEffect(Init.FORAGERS_LUCK.get()).getAmplifier() + 1);
             popResource(level, pos, new ItemStack(DropItem(state).getItem(), j + (flag ? 1 : 0)));
             level.playSound(null, pos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
-            level.setBlock(pos, state.setValue(AGE, Integer.valueOf(1)), 2);
+            level.setBlock(pos, state.setValue(AGE, state.is(Init.GLOW_BERRY_BUSH.get()) ? 1 : 2), 2);
             return InteractionResult.sidedSuccess(level.isClientSide);
         } else {
             return super.use(state, level, pos, player, p_57279_, p_57280_);
@@ -73,6 +75,8 @@ public abstract class ModBushBlock extends BushBlock implements BonemealableBloc
 
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter getter, BlockPos pos, CollisionContext context) {
+        VoxelShape imported = BushShapes.get(state.getBlock(), state.getValue(AGE));
+        if (imported != null) return imported;
         if (state.getValue(AGE) == 0) {
             return SAPLING_SHAPE;
         }

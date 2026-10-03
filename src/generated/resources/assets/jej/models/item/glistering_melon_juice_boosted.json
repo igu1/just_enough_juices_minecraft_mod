@@ -1,6 +1,8 @@
 {
   "parent": "jej:item/juice_bottle",
   "textures": {
-    "liquid": "jej:item/glistering_melon_liquid_boosted"
+    "liquid": "jej:item/glistering_melon_liquid_boosted",
+    "label": "jej:item/glistering_melon_juice_boosted_label",
+    "seal": "jej:item/boosted_seal"
   }
 }

@@ -1,0 +1,927 @@
+{
+  "ambientocclusion": false,
+  "textures": {
+    "0": "jej:block/botany/wildberry_leaves",
+    "1": "jej:block/botany/wildberry_fruit",
+    "2": "jej:block/botany/iceberry_leaves",
+    "3": "jej:block/botany/iceberry_fruit",
+    "4": "jej:block/botany/sunberry_leaves",
+    "5": "jej:block/botany/sunberry_fruit",
+    "6": "jej:block/botany/bush_branches",
+    "7": "jej:block/botany/iceberry_frost",
+    "8": "jej:block/botany/sunberry_flower",
+    "particle": "jej:block/botany/iceberry_leaves"
+  },
+  "elements": [
+    {
+      "name": "Young Iceberry Bush Compact icy leaf cushion 0",
+      "shade": true,
+      "from": [
+        5.85304,
+        0.6104,
+        7.38355
+      ],
+      "to": [
+        7.8512,
+        2.89942,
+        9.29668
+      ],
+      "rotation": {
+        "origin": [
+          6.852119999999999,
+          1.75491,
+          8.340119999999999
+        ],
+        "axis": "y",
+        "angle": -22.5,
+        "rescale": false
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        }
+      }
+    },
+    {
+      "name": "Young Iceberry Bush Compact icy leaf cushion 1",
+      "shade": true,
+      "from": [
+        8.17006,
+        0.10173,
+        7.14972
+      ],
+      "to": [
+        10.21074,
+        2.33988,
+        9.10537
+      ],
+      "rotation": {
+        "origin": [
+          9.1904,
+          1.22081,
+          8.12755
+        ],
+        "axis": "y",
+        "angle": 22.5,
+        "rescale": false
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        }
+      }
+    },
+    {
+      "name": "Young Iceberry Bush Compact icy leaf cushion 2",
+      "shade": true,
+      "from": [
+        6.85212,
+        0.05087,
+        5.70424
+      ],
+      "to": [
+        9.14788,
+        1.98382,
+        7.40481
+      ],
+      "rotation": {
+        "origin": [
+          8.0,
+          1.01734,
+          6.554529999999999
+        ],
+        "axis": "y",
+        "angle": -22.5,
+        "rescale": false
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        }
+      }
+    },
+    {
+      "name": "Young Iceberry Bush Compact icy leaf cushion 3",
+      "shade": true,
+      "from": [
+        6.57578,
+        0.0763,
+        8.51017
+      ],
+      "to": [
+        8.99908,
+        2.00925,
+        10.21074
+      ],
+      "rotation": {
+        "origin": [
+          7.78743,
+          1.04277,
+          9.36046
+        ],
+        "axis": "y",
+        "angle": 22.5,
+        "rescale": false
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        }
+      }
+    },
+    {
+      "name": "Young Iceberry Bush Compact icy leaf cushion 4",
+      "shade": true,
+      "from": [
+        6.34195,
+        2.23815,
+        7.12847
+      ],
+      "to": [
+        8.21257,
+        4.0185,
+        9.12663
+      ],
+      "rotation": {
+        "origin": [
+          7.277259999999999,
+          3.12832,
+          8.12755
+        ],
+        "axis": "y",
+        "angle": -22.5,
+        "rescale": false
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        }
+      }
+    },
+    {
+      "name": "Young Iceberry Bush Compact icy leaf cushion 5",
+      "shade": true,
+      "from": [
+        7.97875,
+        1.88208,
+        7.29852
+      ],
+      "to": [
+        9.80685,
+        3.61156,
+        9.12663
+      ],
+      "rotation": {
+        "origin": [
+          8.892800000000001,
+          2.74682,
+          8.212579999999999
+        ],
+        "axis": "y",
+        "angle": 22.5,
+        "rescale": false
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        }
+      }
+    },
+    {
+      "name": "Young Iceberry Bush Compact icy leaf cushion 6",
+      "shade": true,
+      "from": [
+        7.31978,
+        3.81503,
+        7.38355
+      ],
+      "to": [
+        8.76526,
+        5.18844,
+        8.95657
+      ],
+      "rotation": {
+        "origin": [
+          8.04252,
+          4.50173,
+          8.17006
+        ],
+        "axis": "y",
+        "angle": -22.5,
+        "rescale": false
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        }
+      }
+    },
+    {
+      "name": "Young Iceberry Bush Ice ground skirt 0",
+      "shade": true,
+      "from": [
+        6.21441,
+        0.05087,
+        5.95933
+      ],
+      "to": [
+        7.23475,
+        0.96647,
+        6.89464
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        }
+      }
+    },
+    {
+      "name": "Young Iceberry Bush Ice ground skirt 1",
+      "shade": true,
+      "from": [
+        6.80961,
+        0.05087,
+        9.10537
+      ],
+      "to": [
+        7.82995,
+        0.96647,
+        10.04068
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        }
+      }
+    },
+    {
+      "name": "Young Iceberry Bush Ice ground skirt 2",
+      "shade": true,
+      "from": [
+        7.40481,
+        0.05087,
+        5.95933
+      ],
+      "to": [
+        8.42514,
+        0.96647,
+        6.89464
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        }
+      }
+    },
+    {
+      "name": "Young Iceberry Bush Ice ground skirt 3",
+      "shade": true,
+      "from": [
+        8.0,
+        0.05087,
+        9.10537
+      ],
+      "to": [
+        9.02034,
+        0.96647,
+        10.04068
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        }
+      }
+    },
+    {
+      "name": "Young Iceberry Bush Ice ground skirt 4",
+      "shade": true,
+      "from": [
+        8.5952,
+        0.05087,
+        5.95933
+      ],
+      "to": [
+        9.61554,
+        0.96647,
+        6.89464
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        }
+      }
+    }
+  ]
+}

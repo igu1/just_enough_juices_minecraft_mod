@@ -186,6 +186,13 @@ public class JuiceClass extends PotionItem {
 
         }
 
+        int fruitAmplifier = stack.getItem().getRegistryName().getPath().endsWith("_boosted") ? 1 : 0;
+        MobEffect fruitPower = null;
+        if (stack.is(Init.APPLE_JUICE.get()) || stack.is(Init.APPLE_JUICE_BOOSTED.get())) fruitPower = Init.ORCHARD_GUARD.get();
+        else if (stack.is(Init.ICEBERRY_JUICE.get()) || stack.is(Init.ICEBERRY_JUICE_BOOSTED.get())) fruitPower = Init.FROSTBITE.get();
+        else if (stack.is(Init.SUNBERRY_JUICE.get()) || stack.is(Init.SUNBERRY_JUICE_BOOSTED.get())) fruitPower = Init.SOLAR_CHARGE.get();
+        else if (stack.is(Init.WILDBERRY_JUICE.get()) || stack.is(Init.WILDBERRY_JUICE_BOOSTED.get())) fruitPower = Init.FORAGERS_LUCK.get();
+        if (fruitPower != null) list.add(new MobEffectInstance(fruitPower, fruitAmplifier == 0 ? 1200 : 2400, fruitAmplifier));
         double multiplier = Config.EFFECT_DURATION_MULTIPLIER.get();
         if (multiplier != 1.0D) {
             List<MobEffectInstance> scaled = Lists.newArrayList();
@@ -311,6 +318,11 @@ public class JuiceClass extends PotionItem {
                 }
 
                 components.add(mutablecomponent.withStyle(mobeffect.getCategory().getTooltipFormatting()));
+                if (mobeffect instanceof me.ez.jej.common.Effects.JuiceEffect juice) {
+                    juice.appendTooltip(components);
+                } else {
+                    components.add(new TranslatableComponent(mobeffect.getDescriptionId() + ".desc").withStyle(ChatFormatting.GRAY));
+                }
             }
         }
     }

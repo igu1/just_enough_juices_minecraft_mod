@@ -22,13 +22,13 @@ public class BlockStateModelProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         makeBush(Init.WILD_BERRY_BUSH.get(),
-                "wildberry_bush_stage",
+                "wildberry_bush_blockbench_stage",
                 "wildberry_bush_stage");
         makeBush(Init.ICE_BERRY_BUSH.get(),
-                "iceberry_bush_stage",
+                "iceberry_bush_blockbench_stage",
                 "iceberry_bush_stage");
         makeBush(Init.SUN_BERRY_BUSH.get(),
-                "sunberry_bush_stage",
+                "sunberry_bush_blockbench_stage",
                 "sunberry_bush_stage");
         makeBush(Init.GLOW_BERRY_BUSH.get(),
                 "glowberry_bush_stage",
@@ -42,8 +42,13 @@ public class BlockStateModelProvider extends BlockStateProvider {
 
     private ConfiguredModel[] states(BlockState state, BushBlock block, String modelName, String textureName) {
         ConfiguredModel[] models = new ConfiguredModel[1];
-        models[0] = new ConfiguredModel(models().cross(modelName + state.getValue(BlockStateProperties.AGE_3),
-                new ResourceLocation(Main.MOD_ID, "block/" + textureName + state.getValue(BlockStateProperties.AGE_3))));
+        if (block == Init.GLOW_BERRY_BUSH.get()) {
+            models[0] = new ConfiguredModel(models().cross(modelName + state.getValue(BlockStateProperties.AGE_3),
+                    new ResourceLocation(Main.MOD_ID, "block/" + textureName + state.getValue(BlockStateProperties.AGE_3))));
+        } else {
+            models[0] = new ConfiguredModel(models().getExistingFile(new ResourceLocation(Main.MOD_ID,
+                    "block/" + modelName + state.getValue(BlockStateProperties.AGE_3))));
+        }
         return models;
     }
 }
