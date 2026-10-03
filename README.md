@@ -24,67 +24,15 @@ powers, with **boosted** versions that push them further.
 
 ---
 
-## Installation
+## Recipes
 
-1. Install Minecraft **1.18.2** with **Minecraft Forge 40.1.0 or newer**.
-2. Drop the mod `.jar` into your `mods/` folder.
-3. Launch the game and enjoy.
+Every recipe in the mod is shown in-game with **JEI (Just Enough Items)**. Install
+JEI and open it to see how any juice, boosted bottle, **Juice Booster**, or the
+**Juice Making Table** is made.
 
-Requires **Java 17**.
-
----
-
-## Making Juice
-
-### Crafting table
-
-Every juice follows one of two simple vertical recipes.
-
-**Juice** — one fruit over a milk bucket over a glass bottle:
-
-```
- F     F = fruit / ingredient
- M     M = Milk Bucket
- G     G = Glass Bottle  ->  Juice
-```
-
-**Boosted Juice** — the base juice boosted with a **Juice Booster**:
-
-```
- M     M = Milk Bucket
- E     E = Juice Booster
- J     J = base Juice    ->  Boosted Juice
-```
-
-**Juice Booster** — the reusable catalyst for boosting, crafted from emerald dust
-and gold:
-
-```
-EEE    E = Emerald Dust
-EGE    G = Gold Ingot    ->  Juice Booster
-EEE
-```
-
-> `Glass Bottle` is the mod's own item (glass + gold nuggets). `Emerald Dust` is
-> crafted from an emerald (1 emerald → 9 dust, and 9 dust → 1 emerald). Each
-> **Juice Booster** costs **8 Emerald Dust + 1 Gold Ingot**, so boosting takes
-> roughly a full emerald plus gold — no longer a near-free upgrade.
-
-### Juice Making Table
-
-Craft the table and stock its slots:
-
-| Slot | Accepts | Role |
-|------|---------|------|
-| 0 | fruit / base juice | main ingredient |
-| 1 | milk bucket | milk |
-| 2 | glass bottle **or** Juice Booster | bottle (normal) / booster (boosted) |
-| 3 | — | finished juice output |
-| 4 | — | returned empty buckets |
-
-It matches the same recipes as the crafting table, takes **5 seconds** per bottle,
-and works with hoppers (input from the top/sides, output from the bottom). Put
-**emerald dust** in slot 2 to make the boosted version.
+The **Juice Making Table** takes a fruit (or a base juice), a milk bucket, and either
+a glass bottle (normal) or a **Juice Booster** (boosted), then outputs the finished
+bottle. It takes **5 seconds** per bottle and works with hoppers.
 
 ---
 
@@ -175,9 +123,9 @@ Luck** increases the harvest.
 
 ## Items
 
-- **Glass Bottle** — the container for every juice (glass + gold nuggets).
-- **Emerald Dust** — crafting material for the Juice Booster (1 emerald → 9 dust).
-- **Juice Booster** — the boosting catalyst for every boosted bottle (8 Emerald Dust + 1 Gold Ingot).
+- **Glass Bottle** — the container for every juice.
+- **Emerald Dust** — crafting material for the Juice Booster.
+- **Juice Booster** — the catalyst for every boosted bottle.
 - **Juice Making Table** — the juicing machine.
 
 ---
