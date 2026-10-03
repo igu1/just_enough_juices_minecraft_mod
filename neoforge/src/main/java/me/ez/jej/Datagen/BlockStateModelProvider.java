@@ -2,7 +2,7 @@ package me.ez.jej.Datagen;
 
 import me.ez.jej.Init;
 import me.ez.jej.Main;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.BushBlock;
 import net.minecraft.world.level.block.state.BlockState;
@@ -15,8 +15,8 @@ import java.util.function.Function;
 
 public class BlockStateModelProvider extends BlockStateProvider {
 
-    public BlockStateModelProvider(DataGenerator gen, ExistingFileHelper exFileHelper) {
-        super(gen, Main.MOD_ID, exFileHelper);
+    public BlockStateModelProvider(PackOutput output, ExistingFileHelper exFileHelper) {
+        super(output, Main.MOD_ID, exFileHelper);
     }
 
     @Override
@@ -44,9 +44,9 @@ public class BlockStateModelProvider extends BlockStateProvider {
         ConfiguredModel[] models = new ConfiguredModel[1];
         if (block == Init.GLOW_BERRY_BUSH.get()) {
             models[0] = new ConfiguredModel(models().cross(modelName + state.getValue(BlockStateProperties.AGE_3),
-                    new ResourceLocation(Main.MOD_ID, "block/" + textureName + state.getValue(BlockStateProperties.AGE_3))));
+                    ResourceLocation.fromNamespaceAndPath(Main.MOD_ID, "block/" + textureName + state.getValue(BlockStateProperties.AGE_3))));
         } else {
-            models[0] = new ConfiguredModel(models().getExistingFile(new ResourceLocation(Main.MOD_ID,
+            models[0] = new ConfiguredModel(models().getExistingFile(ResourceLocation.fromNamespaceAndPath(Main.MOD_ID,
                     "block/" + modelName + state.getValue(BlockStateProperties.AGE_3))));
         }
         return models;

@@ -2,12 +2,12 @@ package me.ez.jej.Datagen;
 
 import me.ez.jej.Init;
 import me.ez.jej.Main;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 
 public class LanguageProvider extends net.neoforged.neoforge.common.data.LanguageProvider {
 
-    public LanguageProvider(DataGenerator gen, String locale) {
-        super(gen, Main.MOD_ID, locale);
+    public LanguageProvider(PackOutput output, String locale) {
+        super(output, Main.MOD_ID, locale);
     }
 
     @Override

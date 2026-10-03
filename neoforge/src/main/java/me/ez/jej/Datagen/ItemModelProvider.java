@@ -3,7 +3,8 @@ package me.ez.jej.Datagen;
 
 import me.ez.jej.Init;
 import me.ez.jej.Main;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
@@ -11,8 +12,8 @@ import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 public class ItemModelProvider extends net.neoforged.neoforge.client.model.generators.ItemModelProvider {
 
-    public ItemModelProvider(DataGenerator generator, ExistingFileHelper existingFileHelper) {
-        super(generator, Main.MOD_ID, existingFileHelper);
+    public ItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
+        super(output, Main.MOD_ID, existingFileHelper);
     }
 
     @Override
@@ -69,8 +70,8 @@ public class ItemModelProvider extends net.neoforged.neoforge.client.model.gener
         //Item
         simpleItem(Init.EMERALD_DUST.get());
         simpleItem(Init.JUICE_BOOSTER.get());
-        withExistingParent("glass_bottle", new ResourceLocation(Main.MOD_ID, "item/empty_juice_bottle"));
-        withExistingParent("juice_table", new ResourceLocation(Main.MOD_ID, "block/juice_table"));
+        withExistingParent("glass_bottle", ResourceLocation.fromNamespaceAndPath(Main.MOD_ID, "item/empty_juice_bottle"));
+        withExistingParent("juice_table", ResourceLocation.fromNamespaceAndPath(Main.MOD_ID, "block/juice_table"));
 
         //BlockItem
         withExistingParent("wild_berry", modLoc("item/wild_berry_blockbench"));
@@ -80,22 +81,23 @@ public class ItemModelProvider extends net.neoforged.neoforge.client.model.gener
     }
 
     private ItemModelBuilder simpleItem(Item item) {
-        return withExistingParent(item.getRegistryName().getPath(),
-                new ResourceLocation("item/generated")).texture("layer0",
-                new ResourceLocation(Main.MOD_ID,"item/" + item.getRegistryName().getPath()));
+        String path = BuiltInRegistries.ITEM.getKey(item).getPath();
+        return withExistingParent(path,
+                ResourceLocation.withDefaultNamespace("item/generated")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(Main.MOD_ID, "item/" + path));
     }
 
     private ItemModelBuilder bottleItem(Item item) {
-        String path = item.getRegistryName().getPath();
+        String path = BuiltInRegistries.ITEM.getKey(item).getPath();
         String liquid;
         if (path.endsWith("_juice_boosted")) {
             liquid = path.substring(0, path.length() - "_juice_boosted".length()) + "_liquid_boosted";
         } else {
             liquid = path.substring(0, path.length() - "_juice".length()) + "_liquid";
         }
-        return withExistingParent(path, new ResourceLocation(Main.MOD_ID, "item/juice_bottle"))
-                .texture("liquid", new ResourceLocation(Main.MOD_ID, "item/" + liquid))
-                .texture("label", new ResourceLocation(Main.MOD_ID, "item/" + path + "_label"))
-                .texture("seal", new ResourceLocation(Main.MOD_ID, "item/" + (path.endsWith("_boosted") ? "boosted_seal" : "bottle_seal")));
+        return withExistingParent(path, ResourceLocation.fromNamespaceAndPath(Main.MOD_ID, "item/juice_bottle"))
+                .texture("liquid", ResourceLocation.fromNamespaceAndPath(Main.MOD_ID, "item/" + liquid))
+                .texture("label", ResourceLocation.fromNamespaceAndPath(Main.MOD_ID, "item/" + path + "_label"))
+                .texture("seal", ResourceLocation.fromNamespaceAndPath(Main.MOD_ID, "item/" + (path.endsWith("_boosted") ? "boosted_seal" : "bottle_seal")));
     }
 }
