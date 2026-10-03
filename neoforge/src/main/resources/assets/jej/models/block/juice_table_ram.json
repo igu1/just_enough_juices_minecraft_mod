@@ -1,10 +1,10 @@
 {
-  "loader": "forge:obj",
+  "loader": "neoforge:obj",
   "model": "jej:models/block/juice_table_ram.obj",
-  "flip-v": true,
-  "detectCullableFaces": false,
-  "diffuseLighting": true,
-  "ambientToFullbright": false,
+  "flip_v": true,
+  "automatic_culling": false,
+  "shade_quads": true,
+  "emissive_ambient": false,
   "textures": {
     "particle": "jej:block/juice_table/minimal_juice_table_atlas_png"
   }

@@ -111,7 +111,7 @@ public class JuiceTableBlockEntity extends BlockEntity implements WorldlyContain
         super.saveAdditional(tag, registries);
         ContainerHelper.saveAllItems(tag, items, registries);
         tag.putInt("Progress", progress);
-        tag.put("WorkingResult", workingResult.save(registries));
+        if (!workingResult.isEmpty()) tag.put("WorkingResult", workingResult.save(registries));
     }
 
     @Override protected void loadAdditional(CompoundTag tag, HolderLookup.Provider registries) {
