@@ -14,8 +14,13 @@ import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 public class ClientEvents {
     @SubscribeEvent
     public static void models(ModelEvent.RegisterAdditional event) {
+        //? if >=1.21.2 {
+        /*event.register(JuiceTableRenderer.SCREW);
+        event.register(JuiceTableRenderer.RAM);
+        *///?} else {
         event.register(ModelResourceLocation.standalone(JuiceTableRenderer.SCREW));
         event.register(ModelResourceLocation.standalone(JuiceTableRenderer.RAM));
+        //?}
     }
 
     @SubscribeEvent

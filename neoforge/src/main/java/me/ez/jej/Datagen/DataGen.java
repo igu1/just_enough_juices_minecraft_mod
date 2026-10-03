@@ -1,3 +1,4 @@
+//? if <1.21.2 {
 package me.ez.jej.Datagen;
 
 import me.ez.jej.Datagen.LootTable.BlockLootTable;
@@ -24,3 +25,5 @@ public class DataGen {
         generator.addProvider(event.includeServer(), new LootTableProvider(output, event.getLookupProvider()));
     }
 }
+
+//?}

@@ -15,8 +15,13 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 public class JuiceTableRenderer implements BlockEntityRenderer<JuiceTableBlockEntity> {
     public static final ResourceLocation SCREW = ResourceLocation.fromNamespaceAndPath("jej", "block/juice_table_screw");
     public static final ResourceLocation RAM = ResourceLocation.fromNamespaceAndPath("jej", "block/juice_table_ram");
+    //? if >=1.21.2 {
+    /*private static final ModelResourceLocation SCREW_MODEL = new ModelResourceLocation(SCREW, "standalone");
+    private static final ModelResourceLocation RAM_MODEL = new ModelResourceLocation(RAM, "standalone");
+    *///?} else {
     private static final ModelResourceLocation SCREW_MODEL = ModelResourceLocation.standalone(SCREW);
     private static final ModelResourceLocation RAM_MODEL = ModelResourceLocation.standalone(RAM);
+    //?}
     public JuiceTableRenderer(BlockEntityRendererProvider.Context context) {}
 
     @Override public void render(JuiceTableBlockEntity table, float partialTick, PoseStack pose, MultiBufferSource buffers, int light, int overlay) {

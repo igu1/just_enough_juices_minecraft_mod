@@ -1,3 +1,4 @@
+//? if <1.21.2 {
 package me.ez.jej.Datagen.LootTable;
 
 import me.ez.jej.Init;
@@ -78,3 +79,5 @@ public class BlockLootTable extends BlockLootSubProvider {
                     .apply(ApplyBonusCount.addUniformBonusCount(fortune))))));
     }
 }
+
+//?}

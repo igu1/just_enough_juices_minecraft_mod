@@ -21,8 +21,13 @@ public class JuiceTableScreen extends AbstractContainerScreen<JuiceTableMenu> {
         guiGraphics.drawString(font, playerInventoryTitle, inventoryLabelX, inventoryLabelY, 4210752, false);
     }
     @Override protected void renderBg(GuiGraphics guiGraphics, float partialTick, int mouseX, int mouseY) {
+        //? if >=1.21.2 {
+        /*guiGraphics.blit(net.minecraft.client.renderer.RenderType::guiTextured, TEXTURE, leftPos, topPos, 0, 0, imageWidth, imageHeight, imageWidth, imageHeight);
+        guiGraphics.blit(net.minecraft.client.renderer.RenderType::guiTextured, TEXTURE, leftPos + 121, topPos + 36, 0, 192, menu.getProgressWidth(), 16, 256, 256);
+        *///?} else {
         guiGraphics.blit(TEXTURE, leftPos, topPos, 0, 0, imageWidth, imageHeight);
         guiGraphics.blit(TEXTURE, leftPos + 121, topPos + 36, 0, 192, menu.getProgressWidth(), 16);
+        //?}
     }
     @Override public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTick) {
         super.render(guiGraphics, mouseX, mouseY, partialTick);

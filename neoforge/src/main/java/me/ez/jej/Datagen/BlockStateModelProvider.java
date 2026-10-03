@@ -1,3 +1,4 @@
+//? if <1.21.2 {
 package me.ez.jej.Datagen;
 
 import me.ez.jej.Init;
@@ -52,3 +53,5 @@ public class BlockStateModelProvider extends BlockStateProvider {
         return models;
     }
 }
+
+//?}

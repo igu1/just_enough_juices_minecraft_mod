@@ -1,3 +1,4 @@
+//? if <1.21.2 {
 package me.ez.jej.Datagen;
 
 import me.ez.jej.Datagen.LootTable.BlockLootTable;
@@ -18,3 +19,5 @@ public class LootTableProvider extends net.minecraft.data.loot.LootTableProvider
                 lookupProvider);
     }
 }
+
+//?}

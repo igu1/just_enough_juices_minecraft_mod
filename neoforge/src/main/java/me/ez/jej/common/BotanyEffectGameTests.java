@@ -1,3 +1,4 @@
+//? if <1.21.2 {
 package me.ez.jej.common;
 
 import me.ez.jej.Init;
@@ -132,3 +133,5 @@ public class BotanyEffectGameTests {
         helper.succeed();
     }
 }
+
+//?}

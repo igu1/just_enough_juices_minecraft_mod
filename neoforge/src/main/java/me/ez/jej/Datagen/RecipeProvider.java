@@ -1,3 +1,4 @@
+//? if <1.21.2 {
 package me.ez.jej.Datagen;
 
 import me.ez.jej.Init;
@@ -176,3 +177,5 @@ public class RecipeProvider extends net.minecraft.data.recipes.RecipeProvider {
         addBoostedJuiceRecipe(recipeOutput, Init.GLISTERING_MELON_JUICE.get(), Init.GLISTERING_MELON_JUICE_BOOSTED.get());
     }
 }
+
+//?}

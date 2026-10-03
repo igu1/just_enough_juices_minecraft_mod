@@ -1,3 +1,4 @@
+//? if <1.21.2 {
 package me.ez.jej.Datagen;
 
 
@@ -101,3 +102,5 @@ public class ItemModelProvider extends net.neoforged.neoforge.client.model.gener
                 .texture("seal", ResourceLocation.fromNamespaceAndPath(Main.MOD_ID, "item/" + (path.endsWith("_boosted") ? "boosted_seal" : "bottle_seal")));
     }
 }
+
+//?}

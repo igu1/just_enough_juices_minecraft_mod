@@ -1,3 +1,4 @@
+//? if <1.21.2 {
 package me.ez.jej.client;
 
 import me.ez.jej.Init;
@@ -87,3 +88,5 @@ public class ClientAssetSmokeTest {
         }
     }
 }
+
+//?}

@@ -1,3 +1,4 @@
+//? if <1.21.2 {
 package me.ez.jej.Datagen;
 
 import me.ez.jej.Init;
@@ -194,3 +195,5 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
         add("advancements.jej.golden_mastery.description", "Craft golden apple juice");
     }
 }
+
+//?}
