@@ -1,0 +1,11 @@
+{
+  "loader": "forge:obj",
+  "model": "jej:models/block/juice_table_right.obj",
+  "flip-v": true,
+  "detectCullableFaces": false,
+  "diffuseLighting": true,
+  "ambientToFullbright": false,
+  "textures": {
+    "particle": "jej:block/juice_table/minimal_juice_table_atlas_png"
+  }
+}

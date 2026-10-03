@@ -1,0 +1,8 @@
+{
+  "parent": "jej:item/juice_bottle",
+  "textures": {
+    "liquid": "jej:item/apple_liquid_boosted",
+    "label": "jej:item/apple_juice_boosted_label",
+    "seal": "jej:item/boosted_seal"
+  }
+}

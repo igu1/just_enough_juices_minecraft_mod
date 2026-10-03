@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "jej:driedkelp_juice_boosted"
+    ]
+  },
+  "criteria": {
+    "has_driedkelp_juice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "jej:driedkelp_juice"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "jej:driedkelp_juice_boosted"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_driedkelp_juice",
+      "has_the_recipe"
+    ]
+  ]
+}

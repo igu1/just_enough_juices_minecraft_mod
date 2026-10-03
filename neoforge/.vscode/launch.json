@@ -1,0 +1,93 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "1.21.1 - Client",
+      "presentation": {
+        "group": "Mod Development - 1.21.1",
+        "order": 0
+      },
+      "projectName": "1.21.1",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@/home/eza/Modding/MC/justenoughjuices/neoforge/versions/1.21.1/build/moddev/clientRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@/home/eza/Modding/MC/justenoughjuices/neoforge/versions/1.21.1/build/moddev/clientRunVmArgs.txt",
+        "-Dfml.modFolders\u003djej%%/home/eza/Modding/MC/justenoughjuices/neoforge/versions/1.21.1/bin/main"
+      ],
+      "cwd": "${workspaceFolder}/versions/run-neoforge",
+      "env": {},
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    },
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "1.21.1 - Server",
+      "presentation": {
+        "group": "Mod Development - 1.21.1",
+        "order": 1
+      },
+      "projectName": "1.21.1",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@/home/eza/Modding/MC/justenoughjuices/neoforge/versions/1.21.1/build/moddev/serverRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@/home/eza/Modding/MC/justenoughjuices/neoforge/versions/1.21.1/build/moddev/serverRunVmArgs.txt",
+        "-Dfml.modFolders\u003djej%%/home/eza/Modding/MC/justenoughjuices/neoforge/versions/1.21.1/bin/main"
+      ],
+      "cwd": "${workspaceFolder}/versions/run-neoforge",
+      "env": {},
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    },
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "1.21.11 - Client",
+      "presentation": {
+        "group": "Mod Development - 1.21.11",
+        "order": 0
+      },
+      "projectName": "1.21.11",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@/home/eza/Modding/MC/justenoughjuices/neoforge/versions/1.21.11/build/moddev/clientRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@/home/eza/Modding/MC/justenoughjuices/neoforge/versions/1.21.11/build/moddev/clientRunVmArgs.txt",
+        "-Dfml.modFolders\u003djej%%/home/eza/Modding/MC/justenoughjuices/neoforge/versions/1.21.11/bin/main"
+      ],
+      "cwd": "${workspaceFolder}/versions/run-neoforge",
+      "env": {},
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    },
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "1.21.11 - Server",
+      "presentation": {
+        "group": "Mod Development - 1.21.11",
+        "order": 1
+      },
+      "projectName": "1.21.11",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@/home/eza/Modding/MC/justenoughjuices/neoforge/versions/1.21.11/build/moddev/serverRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@/home/eza/Modding/MC/justenoughjuices/neoforge/versions/1.21.11/build/moddev/serverRunVmArgs.txt",
+        "-Dfml.modFolders\u003djej%%/home/eza/Modding/MC/justenoughjuices/neoforge/versions/1.21.11/bin/main"
+      ],
+      "cwd": "${workspaceFolder}/versions/run-neoforge",
+      "env": {},
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "jej:wildberry_juice"
+    ]
+  },
+  "criteria": {
+    "has_wild_berry": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "jej:wild_berry"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "jej:wildberry_juice"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_wild_berry",
+      "has_the_recipe"
+    ]
+  ]
+}

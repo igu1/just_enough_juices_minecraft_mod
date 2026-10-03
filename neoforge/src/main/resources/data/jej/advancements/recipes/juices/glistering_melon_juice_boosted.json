@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "jej:glistering_melon_juice_boosted"
+    ]
+  },
+  "criteria": {
+    "has_glistering_melon_juice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "jej:glistering_melon_juice"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "jej:glistering_melon_juice_boosted"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_glistering_melon_juice",
+      "has_the_recipe"
+    ]
+  ]
+}

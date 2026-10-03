@@ -1,0 +1,13 @@
+# Centralized per-version properties (https://stonecutter.kikugie.dev/wiki/config/properties)
+mod.id = "jej"
+mod.name = "Just Enough Juices"
+mod.group = "me.ez.jej"
+mod.version = "1.0"
+
+["1.21.1"]
+mod.mc_compat = "[1.21, 1.21.1]"
+deps.neo_loader = "21.1.251"
+
+["1.21.11"]
+mod.mc_compat = "[1.21.11]"
+deps.neo_loader = "21.11.45"

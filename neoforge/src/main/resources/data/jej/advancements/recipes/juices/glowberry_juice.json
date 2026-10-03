@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "jej:glowberry_juice"
+    ]
+  },
+  "criteria": {
+    "has_glow_berry": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "jej:glow_berry"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "jej:glowberry_juice"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_glow_berry",
+      "has_the_recipe"
+    ]
+  ]
+}

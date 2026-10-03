@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "jej:chorus_juice_boosted"
+    ]
+  },
+  "criteria": {
+    "has_chorus_juice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "jej:chorus_juice"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "jej:chorus_juice_boosted"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_chorus_juice",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "jej:pumpkin_juice_boosted"
+    ]
+  },
+  "criteria": {
+    "has_pumpkin_juice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "jej:pumpkin_juice"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "jej:pumpkin_juice_boosted"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_pumpkin_juice",
+      "has_the_recipe"
+    ]
+  ]
+}

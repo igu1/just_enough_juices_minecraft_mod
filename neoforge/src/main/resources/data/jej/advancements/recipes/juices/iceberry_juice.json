@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "jej:iceberry_juice"
+    ]
+  },
+  "criteria": {
+    "has_ice_berry": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "jej:ice_berry"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "jej:iceberry_juice"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_ice_berry",
+      "has_the_recipe"
+    ]
+  ]
+}
