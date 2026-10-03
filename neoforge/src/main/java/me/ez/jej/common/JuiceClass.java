@@ -220,7 +220,11 @@ public class JuiceClass extends PotionItem {
         if (!level.isClientSide()) {
             for(MobEffectInstance mobeffectinstance : getJuiceEffects(stack)) {
                 if (mobeffectinstance.getEffect().value().isInstantenous()) {
+                    //? if >=1.21.2 {
+                    /*mobeffectinstance.getEffect().value().applyInstantenousEffect((net.minecraft.server.level.ServerLevel) livingEntity.level(), player, player, livingEntity, mobeffectinstance.getAmplifier(), 1.0D);
+                    *///?} else {
                     mobeffectinstance.getEffect().value().applyInstantenousEffect(player, player, livingEntity, mobeffectinstance.getAmplifier(), 1.0D);
+                    //?}
                 } else {
                     livingEntity.addEffect(new MobEffectInstance(mobeffectinstance));
                 }

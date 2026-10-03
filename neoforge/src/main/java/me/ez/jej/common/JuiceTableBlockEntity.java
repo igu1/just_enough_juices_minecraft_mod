@@ -56,9 +56,15 @@ public class JuiceTableBlockEntity extends BlockEntity implements WorldlyContain
         grid.set(4, getItem(boosted ? 2 : 1).copy());
         grid.set(7, getItem(boosted ? 0 : 2).copy());
         CraftingInput input = CraftingInput.of(3, 3, grid);
+        //? if >=1.21.2 {
+        /*return level.getServer().getRecipeManager().getRecipeFor(RecipeType.CRAFTING, input, level)
+                .filter(holder -> holder.value().getResultItem(level.registryAccess()).getItem() instanceof JuiceClass)
+                .map(holder -> holder.value().assemble(input, level.registryAccess())).orElse(ItemStack.EMPTY);
+        *///?} else {
         return level.getRecipeManager().getRecipeFor(RecipeType.CRAFTING, input, level)
                 .filter(holder -> holder.value().getResultItem(level.registryAccess()).getItem() instanceof JuiceClass)
                 .map(holder -> holder.value().assemble(input, level.registryAccess())).orElse(ItemStack.EMPTY);
+        //?}
     }
 
     private boolean canFit(int slot, ItemStack stack) {

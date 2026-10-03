@@ -65,7 +65,11 @@ public abstract class ModBushBlock extends BushBlock implements BonemealableBloc
             popResource(level, pos, new ItemStack(DropItem(state).getItem(), j + (flag ? 1 : 0)));
             level.playSound(null, pos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
             level.setBlock(pos, state.setValue(AGE, state.is(Init.GLOW_BERRY_BUSH.get()) ? 1 : 2), 2);
+            //? if >=1.21.2 {
+            /*return InteractionResult.SUCCESS;
+            *///?} else {
             return InteractionResult.sidedSuccess(level.isClientSide());
+            //?}
         } else {
             return super.useWithoutItem(state, level, pos, player, hit);
         }

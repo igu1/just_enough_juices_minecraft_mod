@@ -18,8 +18,13 @@ public class IcyFootEffect extends MobEffect {
         super(MobEffectCategory.BENEFICIAL, amp);
     }
 
+    //? if >=1.21.2 {
+    /*@Override
+    public boolean applyEffectTick(net.minecraft.server.level.ServerLevel serverLevel, LivingEntity livingEntity, int amp) {
+    *///?} else {
     @Override
     public boolean applyEffectTick(LivingEntity livingEntity, int amp) {
+    //?}
         if (livingEntity.onGround()) {
             RandomSource r = livingEntity.getRandom();
             BlockState blockstate = Blocks.FROSTED_ICE.defaultBlockState();

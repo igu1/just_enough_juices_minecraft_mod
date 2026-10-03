@@ -33,7 +33,11 @@ public class Init {
         MENUS.register(bus);
     }
 
+    //? if >=1.21.2 {
+    /*public static final DeferredHolder<net.minecraft.world.level.block.entity.BlockEntityType<?>, net.minecraft.world.level.block.entity.BlockEntityType<me.ez.jej.common.JuiceTableBlockEntity>> JUICE_TABLE_ENTITY = BLOCK_ENTITIES.register("juice_table", () -> new net.minecraft.world.level.block.entity.BlockEntityType<>(me.ez.jej.common.JuiceTableBlockEntity::new, Init.JUICE_TABLE.get()));
+    *///?} else {
     public static final DeferredHolder<net.minecraft.world.level.block.entity.BlockEntityType<?>, net.minecraft.world.level.block.entity.BlockEntityType<me.ez.jej.common.JuiceTableBlockEntity>> JUICE_TABLE_ENTITY = BLOCK_ENTITIES.register("juice_table", () -> net.minecraft.world.level.block.entity.BlockEntityType.Builder.of(me.ez.jej.common.JuiceTableBlockEntity::new, Init.JUICE_TABLE.get()).build(null));
+    //?}
     public static final DeferredHolder<net.minecraft.world.inventory.MenuType<?>, net.minecraft.world.inventory.MenuType<me.ez.jej.common.JuiceTableMenu>> JUICE_TABLE_MENU = MENUS.register("juice_table", () -> net.neoforged.neoforge.common.extensions.IMenuTypeExtension.create(me.ez.jej.common.JuiceTableMenu::new));
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(Registries.ITEM, Main.MOD_ID);
     public static final DeferredHolder<Item, ? extends Item> JUICE_TABLE_ITEM = ITEMS.register("juice_table", () -> new BlockItem(Init.JUICE_TABLE.get(), new Item.Properties()));

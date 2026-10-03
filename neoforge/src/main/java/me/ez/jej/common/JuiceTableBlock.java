@@ -79,7 +79,11 @@ public class JuiceTableBlock extends BaseEntityBlock {
         if (!level.isClientSide() && table != null) {
             ((ServerPlayer) player).openMenu(table, buf -> buf.writeBlockPos(table.getBlockPos()));
         }
+        //? if >=1.21.2 {
+        /*return InteractionResult.SUCCESS;
+        *///?} else {
         return InteractionResult.sidedSuccess(level.isClientSide());
+        //?}
     }
     @Override public void onRemove(BlockState state, Level level, BlockPos pos, BlockState next, boolean moving) {
         if (!state.is(next.getBlock())) {

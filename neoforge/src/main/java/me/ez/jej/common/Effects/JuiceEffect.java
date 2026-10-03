@@ -73,8 +73,13 @@ public class JuiceEffect extends MobEffect {
                 .max().orElse(0);
     }
 
+    //? if >=1.21.2 {
+    /*@Override
+    public boolean applyEffectTick(net.minecraft.server.level.ServerLevel level, LivingEntity entity, int amp) {
+    *///?} else {
     @Override
     public boolean applyEffectTick(LivingEntity entity, int amp) {
+    //?}
         if (entity.level().isClientSide) return true;
         for (JuiceApplication app : applications) {
             if (app.effect != null && !entity.hasEffect(app.effect))

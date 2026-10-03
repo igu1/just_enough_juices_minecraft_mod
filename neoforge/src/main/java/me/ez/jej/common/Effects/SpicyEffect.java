@@ -12,8 +12,13 @@ public class SpicyEffect extends MobEffect {
         super(MobEffectCategory.BENEFICIAL, color);
     }
 
+    //? if >=1.21.2 {
+    /*@Override
+    public boolean applyEffectTick(net.minecraft.server.level.ServerLevel serverLevel, LivingEntity entity, int amp) {
+    *///?} else {
     @Override
     public boolean applyEffectTick(LivingEntity entity, int amp) {
+    //?}
         entity.clearFire();
         if (!entity.level().isClientSide() && entity.level() instanceof ServerLevel level) {
             int radius = 2 + amp;
