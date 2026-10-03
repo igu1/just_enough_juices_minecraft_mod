@@ -84,7 +84,7 @@ public class JuiceTableGameTests {
             for (var ingredient : recipe.getIngredients()) {
                 if (ingredient.isEmpty()) continue;
                 ItemStack stack = ingredient.getItems()[0].copy();
-                int slot = stack.is(Items.MILK_BUCKET) ? 1 : stack.is(Init.GLASS_BOTTLE.get()) || stack.is(Init.EMERALD_DUST.get()) ? 2 : 0;
+                int slot = stack.is(Items.MILK_BUCKET) ? 1 : stack.is(Init.GLASS_BOTTLE.get()) || stack.is(Init.JUICE_BOOSTER.get()) ? 2 : 0;
                 table.setItem(slot, stack);
             }
             tick(helper, table, JuiceTableBlockEntity.DURATION);

@@ -39,7 +39,7 @@ public class RecipeProvider extends net.minecraft.data.recipes.RecipeProvider im
         ShapedRecipeBuilder.shaped(boostedJuice)
                 .define('J', baseJuice)
                 .define('M', Items.MILK_BUCKET)
-                .define('E', Init.EMERALD_DUST.get())
+                .define('E', Init.JUICE_BOOSTER.get())
                 .pattern(" M ")
                 .pattern(" E ")
                 .pattern(" J ")
@@ -60,6 +60,17 @@ public class RecipeProvider extends net.minecraft.data.recipes.RecipeProvider im
                 .requires(Items.EMERALD)
                 .unlockedBy("has_emerald", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.EMERALD).build()))
+                .save(recipeConsumer);
+
+        //Juice Booster: the catalyst that turns a base juice into a boosted one.
+        ShapedRecipeBuilder.shaped(Init.JUICE_BOOSTER.get())
+                .define('E', Init.EMERALD_DUST.get())
+                .define('G', Items.GOLD_INGOT)
+                .pattern("EEE")
+                .pattern("EGE")
+                .pattern("EEE")
+                .unlockedBy("has_emerald_dust", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Init.EMERALD_DUST.get()).build()))
                 .save(recipeConsumer);
 
         ShapedRecipeBuilder.shaped(Init.GLASS_BOTTLE.get(), 3)

@@ -68,6 +68,7 @@ public class ItemModelProvider extends net.minecraftforge.client.model.generator
 
         //Item
         simpleItem(Init.EMERALD_DUST.get());
+        simpleItem(Init.JUICE_BOOSTER.get());
         withExistingParent("glass_bottle", new ResourceLocation(Main.MOD_ID, "item/empty_juice_bottle"));
         withExistingParent("juice_table", new ResourceLocation(Main.MOD_ID, "block/juice_table"));
 

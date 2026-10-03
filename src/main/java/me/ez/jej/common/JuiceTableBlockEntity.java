@@ -39,9 +39,10 @@ public class JuiceTableBlockEntity extends BlockEntity implements WorldlyContain
     }
     public static boolean isInput(int slot, ItemStack stack) {
         if (slot == 1) return stack.is(Items.MILK_BUCKET);
-        if (slot == 2) return stack.is(Init.GLASS_BOTTLE.get()) || stack.is(Init.EMERALD_DUST.get());
+        if (slot == 2) return stack.is(Init.GLASS_BOTTLE.get()) || stack.is(Init.JUICE_BOOSTER.get());
         return slot == 0 && !stack.isEmpty() && !stack.is(Items.MILK_BUCKET) && !stack.is(Items.BUCKET)
-                && !stack.is(Init.GLASS_BOTTLE.get()) && !stack.is(Init.EMERALD_DUST.get());
+                && !stack.is(Init.GLASS_BOTTLE.get()) && !stack.is(Init.EMERALD_DUST.get())
+                && !stack.is(Init.JUICE_BOOSTER.get());
     }
     private ItemStack findResult() {
         // Match the mod's existing recipes, so datapack recipe changes are respected.
@@ -50,7 +51,7 @@ public class JuiceTableBlockEntity extends BlockEntity implements WorldlyContain
             public ItemStack quickMoveStack(Player player, int index) { return ItemStack.EMPTY; }
         };
         CraftingContainer grid = new CraftingContainer(dummy, 3, 3);
-        boolean boosted = getItem(2).is(Init.EMERALD_DUST.get());
+        boolean boosted = getItem(2).is(Init.JUICE_BOOSTER.get());
         grid.setItem(1, getItem(boosted ? 1 : 0).copy());
         grid.setItem(4, getItem(boosted ? 2 : 1).copy());
         grid.setItem(7, getItem(boosted ? 0 : 2).copy());

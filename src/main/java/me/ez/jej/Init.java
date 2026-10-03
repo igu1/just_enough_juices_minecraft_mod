@@ -103,6 +103,7 @@ public class Init {
     public static final RegistryObject<Item> COCOA_JUICE_BOOSTED = ITEMS.register("cocoa_juice_boosted", () -> new JuiceClass(new Item.Properties().rarity(Rarity.RARE).stacksTo(1).tab(Main.TAB)));
 
     public static final RegistryObject<Item> EMERALD_DUST = ITEMS.register("emerald_dust",() -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+    public static final RegistryObject<Item> JUICE_BOOSTER = ITEMS.register("juice_booster", () -> new me.ez.jej.common.JuiceBoosterItem(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
     public static final RegistryObject<Item> GLASS_BOTTLE = ITEMS.register("glass_bottle",() -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC).stacksTo(16)));
 
     public static final RegistryObject<BlockItem> ICE_BERRY = ITEMS.register("ice_berry",() -> new BlockItem(Init.ICE_BERRY_BUSH.get(), new Item.Properties().tab(CreativeModeTab.TAB_FOOD).food(new FoodProperties.Builder().nutrition(1).saturationMod(0.1F).build())));

@@ -22,7 +22,7 @@ public class LanguageProvider extends net.minecraftforge.common.data.LanguagePro
         add("container.jej.juice_table", "Juice Making Table");
         add("container.jej.juice_table.slot0", "Fruit or base juice");
         add("container.jej.juice_table.slot1", "Milk bucket");
-        add("container.jej.juice_table.slot2", "Empty juice bottle or emerald dust");
+        add("container.jej.juice_table.slot2", "Empty juice bottle or Juice Booster");
         add("container.jej.juice_table.slot3", "Finished juice");
         add("container.jej.juice_table.slot4", "Returned buckets");
 
@@ -181,6 +181,8 @@ public class LanguageProvider extends net.minecraftforge.common.data.LanguagePro
 
         //item
         add(Init.EMERALD_DUST.get(), "Emerald Dust");
+        add(Init.JUICE_BOOSTER.get(), "Juice Booster");
+        add("item.jej.juice_booster.desc", "Combine with a base juice and milk to make a boosted juice.");
         add(Init.GLASS_BOTTLE.get(), "Glass Bottle");
 
         //Advancements

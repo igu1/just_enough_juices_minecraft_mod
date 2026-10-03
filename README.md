@@ -48,16 +48,27 @@ Every juice follows one of two simple vertical recipes.
  G     G = Glass Bottle  ->  Juice
 ```
 
-**Boosted Juice** — the base juice boosted with emerald dust:
+**Boosted Juice** — the base juice boosted with a **Juice Booster**:
 
 ```
  M     M = Milk Bucket
- E     E = Emerald Dust
+ E     E = Juice Booster
  J     J = base Juice    ->  Boosted Juice
 ```
 
+**Juice Booster** — the reusable catalyst for boosting, crafted from emerald dust
+and gold:
+
+```
+EEE    E = Emerald Dust
+EGE    G = Gold Ingot    ->  Juice Booster
+EEE
+```
+
 > `Glass Bottle` is the mod's own item (glass + gold nuggets). `Emerald Dust` is
-> crafted from an emerald (1 emerald → 9 dust, and 9 dust → 1 emerald).
+> crafted from an emerald (1 emerald → 9 dust, and 9 dust → 1 emerald). Each
+> **Juice Booster** costs **8 Emerald Dust + 1 Gold Ingot**, so boosting takes
+> roughly a full emerald plus gold — no longer a near-free upgrade.
 
 ### Juice Making Table
 
@@ -67,7 +78,7 @@ Craft the table and stock its slots:
 |------|---------|------|
 | 0 | fruit / base juice | main ingredient |
 | 1 | milk bucket | milk |
-| 2 | glass bottle **or** emerald dust | bottle (normal) / booster (boosted) |
+| 2 | glass bottle **or** Juice Booster | bottle (normal) / booster (boosted) |
 | 3 | — | finished juice output |
 | 4 | — | returned empty buckets |
 
@@ -165,7 +176,8 @@ Luck** increases the harvest.
 ## Items
 
 - **Glass Bottle** — the container for every juice (glass + gold nuggets).
-- **Emerald Dust** — the booster ingredient.
+- **Emerald Dust** — crafting material for the Juice Booster (1 emerald → 9 dust).
+- **Juice Booster** — the boosting catalyst for every boosted bottle (8 Emerald Dust + 1 Gold Ingot).
 - **Juice Making Table** — the juicing machine.
 
 ---
