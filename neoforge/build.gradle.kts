@@ -36,13 +36,18 @@ neoForge {
     }
 
     runs {
+        // Pass -PdebugJvm to expose a JDWP debug port (5005) for attaching a debugger.
+        val debugAgent = "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005"
+        val debug = project.findProperty("debugJvm") != null
         register("client") {
             gameDirectory = file("../run-neoforge/")
             client()
+            if (debug) jvmArgument(debugAgent)
         }
         register("server") {
             gameDirectory = file("../run-neoforge/")
             server()
+            if (debug) jvmArgument(debugAgent)
         }
     }
 }

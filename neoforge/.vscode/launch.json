@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Attach to NeoForge (5005)",
+      "request": "attach",
+      "hostName": "localhost",
+      "port": 5005
+    },
+    {
+      "type": "java",
       "request": "launch",
       "name": "1.21.1 - Client",
       "presentation": {
