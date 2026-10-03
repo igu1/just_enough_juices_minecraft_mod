@@ -5,38 +5,41 @@ import me.ez.jej.Main;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.TitleScreen;
 import net.minecraft.client.renderer.texture.MissingTextureAtlasSprite;
+import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.api.distmarker.Dist;
-import net.neoforged.neoforge.event.TickEvent;
+import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.common.EventBusSubscriber;
 
 /** Opt-in real-client model/atlas test; inactive in normal play. */
-@Mod.EventBusSubscriber(modid = Main.MOD_ID, value = Dist.CLIENT)
+@EventBusSubscriber(modid = Main.MOD_ID, value = Dist.CLIENT)
 public class ClientAssetSmokeTest {
     private static boolean completed;
     private static void check(boolean condition, String message) {
         if (!condition) throw new IllegalStateException(message);
     }
     private static void model(ResourceLocation location) {
-        checkModel(Minecraft.getInstance().getModelManager().getModel(location), location.toString());
+        checkModel(Minecraft.getInstance().getModelManager().getModel(ModelResourceLocation.standalone(location)), location.toString());
     }
     private static void checkModel(net.minecraft.client.resources.model.BakedModel model, String location) {
         check(model != Minecraft.getInstance().getModelManager().getMissingModel(), "Missing baked model: " + location);
-        var quads = model.getQuads(null, null, new java.util.Random(42));
+        var quads = model.getQuads(null, null, RandomSource.create(42));
         check(!quads.isEmpty(), "Empty baked model: " + location);
-        for (var quad : quads) check(!quad.getSprite().getName().equals(MissingTextureAtlasSprite.getLocation()), "Missing model texture: " + location);
+        for (var quad : quads) check(!quad.getSprite().contents().name().equals(MissingTextureAtlasSprite.getLocation()), "Missing model texture: " + location);
     }
-    @SubscribeEvent public static void tick(TickEvent.ClientTickEvent event) {
-        if (!Boolean.getBoolean("jej.assetSmokeTest") || completed || event.phase != TickEvent.Phase.END) return;
+    @SubscribeEvent public static void tick(ClientTickEvent.Post event) {
+        if (!Boolean.getBoolean("jej.assetSmokeTest") || completed) return;
         var minecraft = Minecraft.getInstance();
         if (!(minecraft.screen instanceof TitleScreen) || minecraft.getOverlay() != null) return;
         completed = true;
         boolean success = false;
         String error = "";
         try {
-            for (String part : new String[]{"screw", "ram"}) model(new ResourceLocation("jej", "block/juice_table_" + part));
+            for (String part : new String[]{"screw", "ram"}) model(ResourceLocation.fromNamespaceAndPath("jej", "block/juice_table_" + part));
             for (var part : net.minecraft.world.level.block.state.properties.BedPart.values()) {
                 for (var facing : net.minecraft.core.Direction.Plane.HORIZONTAL) {
                     var state = Init.JUICE_TABLE.get().defaultBlockState().setValue(net.minecraft.world.level.block.state.properties.BlockStateProperties.BED_PART, part)
@@ -51,7 +54,7 @@ public class ClientAssetSmokeTest {
                 }
             }
             for (var berry : new net.minecraft.world.item.Item[]{Init.WILD_BERRY.get(), Init.ICE_BERRY.get(), Init.SUN_BERRY.get()}) {
-                checkModel(minecraft.getItemRenderer().getModel(new ItemStack(berry), null, null, 0), berry.getRegistryName().toString());
+                checkModel(minecraft.getItemRenderer().getModel(new ItemStack(berry), null, null, 0), BuiltInRegistries.ITEM.getKey(berry).toString());
             }
             for (var item : Init.ITEMS.getEntries()) {
                 if (item.getId().getPath().contains("_juice")) {
@@ -60,8 +63,8 @@ public class ClientAssetSmokeTest {
                 }
             }
             for (var effect : Init.EFFECT.getEntries()) {
-                var sprite = minecraft.getMobEffectTextures().get(effect.get());
-                check(!sprite.getName().equals(MissingTextureAtlasSprite.getLocation()) && sprite.getWidth() == 18 && sprite.getHeight() == 18,
+                var sprite = minecraft.getMobEffectTextures().get(effect);
+                check(!sprite.contents().name().equals(MissingTextureAtlasSprite.getLocation()) && sprite.contents().width() == 18 && sprite.contents().height() == 18,
                         "Missing/invalid effect icon: " + effect.getId());
             }
             check(JuiceTableAnimation.sample(JuiceTableAnimation.ROTATION, 1.75F) == 540F, "Wrong imported crank keyframe");
