@@ -20,8 +20,16 @@ build
 # other
 eclipse
 run
+run-neoforge
 
 # Files from Forge MDK
 forge*changelog.txt
 curseforge-description.html
-./tools
+
+# Local-only art sources and tooling (not published)
+art/
+tools/
+__pycache__/
+*.pyc
+# Collected mod builds 2026-10-03
+builds/

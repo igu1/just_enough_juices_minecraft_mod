@@ -84,9 +84,13 @@ tasks {
 
     register<Copy>("buildAndCollect") {
         group = "build"
-        description = "Builds mod jars and copies results to build/libs/{mod version}/"
+        description = "Builds mod jars and copies results to the repository builds/neoforge-<version>/ folder"
         inputs.property("version", project.property("mod.version"))
         from(jar.flatMap { it.archiveFile }, named<Jar>("sourcesJar").flatMap { it.archiveFile })
-        into(rootProject.layout.buildDirectory.file("libs/${project.property("mod.version")}"))
+        into(rootProject.projectDir.parentFile.resolve("builds/neoforge-${sc.current.version}"))
+        rename { name ->
+            val suffix = if (name.contains("-sources")) "-sources.jar" else ".jar"
+            "jej-neoforge-${sc.current.version}-${project.property("mod.version")}$suffix"
+        }
     }
 }
