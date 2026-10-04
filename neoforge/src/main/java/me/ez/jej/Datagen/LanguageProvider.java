@@ -80,6 +80,12 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
 
         add(Init.GLOW_BERRY_BUSH.get(), "Glow Berry Bush");
 
+        //Berry items are BlockItems but get their own names (not "... Bush")
+        add("item.jej.ice_berry", "Ice Berry");
+        add("item.jej.wild_berry", "Wild Berry");
+        add("item.jej.sun_berry", "Sun Berry");
+        add("item.jej.glow_berry", "Glow Berry");
+
         //Effect
         add(Init.ICYFOOTEFFECT.get(), "Icy Foot");
         add(Init.CAFFEINATED.get(), "Caffeinated");

@@ -108,10 +108,10 @@ public class Init {
     public static final DeferredHolder<Item, ? extends Item> JUICE_BOOSTER = ITEMS.registerItem("juice_booster", me.ez.jej.common.JuiceBoosterItem::new, new Item.Properties());
     public static final DeferredHolder<Item, ? extends Item> GLASS_BOTTLE = ITEMS.registerSimpleItem("glass_bottle", new Item.Properties().stacksTo(16));
 
-    public static final DeferredHolder<Item, ? extends BlockItem> ICE_BERRY = ITEMS.registerSimpleBlockItem("ice_berry", () -> Init.ICE_BERRY_BUSH.get(), new Item.Properties().food(new FoodProperties.Builder().nutrition(1).saturationModifier(0.1F).build()));
-    public static final DeferredHolder<Item, ? extends BlockItem> WILD_BERRY = ITEMS.registerSimpleBlockItem("wild_berry", () -> Init.WILD_BERRY_BUSH.get(), new Item.Properties().food(new FoodProperties.Builder().nutrition(2).saturationModifier(0.1F).build()));
-    public static final DeferredHolder<Item, ? extends BlockItem> SUN_BERRY = ITEMS.registerSimpleBlockItem("sun_berry", () -> Init.SUN_BERRY_BUSH.get(), new Item.Properties().food(new FoodProperties.Builder().nutrition(3).saturationModifier(0.3F).build()));
-    public static final DeferredHolder<Item, ? extends BlockItem> GLOW_BERRY = ITEMS.registerSimpleBlockItem("glow_berry", () -> Init.GLOW_BERRY_BUSH.get(), new Item.Properties().food(new FoodProperties.Builder().nutrition(2).saturationModifier(0.1F).build()));
+    public static final DeferredHolder<Item, ? extends BlockItem> ICE_BERRY = ITEMS.registerItem("ice_berry", props -> new me.ez.jej.common.NamedBlockItem(Init.ICE_BERRY_BUSH.get(), props), new Item.Properties().food(new FoodProperties.Builder().nutrition(1).saturationModifier(0.1F).build()));
+    public static final DeferredHolder<Item, ? extends BlockItem> WILD_BERRY = ITEMS.registerItem("wild_berry", props -> new me.ez.jej.common.NamedBlockItem(Init.WILD_BERRY_BUSH.get(), props), new Item.Properties().food(new FoodProperties.Builder().nutrition(2).saturationModifier(0.1F).build()));
+    public static final DeferredHolder<Item, ? extends BlockItem> SUN_BERRY = ITEMS.registerItem("sun_berry", props -> new me.ez.jej.common.NamedBlockItem(Init.SUN_BERRY_BUSH.get(), props), new Item.Properties().food(new FoodProperties.Builder().nutrition(3).saturationModifier(0.3F).build()));
+    public static final DeferredHolder<Item, ? extends BlockItem> GLOW_BERRY = ITEMS.registerItem("glow_berry", props -> new me.ez.jej.common.NamedBlockItem(Init.GLOW_BERRY_BUSH.get(), props), new Item.Properties().food(new FoodProperties.Builder().nutrition(2).saturationModifier(0.1F).build()));
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(Registries.BLOCK, Main.MOD_ID);
     public static final DeferredHolder<Block, ? extends me.ez.jej.common.JuiceTableBlock> JUICE_TABLE = BLOCKS.register("juice_table", me.ez.jej.common.JuiceTableBlock::new);
