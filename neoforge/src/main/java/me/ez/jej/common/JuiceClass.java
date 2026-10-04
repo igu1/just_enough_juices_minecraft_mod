@@ -31,7 +31,22 @@ public class JuiceClass extends PotionItem {
 
 
     public JuiceClass(Properties properties) {
-        super(properties.stacksTo(1));
+        super(juiceProperties(properties));
+    }
+
+    private static Properties juiceProperties(Properties properties) {
+        //? if >=1.21.2 {
+        /*// Since 1.21.2 drinking is driven by the CONSUMABLE component, not PotionItem.
+        return properties.stacksTo(1).component(
+                net.minecraft.core.component.DataComponents.CONSUMABLE,
+                net.minecraft.world.item.component.Consumable.builder()
+                        .consumeSeconds(1.6F)
+                        .animation(net.minecraft.world.item.ItemUseAnimation.DRINK)
+                        .sound(net.minecraft.sounds.SoundEvents.GENERIC_DRINK)
+                        .build());
+        *///?} else {
+        return properties.stacksTo(1);
+        //?}
     }
 
     private List<MobEffectInstance> getJuiceEffects(ItemStack stack) {
