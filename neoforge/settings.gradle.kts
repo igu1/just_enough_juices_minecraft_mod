@@ -15,12 +15,14 @@ plugins {
 
 stonecutter {
     create(rootProject) {
-        // Full NeoForge range (1.20.2 is the first NeoForge release).
+        // Major NeoForge releases only (no per-patch targets).
         versions(
-            "1.20.2", "1.20.4", "1.20.6",
-            "1.21.1", "1.21.3", "1.21.4", "1.21.5", "1.21.6",
-            "1.21.7", "1.21.8", "1.21.9", "1.21.10", "1.21.11",
-            "26.1.2", "26.2", "26.3"
+            "1.20.4",
+            "1.21.1",
+            "1.21.4",
+            "1.21.8",
+            "1.21.11",
+            "26.3"
         )
         vcsVersion = "1.21.1"
     }
