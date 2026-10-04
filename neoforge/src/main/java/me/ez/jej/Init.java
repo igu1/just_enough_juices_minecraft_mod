@@ -39,79 +39,79 @@ public class Init {
     public static final DeferredHolder<net.minecraft.world.level.block.entity.BlockEntityType<?>, net.minecraft.world.level.block.entity.BlockEntityType<me.ez.jej.common.JuiceTableBlockEntity>> JUICE_TABLE_ENTITY = BLOCK_ENTITIES.register("juice_table", () -> net.minecraft.world.level.block.entity.BlockEntityType.Builder.of(me.ez.jej.common.JuiceTableBlockEntity::new, Init.JUICE_TABLE.get()).build(null));
     //?}
     public static final DeferredHolder<net.minecraft.world.inventory.MenuType<?>, net.minecraft.world.inventory.MenuType<me.ez.jej.common.JuiceTableMenu>> JUICE_TABLE_MENU = MENUS.register("juice_table", () -> net.neoforged.neoforge.common.extensions.IMenuTypeExtension.create(me.ez.jej.common.JuiceTableMenu::new));
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(Registries.ITEM, Main.MOD_ID);
-    public static final DeferredHolder<Item, ? extends Item> JUICE_TABLE_ITEM = ITEMS.register("juice_table", () -> new BlockItem(Init.JUICE_TABLE.get(), new Item.Properties()));
+    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Main.MOD_ID);
+    public static final DeferredHolder<Item, ? extends Item> JUICE_TABLE_ITEM = ITEMS.registerSimpleBlockItem("juice_table", () -> Init.JUICE_TABLE.get(), new Item.Properties());
 
     //Items
-    public static final DeferredHolder<Item, ? extends Item> APPLE_JUICE = ITEMS.register("apple_juice", () -> new JuiceClass(new Item.Properties().stacksTo(1)));
-    public static final DeferredHolder<Item, ? extends Item> APPLE_JUICE_BOOSTED = ITEMS.register("apple_juice_boosted", () -> new JuiceClass(new Item.Properties().rarity(Rarity.RARE).stacksTo(1)));
+    public static final DeferredHolder<Item, ? extends Item> APPLE_JUICE = ITEMS.registerItem("apple_juice", JuiceClass::new, new Item.Properties().stacksTo(1));
+    public static final DeferredHolder<Item, ? extends Item> APPLE_JUICE_BOOSTED = ITEMS.registerItem("apple_juice_boosted", JuiceClass::new, new Item.Properties().rarity(Rarity.RARE).stacksTo(1));
 
-    public static final DeferredHolder<Item, ? extends Item> SWEETBERRY_JUICE = ITEMS.register("sweetberry_juice", () -> new JuiceClass(new Item.Properties().stacksTo(1)));
-    public static final DeferredHolder<Item, ? extends Item> SWEETBERRY_JUICE_BOOSTED = ITEMS.register("sweetberry_juice_boosted", () -> new JuiceClass(new Item.Properties().rarity(Rarity.RARE).stacksTo(1)));
+    public static final DeferredHolder<Item, ? extends Item> SWEETBERRY_JUICE = ITEMS.registerItem("sweetberry_juice", JuiceClass::new, new Item.Properties().stacksTo(1));
+    public static final DeferredHolder<Item, ? extends Item> SWEETBERRY_JUICE_BOOSTED = ITEMS.registerItem("sweetberry_juice_boosted", JuiceClass::new, new Item.Properties().rarity(Rarity.RARE).stacksTo(1));
 
-    public static final DeferredHolder<Item, ? extends Item> CARROT_JUICE = ITEMS.register("carrot_juice", () -> new JuiceClass(new Item.Properties().stacksTo(1)));
-    public static final DeferredHolder<Item, ? extends Item> CARROT_JUICE_BOOSTED = ITEMS.register("carrot_juice_boosted", () -> new JuiceClass(new Item.Properties().rarity(Rarity.RARE).stacksTo(1)));
+    public static final DeferredHolder<Item, ? extends Item> CARROT_JUICE = ITEMS.registerItem("carrot_juice", JuiceClass::new, new Item.Properties().stacksTo(1));
+    public static final DeferredHolder<Item, ? extends Item> CARROT_JUICE_BOOSTED = ITEMS.registerItem("carrot_juice_boosted", JuiceClass::new, new Item.Properties().rarity(Rarity.RARE).stacksTo(1));
 
-    public static final DeferredHolder<Item, ? extends Item> BAKEDPOTATO_JUICE = ITEMS.register("bakedpotato_juice", () -> new JuiceClass(new Item.Properties().stacksTo(1)));
-    public static final DeferredHolder<Item, ? extends Item> BAKEDPOTATO_JUICE_BOOSTED = ITEMS.register("bakedpotato_juice_boosted", () -> new JuiceClass(new Item.Properties().rarity(Rarity.RARE).stacksTo(1)));
+    public static final DeferredHolder<Item, ? extends Item> BAKEDPOTATO_JUICE = ITEMS.registerItem("bakedpotato_juice", JuiceClass::new, new Item.Properties().stacksTo(1));
+    public static final DeferredHolder<Item, ? extends Item> BAKEDPOTATO_JUICE_BOOSTED = ITEMS.registerItem("bakedpotato_juice_boosted", JuiceClass::new, new Item.Properties().rarity(Rarity.RARE).stacksTo(1));
 
-    public static final DeferredHolder<Item, ? extends Item> MELON_JUICE = ITEMS.register("melon_juice", () -> new JuiceClass(new Item.Properties().stacksTo(1)));
-    public static final DeferredHolder<Item, ? extends Item> MELON_JUICE_BOOSTED = ITEMS.register("melon_juice_boosted", () -> new JuiceClass(new Item.Properties().rarity(Rarity.RARE).stacksTo(1)));
+    public static final DeferredHolder<Item, ? extends Item> MELON_JUICE = ITEMS.registerItem("melon_juice", JuiceClass::new, new Item.Properties().stacksTo(1));
+    public static final DeferredHolder<Item, ? extends Item> MELON_JUICE_BOOSTED = ITEMS.registerItem("melon_juice_boosted", JuiceClass::new, new Item.Properties().rarity(Rarity.RARE).stacksTo(1));
 
-    public static final DeferredHolder<Item, ? extends Item> PUMPKIN_JUICE = ITEMS.register("pumpkin_juice", () -> new JuiceClass(new Item.Properties().stacksTo(1)));
-    public static final DeferredHolder<Item, ? extends Item> PUMPKIN_JUICE_BOOSTED = ITEMS.register("pumpkin_juice_boosted", () -> new JuiceClass(new Item.Properties().rarity(Rarity.RARE).stacksTo(1)));
+    public static final DeferredHolder<Item, ? extends Item> PUMPKIN_JUICE = ITEMS.registerItem("pumpkin_juice", JuiceClass::new, new Item.Properties().stacksTo(1));
+    public static final DeferredHolder<Item, ? extends Item> PUMPKIN_JUICE_BOOSTED = ITEMS.registerItem("pumpkin_juice_boosted", JuiceClass::new, new Item.Properties().rarity(Rarity.RARE).stacksTo(1));
 
-    public static final DeferredHolder<Item, ? extends Item> ICEBERRY_JUICE = ITEMS.register("iceberry_juice", () -> new JuiceClass(new Item.Properties().stacksTo(1)));
-    public static final DeferredHolder<Item, ? extends Item> ICEBERRY_JUICE_BOOSTED = ITEMS.register("iceberry_juice_boosted", () -> new JuiceClass(new Item.Properties().rarity(Rarity.RARE).stacksTo(1)));
+    public static final DeferredHolder<Item, ? extends Item> ICEBERRY_JUICE = ITEMS.registerItem("iceberry_juice", JuiceClass::new, new Item.Properties().stacksTo(1));
+    public static final DeferredHolder<Item, ? extends Item> ICEBERRY_JUICE_BOOSTED = ITEMS.registerItem("iceberry_juice_boosted", JuiceClass::new, new Item.Properties().rarity(Rarity.RARE).stacksTo(1));
 
-    public static final DeferredHolder<Item, ? extends Item> WILDBERRY_JUICE = ITEMS.register("wildberry_juice", () -> new JuiceClass(new Item.Properties().stacksTo(1)));
-    public static final DeferredHolder<Item, ? extends Item> WILDBERRY_JUICE_BOOSTED = ITEMS.register("wildberry_juice_boosted", () -> new JuiceClass(new Item.Properties().rarity(Rarity.RARE).stacksTo(1)));
+    public static final DeferredHolder<Item, ? extends Item> WILDBERRY_JUICE = ITEMS.registerItem("wildberry_juice", JuiceClass::new, new Item.Properties().stacksTo(1));
+    public static final DeferredHolder<Item, ? extends Item> WILDBERRY_JUICE_BOOSTED = ITEMS.registerItem("wildberry_juice_boosted", JuiceClass::new, new Item.Properties().rarity(Rarity.RARE).stacksTo(1));
 
-    public static final DeferredHolder<Item, ? extends Item> DRIEDKELP_JUICE = ITEMS.register("driedkelp_juice", () -> new JuiceClass(new Item.Properties().stacksTo(1)));
-    public static final DeferredHolder<Item, ? extends Item> DRIEDKELP_JUICE_BOOSTED = ITEMS.register("driedkelp_juice_boosted", () -> new JuiceClass(new Item.Properties().rarity(Rarity.RARE).stacksTo(1)));
+    public static final DeferredHolder<Item, ? extends Item> DRIEDKELP_JUICE = ITEMS.registerItem("driedkelp_juice", JuiceClass::new, new Item.Properties().stacksTo(1));
+    public static final DeferredHolder<Item, ? extends Item> DRIEDKELP_JUICE_BOOSTED = ITEMS.registerItem("driedkelp_juice_boosted", JuiceClass::new, new Item.Properties().rarity(Rarity.RARE).stacksTo(1));
 
-    public static final DeferredHolder<Item, ? extends Item> GOLDENAPPLE_JUICE = ITEMS.register("goldenapple_juice", () -> new JuiceClass(new Item.Properties().stacksTo(1)));
-    public static final DeferredHolder<Item, ? extends Item> GOLDENAPPLE_JUICE_BOOSTED = ITEMS.register("goldenapple_juice_boosted", () -> new JuiceClass(new Item.Properties().rarity(Rarity.RARE).stacksTo(1)));
+    public static final DeferredHolder<Item, ? extends Item> GOLDENAPPLE_JUICE = ITEMS.registerItem("goldenapple_juice", JuiceClass::new, new Item.Properties().stacksTo(1));
+    public static final DeferredHolder<Item, ? extends Item> GOLDENAPPLE_JUICE_BOOSTED = ITEMS.registerItem("goldenapple_juice_boosted", JuiceClass::new, new Item.Properties().rarity(Rarity.RARE).stacksTo(1));
 
-    public static final DeferredHolder<Item, ? extends Item> GOLDENCARROT_JUICE = ITEMS.register("goldencarrot_juice", () -> new JuiceClass(new Item.Properties().stacksTo(1)));
-    public static final DeferredHolder<Item, ? extends Item> GOLDENCARROT_JUICE_BOOSTED = ITEMS.register("goldencarrot_juice_boosted", () -> new JuiceClass(new Item.Properties().rarity(Rarity.RARE).stacksTo(1)));
+    public static final DeferredHolder<Item, ? extends Item> GOLDENCARROT_JUICE = ITEMS.registerItem("goldencarrot_juice", JuiceClass::new, new Item.Properties().stacksTo(1));
+    public static final DeferredHolder<Item, ? extends Item> GOLDENCARROT_JUICE_BOOSTED = ITEMS.registerItem("goldencarrot_juice_boosted", JuiceClass::new, new Item.Properties().rarity(Rarity.RARE).stacksTo(1));
 
-    public static final DeferredHolder<Item, ? extends Item> GLISTERING_MELON_JUICE = ITEMS.register("glistering_melon_juice", () -> new JuiceClass(new Item.Properties().stacksTo(1)));
-    public static final DeferredHolder<Item, ? extends Item> GLISTERING_MELON_JUICE_BOOSTED = ITEMS.register("glistering_melon_juice_boosted", () -> new JuiceClass(new Item.Properties().rarity(Rarity.RARE).stacksTo(1)));
+    public static final DeferredHolder<Item, ? extends Item> GLISTERING_MELON_JUICE = ITEMS.registerItem("glistering_melon_juice", JuiceClass::new, new Item.Properties().stacksTo(1));
+    public static final DeferredHolder<Item, ? extends Item> GLISTERING_MELON_JUICE_BOOSTED = ITEMS.registerItem("glistering_melon_juice_boosted", JuiceClass::new, new Item.Properties().rarity(Rarity.RARE).stacksTo(1));
 
     //New Juices
-    public static final DeferredHolder<Item, ? extends Item> CHORUS_JUICE = ITEMS.register("chorus_juice", () -> new JuiceClass(new Item.Properties().stacksTo(1)));
-    public static final DeferredHolder<Item, ? extends Item> CHORUS_JUICE_BOOSTED = ITEMS.register("chorus_juice_boosted", () -> new JuiceClass(new Item.Properties().rarity(Rarity.RARE).stacksTo(1)));
+    public static final DeferredHolder<Item, ? extends Item> CHORUS_JUICE = ITEMS.registerItem("chorus_juice", JuiceClass::new, new Item.Properties().stacksTo(1));
+    public static final DeferredHolder<Item, ? extends Item> CHORUS_JUICE_BOOSTED = ITEMS.registerItem("chorus_juice_boosted", JuiceClass::new, new Item.Properties().rarity(Rarity.RARE).stacksTo(1));
 
-    public static final DeferredHolder<Item, ? extends Item> GLOWBERRY_JUICE = ITEMS.register("glowberry_juice", () -> new JuiceClass(new Item.Properties().stacksTo(1)));
-    public static final DeferredHolder<Item, ? extends Item> GLOWBERRY_JUICE_BOOSTED = ITEMS.register("glowberry_juice_boosted", () -> new JuiceClass(new Item.Properties().rarity(Rarity.RARE).stacksTo(1)));
+    public static final DeferredHolder<Item, ? extends Item> GLOWBERRY_JUICE = ITEMS.registerItem("glowberry_juice", JuiceClass::new, new Item.Properties().stacksTo(1));
+    public static final DeferredHolder<Item, ? extends Item> GLOWBERRY_JUICE_BOOSTED = ITEMS.registerItem("glowberry_juice_boosted", JuiceClass::new, new Item.Properties().rarity(Rarity.RARE).stacksTo(1));
 
-    public static final DeferredHolder<Item, ? extends Item> SPICY_JUICE = ITEMS.register("spicy_juice", () -> new JuiceClass(new Item.Properties().stacksTo(1)));
-    public static final DeferredHolder<Item, ? extends Item> SPICY_JUICE_BOOSTED = ITEMS.register("spicy_juice_boosted", () -> new JuiceClass(new Item.Properties().rarity(Rarity.RARE).stacksTo(1)));
+    public static final DeferredHolder<Item, ? extends Item> SPICY_JUICE = ITEMS.registerItem("spicy_juice", JuiceClass::new, new Item.Properties().stacksTo(1));
+    public static final DeferredHolder<Item, ? extends Item> SPICY_JUICE_BOOSTED = ITEMS.registerItem("spicy_juice_boosted", JuiceClass::new, new Item.Properties().rarity(Rarity.RARE).stacksTo(1));
 
-    public static final DeferredHolder<Item, ? extends Item> GOLEM_JUICE = ITEMS.register("golem_juice", () -> new JuiceClass(new Item.Properties().stacksTo(1)));
-    public static final DeferredHolder<Item, ? extends Item> GOLEM_JUICE_BOOSTED = ITEMS.register("golem_juice_boosted", () -> new JuiceClass(new Item.Properties().rarity(Rarity.RARE).stacksTo(1)));
+    public static final DeferredHolder<Item, ? extends Item> GOLEM_JUICE = ITEMS.registerItem("golem_juice", JuiceClass::new, new Item.Properties().stacksTo(1));
+    public static final DeferredHolder<Item, ? extends Item> GOLEM_JUICE_BOOSTED = ITEMS.registerItem("golem_juice_boosted", JuiceClass::new, new Item.Properties().rarity(Rarity.RARE).stacksTo(1));
 
-    public static final DeferredHolder<Item, ? extends Item> SUNBERRY_JUICE = ITEMS.register("sunberry_juice", () -> new JuiceClass(new Item.Properties().stacksTo(1)));
-    public static final DeferredHolder<Item, ? extends Item> SUNBERRY_JUICE_BOOSTED = ITEMS.register("sunberry_juice_boosted", () -> new JuiceClass(new Item.Properties().rarity(Rarity.RARE).stacksTo(1)));
+    public static final DeferredHolder<Item, ? extends Item> SUNBERRY_JUICE = ITEMS.registerItem("sunberry_juice", JuiceClass::new, new Item.Properties().stacksTo(1));
+    public static final DeferredHolder<Item, ? extends Item> SUNBERRY_JUICE_BOOSTED = ITEMS.registerItem("sunberry_juice_boosted", JuiceClass::new, new Item.Properties().rarity(Rarity.RARE).stacksTo(1));
 
-    public static final DeferredHolder<Item, ? extends Item> BEETROOT_JUICE = ITEMS.register("beetroot_juice", () -> new JuiceClass(new Item.Properties().stacksTo(1)));
-    public static final DeferredHolder<Item, ? extends Item> BEETROOT_JUICE_BOOSTED = ITEMS.register("beetroot_juice_boosted", () -> new JuiceClass(new Item.Properties().rarity(Rarity.RARE).stacksTo(1)));
+    public static final DeferredHolder<Item, ? extends Item> BEETROOT_JUICE = ITEMS.registerItem("beetroot_juice", JuiceClass::new, new Item.Properties().stacksTo(1));
+    public static final DeferredHolder<Item, ? extends Item> BEETROOT_JUICE_BOOSTED = ITEMS.registerItem("beetroot_juice_boosted", JuiceClass::new, new Item.Properties().rarity(Rarity.RARE).stacksTo(1));
 
-    public static final DeferredHolder<Item, ? extends Item> NETHERWART_JUICE = ITEMS.register("netherwart_juice", () -> new JuiceClass(new Item.Properties().stacksTo(1)));
-    public static final DeferredHolder<Item, ? extends Item> NETHERWART_JUICE_BOOSTED = ITEMS.register("netherwart_juice_boosted", () -> new JuiceClass(new Item.Properties().rarity(Rarity.RARE).stacksTo(1)));
+    public static final DeferredHolder<Item, ? extends Item> NETHERWART_JUICE = ITEMS.registerItem("netherwart_juice", JuiceClass::new, new Item.Properties().stacksTo(1));
+    public static final DeferredHolder<Item, ? extends Item> NETHERWART_JUICE_BOOSTED = ITEMS.registerItem("netherwart_juice_boosted", JuiceClass::new, new Item.Properties().rarity(Rarity.RARE).stacksTo(1));
 
-    public static final DeferredHolder<Item, ? extends Item> COCOA_JUICE = ITEMS.register("cocoa_juice", () -> new JuiceClass(new Item.Properties().stacksTo(1)));
-    public static final DeferredHolder<Item, ? extends Item> COCOA_JUICE_BOOSTED = ITEMS.register("cocoa_juice_boosted", () -> new JuiceClass(new Item.Properties().rarity(Rarity.RARE).stacksTo(1)));
+    public static final DeferredHolder<Item, ? extends Item> COCOA_JUICE = ITEMS.registerItem("cocoa_juice", JuiceClass::new, new Item.Properties().stacksTo(1));
+    public static final DeferredHolder<Item, ? extends Item> COCOA_JUICE_BOOSTED = ITEMS.registerItem("cocoa_juice_boosted", JuiceClass::new, new Item.Properties().rarity(Rarity.RARE).stacksTo(1));
 
-    public static final DeferredHolder<Item, ? extends Item> EMERALD_DUST = ITEMS.register("emerald_dust", () -> new Item(new Item.Properties()));
-    public static final DeferredHolder<Item, ? extends Item> JUICE_BOOSTER = ITEMS.register("juice_booster", () -> new me.ez.jej.common.JuiceBoosterItem(new Item.Properties()));
-    public static final DeferredHolder<Item, ? extends Item> GLASS_BOTTLE = ITEMS.register("glass_bottle", () -> new Item(new Item.Properties().stacksTo(16)));
+    public static final DeferredHolder<Item, ? extends Item> EMERALD_DUST = ITEMS.registerSimpleItem("emerald_dust", new Item.Properties());
+    public static final DeferredHolder<Item, ? extends Item> JUICE_BOOSTER = ITEMS.registerItem("juice_booster", me.ez.jej.common.JuiceBoosterItem::new, new Item.Properties());
+    public static final DeferredHolder<Item, ? extends Item> GLASS_BOTTLE = ITEMS.registerSimpleItem("glass_bottle", new Item.Properties().stacksTo(16));
 
-    public static final DeferredHolder<Item, ? extends BlockItem> ICE_BERRY = ITEMS.register("ice_berry", () -> new BlockItem(Init.ICE_BERRY_BUSH.get(), new Item.Properties().food(new FoodProperties.Builder().nutrition(1).saturationModifier(0.1F).build())));
-    public static final DeferredHolder<Item, ? extends BlockItem> WILD_BERRY = ITEMS.register("wild_berry", () -> new BlockItem(Init.WILD_BERRY_BUSH.get(), new Item.Properties().food(new FoodProperties.Builder().nutrition(2).saturationModifier(0.1F).build())));
-    public static final DeferredHolder<Item, ? extends BlockItem> SUN_BERRY = ITEMS.register("sun_berry", () -> new BlockItem(Init.SUN_BERRY_BUSH.get(), new Item.Properties().food(new FoodProperties.Builder().nutrition(3).saturationModifier(0.3F).build())));
-    public static final DeferredHolder<Item, ? extends BlockItem> GLOW_BERRY = ITEMS.register("glow_berry", () -> new BlockItem(Init.GLOW_BERRY_BUSH.get(), new Item.Properties().food(new FoodProperties.Builder().nutrition(2).saturationModifier(0.1F).build())));
+    public static final DeferredHolder<Item, ? extends BlockItem> ICE_BERRY = ITEMS.registerSimpleBlockItem("ice_berry", () -> Init.ICE_BERRY_BUSH.get(), new Item.Properties().food(new FoodProperties.Builder().nutrition(1).saturationModifier(0.1F).build()));
+    public static final DeferredHolder<Item, ? extends BlockItem> WILD_BERRY = ITEMS.registerSimpleBlockItem("wild_berry", () -> Init.WILD_BERRY_BUSH.get(), new Item.Properties().food(new FoodProperties.Builder().nutrition(2).saturationModifier(0.1F).build()));
+    public static final DeferredHolder<Item, ? extends BlockItem> SUN_BERRY = ITEMS.registerSimpleBlockItem("sun_berry", () -> Init.SUN_BERRY_BUSH.get(), new Item.Properties().food(new FoodProperties.Builder().nutrition(3).saturationModifier(0.3F).build()));
+    public static final DeferredHolder<Item, ? extends BlockItem> GLOW_BERRY = ITEMS.registerSimpleBlockItem("glow_berry", () -> Init.GLOW_BERRY_BUSH.get(), new Item.Properties().food(new FoodProperties.Builder().nutrition(2).saturationModifier(0.1F).build()));
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(Registries.BLOCK, Main.MOD_ID);
     public static final DeferredHolder<Block, ? extends me.ez.jej.common.JuiceTableBlock> JUICE_TABLE = BLOCKS.register("juice_table", me.ez.jej.common.JuiceTableBlock::new);

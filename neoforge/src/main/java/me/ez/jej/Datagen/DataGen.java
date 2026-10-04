@@ -1,7 +1,6 @@
 //? if <1.21.2 {
 package me.ez.jej.Datagen;
 
-import me.ez.jej.Datagen.LootTable.BlockLootTable;
 import me.ez.jej.Main;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;

@@ -9,7 +9,11 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 public class GlowBerryBush extends ModBushBlock {
 
     public GlowBerryBush() {
+        //? if >=1.21.2 {
+        /*super(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH).setId(net.minecraft.resources.ResourceKey.create(net.minecraft.core.registries.Registries.BLOCK, net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("jej", "glowberry_bush"))).lightLevel(state -> state.getValue(AGE) >= 3 ? 8 : 0));
+        *///?} else {
         super(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH).lightLevel(state -> state.getValue(AGE) >= 3 ? 8 : 0));
+        //?}
     }
 
     @Override

@@ -9,7 +9,11 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 public class IcyBush extends ModBushBlock {
 
     public IcyBush() {
+        //? if >=1.21.2 {
+        /*super(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH).setId(net.minecraft.resources.ResourceKey.create(net.minecraft.core.registries.Registries.BLOCK, net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("jej", "iceberry_bush"))));
+        *///?} else {
         super(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH));
+        //?}
     }
 
     @Override

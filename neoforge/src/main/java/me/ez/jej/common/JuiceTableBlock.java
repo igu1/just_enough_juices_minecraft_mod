@@ -5,7 +5,6 @@ import me.ez.jej.Init;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.Containers;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -23,7 +22,11 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class JuiceTableBlock extends BaseEntityBlock {
     public JuiceTableBlock() {
+        //? if >=1.21.2 {
+        /*super(Properties.of().setId(net.minecraft.resources.ResourceKey.create(net.minecraft.core.registries.Registries.BLOCK, net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("jej", "juice_table"))).strength(2.5F).sound(SoundType.WOOD).noOcclusion());
+        *///?} else {
         super(Properties.of().strength(2.5F).sound(SoundType.WOOD).noOcclusion());
+        //?}
         registerDefaultState(stateDefinition.any().setValue(BlockStateProperties.HORIZONTAL_FACING, net.minecraft.core.Direction.NORTH)
                 .setValue(BlockStateProperties.BED_PART, BedPart.FOOT));
     }
