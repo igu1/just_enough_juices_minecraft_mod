@@ -18,6 +18,17 @@ stonecutter parameters {
     constants["release"] = true
 
     replacements {
+        // MC 1.21.5 renamed several MobEffects fields. Only touch the MobEffects-qualified
+        // names so our own JuicePower enum constants stay intact.
+        string(current.parsed >= "1.21.5") {
+            replace("MobEffects.MOVEMENT_SPEED", "MobEffects.SPEED")
+            replace("MobEffects.MOVEMENT_SLOWDOWN", "MobEffects.SLOWNESS")
+            replace("MobEffects.DAMAGE_BOOST", "MobEffects.STRENGTH")
+            replace("MobEffects.DAMAGE_RESISTANCE", "MobEffects.RESISTANCE")
+            replace("MobEffects.DIG_SPEED", "MobEffects.HASTE")
+            replace("MobEffects.JUMP", "MobEffects.JUMP_BOOST")
+            replace("MobEffects.CONFUSION", "MobEffects.NAUSEA")
+        }
         string(current.parsed >= "1.21.11") {
             replace("ResourceLocation", "Identifier")
         }
