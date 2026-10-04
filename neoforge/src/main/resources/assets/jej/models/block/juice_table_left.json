@@ -6,6 +6,7 @@
   "shade_quads": true,
   "emissive_ambient": false,
   "textures": {
+    "jej:block/juice_table/minimal_juice_table_atlas_png": "jej:block/juice_table/minimal_juice_table_atlas_png",
     "particle": "jej:block/juice_table/minimal_juice_table_atlas_png"
   }
 }
