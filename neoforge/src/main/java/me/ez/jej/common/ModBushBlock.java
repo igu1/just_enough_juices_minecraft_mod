@@ -36,12 +36,12 @@ public abstract class ModBushBlock extends BushBlock implements BonemealableBloc
     }
 
     //? if >=1.21.4 {
-    @Override
-    public ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state, boolean includeData) {
-    //?} else {
     /*@Override
+    public ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state, boolean includeData) {
+    *///?} else {
+    @Override
     public ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state) {
-    *///?}
+    //?}
         return DropItem(state);
     }
 
